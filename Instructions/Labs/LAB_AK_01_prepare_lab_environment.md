@@ -16,7 +16,7 @@ You have just started the pilot project; therefore, in this first lab you will s
 
 ## Lab Setup
 
-  - **Estimated Time**: 60 minutes
+  - **Estimated Time**: 30 minutes
 
 ## Instructions
 
