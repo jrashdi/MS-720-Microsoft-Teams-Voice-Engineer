@@ -10,7 +10,7 @@ lab:
 
 ## Lab scenario
 
-As part of the expanding business the organisation has an existing SIP trunk into their primary data center. The contractual obligations mean that it’s more cost effective to utilise the SIP trunk and move to Microsoft Calling Plans later. As part of the move Megan will be moved from the old telephone system to the new Microsoft Phone System solution. 
+As part of the expanding business the organization has an existing SIP trunk into their primary data center. The contractual obligations mean that it’s more cost effective to utilise the SIP trunk and move to Microsoft Calling Plans later. As part of the move Megan will be moved from the old telephone system to the new Microsoft Phone System solution. 
 
 ## Lab Setup
 
