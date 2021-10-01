@@ -1,8 +1,8 @@
 ---
 lab:
-    title: 'Lab: Configure your environment for Teams Voice Usage'
+    title: 'Lab 02: Configure your environment for Teams Voice Usage'
     type: 'Answer Key'
-    module: 'Module 1: Plan and configure Teams Phone'
+    module: 'Module 01: Plan and configure Teams Phone'
 ---
 
 # Lab 02: Configure your environment for Teams Voice Usage
@@ -38,11 +38,15 @@ Finally we will configure Call Queues and Auto Attendants for inbound calls to C
 
 ## Lab Setup
 
-  - **Estimated Time**: 60 minutes
+  - **Estimated Time**: 225 minutes
 
 ## Instructions
 
 ## Exercise 1: Evaluate your network requirements with the Network Planner
+
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
 
 In this exercise, you will determine if your organizations network has enough bandwidth to run Microsoft Teams successfully using Network Planner.
 
@@ -166,6 +170,10 @@ You have successfully generated a Network Planner Report. We can see from the re
 
 ## Exercise 2: Use the Teams Network Assessment Tool
 
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
+
 In this exercise, you will install and run the Teams Network Assessment Tool to check the connectivity and performance from a client machine. This is an important task to understand if any network issues could probably degrade the user experience for Teams in your company and to develop strategies for optimizing your network.
 
 ### Task 1 - Install the Tool
@@ -287,6 +295,10 @@ Note, due to performing the test on a lab VM, you may see unusual or high result
 At the end of this task, you have successfully reviewed the results of the Network Quality Check.
 
 ## Exercise 3: Configure a basic network topology for Dynamic Emergency Calling 
+
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
 
 Network sites are used for Dynamic emergency calling. Before configuring dynamic emergency calling we must map the relevant Network Regions, Network sites, network subnets and Trusted IP addresses. In this exercise we will configure a network region and sites
 
@@ -476,6 +488,10 @@ You have successfully setup notifications for Alex Wilber whenever emergency cal
 
 ## Exercise 4: Configure Voice Policies
 
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
+
 In this exercise, you will configure some key voice setting and policies required for the Contoso users to utilize voice services in context with the company policies.
 
 ### Task 1 - Create a Dial Plan for extension dialing
@@ -642,6 +658,10 @@ You have successfully blocked all inbound calls from 1 (412) 555-1111 via PowerS
 
 ## Exercise 5: Prepare users for calling
 
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
+
 In this exercise, you will setup a user for Teams Phone with a Microsoft Calling plan. 
 
 ### Task 1 - Order a phone number
@@ -756,6 +776,10 @@ Now we confirmed that Alex can make a PSTN call in Teams
 
 ## Exercise 6: Configure Audio Conferencing Settings
 
+### Exercise Duration
+
+  - **Estimated Time to complete**: 15 minutes
+
 In this exercise, you will configure Microsoft PSTN audio conferencing to meet the organizations requirements.
 
 ### Task 1 - Set a default Audio Conferencing Bridge
@@ -835,6 +859,10 @@ You have successfully ordered a new dedicated conference toll phone number throu
 You have successfully setup a new dedicated conference bridge number.
 
 ## Exercise 7: Configure Call Queues and Auto Attendants
+
+### Exercise Duration
+
+  - **Estimated Time to complete**: 60 minutes
 
 In this exercise, you will gain an understanding of how to configure Call Queues and Auto Attendants. Auto attendant being configured today is for the Sales Team. The sales team take sales queries and then apply them to different parts of the business. On this occasion Alex Wilber is going to be part of the call queue and later in the module we will see how to then assign it to a Team.
 

@@ -1,8 +1,8 @@
 ---
 lab:
-    title: 'Lab: Configure the lab environment'
+    title: 'Lab 01: Configure the lab environment'
     type: 'Answer Key'
-    module: 'Module 1: Plan and configure Teams Phone'
+    module: 'Module 01: Plan and configure Teams Phone'
 ---
 
 # Lab 01: Configure the lab environment
@@ -14,13 +14,17 @@ In the labs for this course, you are taking on the role of Katie Jordan, Contoso
 
 You have just started the pilot project; therefore, in this first lab you will set up a personalized Microsoft 365 user account for Katie that will be used throughout all the labs in this course. This first exercise also requires that you perform several setup tasks that will initialize your trial tenant for the remaining labs in this course. You must configure your trial tenant, create a personalized Teams Service user account in Microsoft 365 for Kate, configure several test users and groups that will be used throughout the remaining labs, and request a certificate signed by a public certificate authority.
 
-## Lab Setup
+## Lab Duration
 
-  - **Estimated Time**: 30 minutes
+  - **Estimated Time to complete**: 120 minutes
 
 ## Instructions
 
 ## Exercise 1: Configure your lab environment
+
+### Exercise Duration
+
+  - **Estimated Time to complete**: 45 minutes
 
 In this exercise, you will run scripts designed to provision user accounts, groups, teams, and other resources used by the labs in this course. This script will also add your lab's custom domain to Office 365. If you have already added your lab's custom domain, the script will verify that it exists. The script will also add your lab's public DNS records to RRAS01, create a certificate request, and create the configuration file for the AudioCodes Mediant virtual edition SBC used in direct routing lab.
 
@@ -144,6 +148,10 @@ You have successfully requested the certificate from DigiCert and will download 
 
 ## Exercise 2: Assign Permissions
 
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
+
 In this exercise, you will assign the required admin permissions to continue with the other labs and exercises in this course.
 
 ### Task 1 - Verify the custom domain has been added to your Office 365 subscription
@@ -220,6 +228,10 @@ You have successfully added the custom domain to Megan Bowen.
 
 ## Exercise 3: Validate and manage licenses
 
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
+
 In this exercise, you will review the overall number of licenses and the number of active users who have been assigned a license.
 
 ### Task 1 - Validate licenses in the admin portal
@@ -295,6 +307,10 @@ As an admin, you can assign the calling plan license that gives users the right 
 You have successfully assigned the license to Isaiah Langer, activated additional features for this account and reset his password. Remember or write down the password. You will continue with additional tasks for assigning phone numbers in a later exercise. 
 
 ## Exercise 4: Setup PowerShell for Microsoft Teams Administration
+
+### Exercise Duration
+
+  - **Estimated Time to complete**: 15 minutes
 
 Several configuration steps of Microsoft Teams in this lab can also be done or must be done through the Microsoft Teams PowerShell module. In this exercise, you will install the Microsoft Teams PowerShell module and validate the correct version number for being ready for Teams Administration tasks during your lab.
 
