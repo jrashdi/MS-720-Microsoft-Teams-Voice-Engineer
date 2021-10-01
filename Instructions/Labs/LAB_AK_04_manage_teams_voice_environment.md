@@ -1,12 +1,29 @@
 
+---
+lab:
+    title: 'Lab: Manage your Teams Voice Environment'
+    type: 'Answer Key'
+    module: 'Module 1: Plan and configure Teams Phone'
+---
 
-# Lab 4: Manage your Teams Voice Environment
+# Lab 04: Manage your Teams Voice Environment
+# Student lab answer key
+
+## Lab Scenario
 
 Contoso need to make changes to existing users who are enabled for Teams Voice and add Teams Devices. Whilst making changes, support tickets have been raised due to problems users have reported with connectivity and troubleshooting must be performed.
 
+## Lab Duration
+
+  - **Estimated Time to complete**: 255 minutes
+
+## Instructions
+
 ## Exercise 1: Manage Voice Users
 
-Estimated time to complete 30 minutes
+### Exercise Duration
+
+  - **Estimated Time to complete**: 30 minutes
 
 In this exercise, you will perform day-to-day management tasks for Teams Voice users. 
 
@@ -129,7 +146,9 @@ Outbound calls from Megan Bowen have been restricted.
 
 ## Exercise 2: Manage Teams Devices
 
-Estimated time to complete 45 minutes
+### Exercise Duration
+
+  - **Estimated Time to complete**: 45 minutes
 
 In this exercise we will watch a demonstration video to show the end-to-end process for provisioning a Teams IP Phone. We will then create and license an account to use with a Microsoft Teams Room system.
 
@@ -294,7 +313,9 @@ After applying a tag to devices, you can then use the **Search** box in the devi
 
 ## Exercise 3: Monitor and Troubleshoot Teams Phone System
 
-Estimated time to complete: 180 minutes
+### Exercise Duration
+
+  - **Estimated Time to complete**: 180 minutes
 
 In this exercise, you will perform exercises to help troubleshoot specific issues and monitor call use and quality.
 
