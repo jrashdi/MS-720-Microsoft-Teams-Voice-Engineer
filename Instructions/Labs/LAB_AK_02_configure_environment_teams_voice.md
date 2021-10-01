@@ -5,7 +5,7 @@ lab:
     module: 'Module 1: Plan and configure Teams Phone'
 ---
 
-# Lab 01: Configure the lab environment
+# Lab 02: Configure your environment for Teams Voice Usage
 # Student lab answer key
 
 ## Lab scenario
@@ -530,7 +530,7 @@ At Contoso you need to enable the option of convenience recording 1:1 calls, whi
 
 2. In the left navigation menu select **Voice** and **Calling policies**. 
 
-3. Select A**dd** to add a new policy.
+3. Select **Add** to add a new policy.
 
 4. Under add a **name** for your calling policy enter **Busy on busy and call recording**.
 
@@ -618,12 +618,9 @@ There is a persistent nuisance caller calling users in the Bellevue office and w
 
 4. Windows PowerShell will load, enter the following at the command to connect to Microsoft Teams.
 
-    | PowerShell |
-    | - |
-    | Connect-MicrosoftTeams |
-
-
- 
+```powershell
+Connect-MicrosoftTeams
+```
 
 5. It may take around a minute to connect, when prompted enter the username of **Katie Jordan** and select **Next**.
 
@@ -635,12 +632,9 @@ There is a persistent nuisance caller calling users in the Bellevue office and w
 
  
 
-    | PowerShell |
-    | - |
-    | New-CsInboundBlockedNumberPattern -Name "BlockNusance1" -Enabled $True -Description "Block Fabrikam" -Pattern "^\+?14125551111" |
-
-
- 
+```powershell
+New-CsInboundBlockedNumberPattern -Name "BlockNusance1" -Enabled $True -Description "Block Fabrikam" -Pattern "^\+?14125551111"
+```
 
 9. Close the PowerShell window at the end of the task with the **X** in the upper right-side corner.
 

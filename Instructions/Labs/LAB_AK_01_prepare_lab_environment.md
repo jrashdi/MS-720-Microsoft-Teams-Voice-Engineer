@@ -310,10 +310,9 @@ In this task you will install the latest Teams PowerShell module on your lab cli
 
 1. When Windows PowerShell window has opened, enter the following cmdlet to download the Microsoft Teams PowerShell module from the PSGallery and Install it:
 
-    | PowerShell |
-    | - |
-    | Install-Module -Name MicrosoftTeams -Repository PSGallery -Force |
-
+```powershell
+Install-Module -Name MicrosoftTeams -Repository PSGallery -Force
+```
 
  
 
@@ -321,19 +320,17 @@ In this task you will install the latest Teams PowerShell module on your lab cli
 
 1. Enter the following cmdlet to import the newly installed Microsoft Teams PowerShell module:
 
-    | PowerShell |
-    | - |
-    | Import-Module -Name MicrosoftTeams |
-
+```powershell
+Import-Module -Name MicrosoftTeams
+```
 
  
 
 1. After importing the module, you are back on the command prompt again. Enter the following cmdlet to get the module version and available commands:
 
-    | PowerShell |
-    | - |
-    | Get-Module -Name MicrosoftTeams |
-
+```powershell
+Get-Module -Name MicrosoftTeams
+```
 
  
 
@@ -341,10 +338,9 @@ In this task you will install the latest Teams PowerShell module on your lab cli
 
 1. Now login to Microsoft Teams via PowerShell to confirm you can connect. At the command prompt type the following cmdlet:
 
-    | PowerShell |
-    | - |
-    | Connect-MicrosoftTeams |
-
+```powershell
+Connect-MicrosoftTeams
+```
 
  
 
@@ -354,10 +350,9 @@ In this task you will install the latest Teams PowerShell module on your lab cli
 
 1. To check you are signed in correctly, you will be able to retrieve objects from your tenant. To get a list of users, run the following command:
 
-    | PowerShell |
-    | - |
-    | Get-CSOnlineUser |   |
-
+```powershell
+Get-CSOnlineUser
+```
 
  
 
@@ -365,10 +360,9 @@ In this task you will install the latest Teams PowerShell module on your lab cli
 
 1. Disconnect your session by running the following command at the command prompt.
 
-    | PowerShell |
-    | - |
-    | Disconnect-MicrosoftTeams |
-
+```powershell
+Disconnect-MicrosoftTeams
+```
 
  
 
