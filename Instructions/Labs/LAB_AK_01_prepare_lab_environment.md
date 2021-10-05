@@ -16,7 +16,7 @@ You have just started the pilot project; therefore, in this first lab you will s
 
 ## Lab Duration
 
-  - **Estimated Time to complete**: 120 minutes
+  - **Estimated Time to complete**: 65 minutes
 
 ## Instructions
 
@@ -24,7 +24,7 @@ You have just started the pilot project; therefore, in this first lab you will s
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 45 minutes
+  - **Estimated Time to complete**: 25 minutes
 
 In this exercise, you will run scripts designed to provision user accounts, groups, teams, and other resources used by the labs in this course. This script will also add your lab's custom domain to Office 365. If you have already added your lab's custom domain, the script will verify that it exists. The script will also add your lab's public DNS records to RRAS01, create a certificate request, and create the configuration file for the AudioCodes Mediant virtual edition SBC used in direct routing lab.
 
@@ -150,7 +150,7 @@ You have successfully requested the certificate from DigiCert and will download 
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 30 minutes
+  - **Estimated Time to complete**: 15 minutes
 
 In this exercise, you will assign the required admin permissions to continue with the other labs and exercises in this course.
 
@@ -230,7 +230,7 @@ You have successfully added the custom domain to Megan Bowen.
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 30 minutes
+  - **Estimated Time to complete**: 15 minutes
 
 In this exercise, you will review the overall number of licenses and the number of active users who have been assigned a license.
 
@@ -310,7 +310,7 @@ You have successfully assigned the license to Isaiah Langer, activated additiona
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 15 minutes
+  - **Estimated Time to complete**: 10 minutes
 
 Several configuration steps of Microsoft Teams in this lab can also be done or must be done through the Microsoft Teams PowerShell module. In this exercise, you will install the Microsoft Teams PowerShell module and validate the correct version number for being ready for Teams Administration tasks during your lab.
 
