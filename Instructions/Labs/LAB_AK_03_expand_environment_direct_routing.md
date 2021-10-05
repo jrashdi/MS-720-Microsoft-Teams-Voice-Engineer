@@ -14,7 +14,7 @@ As part of the expanding business the organization has an existing SIP trunk int
 
 ## Lab Setup
 
-  - **Estimated Time**: 255 minutes
+  - **Estimated Time to complete**: 180 minutes
 
 ## Instructions
 
@@ -22,7 +22,7 @@ As part of the expanding business the organization has an existing SIP trunk int
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 90 minutes
+  - **Estimated Time to complete**: 60 minutes
 
 In this exercise, you will configure the session boarder controller, install the services needed to ensure the custom domain and SBC work as expected.
 
@@ -205,7 +205,7 @@ You have successfully configured the AudioCodes SBC to receive requests from the
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 120 minutes
+  - **Estimated Time to complete**: 90 minutes
 
 In this exercise, you will create a direct route routing policy, PSTN Usage policy, and voice route to enable Megan Bowen to perform voice calls over the SBC. Megan resides in a location where the telephone number assigned to her has a long-standing contract and requires her to continue to use the telephone service provider telephone number rather than moving to a calling plan from Microsoft. Long term the plan is to move the telephone number over to a calling plan, however, currently this is cost prohibitive. 
 
@@ -395,7 +395,7 @@ You have successfully implemented the Location based routing which will route yo
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 45 minutes
+  - **Estimated Time to complete**: 30 minutes
 
 In this exercise, you will verify that you can receive a phone call from a softphone to Microsoft Teams via the SBC.
 

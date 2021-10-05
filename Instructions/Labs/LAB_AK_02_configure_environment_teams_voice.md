@@ -38,7 +38,7 @@ Finally we will configure Call Queues and Auto Attendants for inbound calls to C
 
 ## Lab Setup
 
-  - **Estimated Time**: 225 minutes
+  - **Estimated Time to complete**: 155 minutes
 
 ## Instructions
 
@@ -46,7 +46,7 @@ Finally we will configure Call Queues and Auto Attendants for inbound calls to C
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 30 minutes
+  - **Estimated Time to complete**: 20 minutes
 
 In this exercise, you will determine if your organizations network has enough bandwidth to run Microsoft Teams successfully using Network Planner.
 
@@ -172,7 +172,7 @@ You have successfully generated a Network Planner Report. We can see from the re
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 30 minutes
+  - **Estimated Time to complete**: 20 minutes
 
 In this exercise, you will install and run the Teams Network Assessment Tool to check the connectivity and performance from a client machine. This is an important task to understand if any network issues could probably degrade the user experience for Teams in your company and to develop strategies for optimizing your network.
 
@@ -298,7 +298,7 @@ At the end of this task, you have successfully reviewed the results of the Netwo
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 30 minutes
+  - **Estimated Time to complete**: 20 minutes
 
 Network sites are used for Dynamic emergency calling. Before configuring dynamic emergency calling we must map the relevant Network Regions, Network sites, network subnets and Trusted IP addresses. In this exercise we will configure a network region and sites
 
@@ -490,7 +490,7 @@ You have successfully setup notifications for Alex Wilber whenever emergency cal
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 30 minutes
+  - **Estimated Time to complete**: 20 minutes
 
 In this exercise, you will configure some key voice setting and policies required for the Contoso users to utilize voice services in context with the company policies.
 
@@ -660,7 +660,7 @@ You have successfully blocked all inbound calls from 1 (412) 555-1111 via PowerS
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 30 minutes
+  - **Estimated Time to complete**: 20 minutes
 
 In this exercise, you will setup a user for Teams Phone with a Microsoft Calling plan. 
 
@@ -778,7 +778,7 @@ Now we confirmed that Alex can make a PSTN call in Teams
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 15 minutes
+  - **Estimated Time to complete**: 10 minutes
 
 In this exercise, you will configure Microsoft PSTN audio conferencing to meet the organizations requirements.
 
@@ -862,7 +862,7 @@ You have successfully setup a new dedicated conference bridge number.
 
 ### Exercise Duration
 
-  - **Estimated Time to complete**: 60 minutes
+  - **Estimated Time to complete**: 45 minutes
 
 In this exercise, you will gain an understanding of how to configure Call Queues and Auto Attendants. Auto attendant being configured today is for the Sales Team. The sales team take sales queries and then apply them to different parts of the business. On this occasion Alex Wilber is going to be part of the call queue and later in the module we will see how to then assign it to a Team.
 
