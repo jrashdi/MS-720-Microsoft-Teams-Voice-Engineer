@@ -6,7 +6,7 @@ lab:
     module: 'Module 1: Plan and configure Teams Phone'
 ---
 
-# Lab 04: Manage your Teams Voice Environment
+# Lab 04: Manage your Teams Phone environment
 # Student lab answer key
 
 ## Lab Scenario
@@ -19,7 +19,7 @@ Contoso need to make changes to existing users who are enabled for Teams Voice a
 
 ## Instructions
 
-## Exercise 1: Manage Voice Users
+## Exercise 1: Manage voice users
 
 ### Exercise Duration
 
@@ -144,7 +144,7 @@ In this task you will assign a new Dial out policy to Megan Bowen, to restrict h
 
 Outbound calls from Megan Bowen have been restricted.
 
-## Exercise 2: Manage Teams Devices
+## Exercise 2: Manage Teams devices
 
 ### Exercise Duration
 
@@ -311,7 +311,7 @@ As devices are provisioned or joined, they will be displayed in the **Devices** 
 
 After applying a tag to devices, you can then use the **Search** box in the device list to choose **Select what you want to search by**, and then choosing **Tags**. Enter the tag you’ve assigned to devices, and these devices will be displayed in the search results.
 
-## Exercise 3: Monitor and Troubleshoot Teams Phone System
+## Exercise 3: Monitor and troubleshoot Teams Phone
 
 ### Exercise Duration
 

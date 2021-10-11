@@ -5,7 +5,7 @@ lab:
     module: 'Module 01: Plan and configure Teams Phone'
 ---
 
-# Lab 02: Configure your environment for Teams Voice Usage
+# Lab 02: Configure your environment for Teams Phone
 # Student lab answer key
 
 ## Lab scenario
@@ -42,7 +42,7 @@ Finally we will configure Call Queues and Auto Attendants for inbound calls to C
 
 ## Instructions
 
-## Exercise 1: Evaluate your network requirements with the Network Planner
+## Exercise 1: Evaluate your network with the Network Planner
 
 ### Exercise Duration
 
@@ -294,7 +294,7 @@ Note, due to performing the test on a lab VM, you may see unusual or high result
 
 At the end of this task, you have successfully reviewed the results of the Network Quality Check.
 
-## Exercise 3: Configure a basic network topology for Dynamic Emergency Calling 
+## Exercise 3: Configure a basic network topology for dynamic emergency calling 
 
 ### Exercise Duration
 
@@ -486,7 +486,7 @@ In this task you will configure an emergency calling policy. Emergency calling p
 
 You have successfully setup notifications for Alex Wilber whenever emergency calls are made.
 
-## Exercise 4: Configure Voice Policies
+## Exercise 4: Configure voice policies
 
 ### Exercise Duration
 
@@ -774,7 +774,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 Now we confirmed that Alex can make a PSTN call in Teams
 
-## Exercise 6: Configure Audio Conferencing Settings
+## Exercise 6: Configure audio conferencing settings
 
 ### Exercise Duration
 
@@ -858,7 +858,7 @@ You have successfully ordered a new dedicated conference toll phone number throu
 
 You have successfully setup a new dedicated conference bridge number.
 
-## Exercise 7: Configure Call Queues and Auto Attendants
+## Exercise 7: Configure call queues and auto attendants
 
 ### Exercise Duration
 

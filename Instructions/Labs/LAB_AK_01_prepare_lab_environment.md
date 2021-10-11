@@ -146,7 +146,7 @@ In the following task you will request your public certificate for the SBC (Sess
 
 You have successfully requested the certificate from DigiCert and will download it later.
 
-## Exercise 2: Assign Permissions
+## Exercise 2: Assign permissions
 
 ### Exercise Duration
 
@@ -306,7 +306,7 @@ As an admin, you can assign the calling plan license that gives users the right 
 
 You have successfully assigned the license to Isaiah Langer, activated additional features for this account and reset his password. Remember or write down the password. You will continue with additional tasks for assigning phone numbers in a later exercise. 
 
-## Exercise 4: Setup PowerShell for Microsoft Teams Administration
+## Exercise 4: Setup PowerShell for Microsoft Teams administration
 
 ### Exercise Duration
 

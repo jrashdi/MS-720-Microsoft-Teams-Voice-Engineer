@@ -5,7 +5,7 @@ lab:
     module: 'Module 1: Plan and configure Teams Phone'
 ---
 
-# Lab 03: Expand your Teams Voice Environment to use Direct Routing
+# Lab 03: Expand your Teams Phone Environment to use Direct Routing
 # Student lab answer key
 
 ## Lab scenario
