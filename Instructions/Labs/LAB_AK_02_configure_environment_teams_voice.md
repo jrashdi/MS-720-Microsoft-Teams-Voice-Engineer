@@ -224,7 +224,7 @@ The Teams Network Assessment Tool is run from the command line. We will now run 
 
 6. Enter **NetworkAssessmentTool.exe** and press enter to run that program.
 
-7. You will get a **Windows Defender Firewall Prompt;** Ensure Public networks is ticked and select **allow access.**
+7. You will get a **Windows Defender Firewall Prompt;** Ensure Public networks is ticked and select **allow access**.
 
 8. The test will complete, and you will see Service connectivity result has been written to: and a file path, and be put back at the command prompt.
 
@@ -250,7 +250,7 @@ The network quality check (performance test) is run with the NetworkAssessmentTo
 
 1. You are still signed in to CLIENT01 as “Lab User” with the command prompt running.
 
-2. enter **cd** **C****:\NetworkTest** and press enter, this changes our directory to the NetworkTest Directory.
+2. Enter **cd C:\NetworkTest** and press enter, this changes our directory to the NetworkTest Directory.
 
 3. Enter **NetworkAssessmentTool.exe /qualitycheck** and press enter to run that program.
 
@@ -258,7 +258,7 @@ The network quality check (performance test) is run with the NetworkAssessmentTo
 
 5. The test will run for 300 seconds with tests every 5 seconds, we will finish the test early, after 10 or more tests have been completed, press **Ctrl+C** to stop the test.
 
-6. When the test is complete, you will see the output **Call Quality Check Has Finished Call Quality Check result has been written to:** **C:\Users\LabUser\AppData\Local\Microsoft Teams Network Assessment Tool\****&lt;Number&gt;quality_check_results.csv**
+6. When the test is complete, you will see the output **Call Quality Check Has Finished Call Quality Check result has been written to: C:\Users\LabUser\AppData\Local\Microsoft Teams Network Assessment Tool\\<Number\>quality_check_results.csv**
 
 ### Task 5 - Interpret Results of the Network Quality Check
 
@@ -274,7 +274,11 @@ Review Packet Loss, Latency and Jitter by following these steps:
 
 1. You are still signed in to CLIENT01 as “Lab User” and at the command prompt.
 
-2. Enter **cd $HOME”\AppData\Local\Microsoft Teams Network Assessment Tool\”**.
+2. Enter the following into the command prompt:
+
+    ```console
+    cd $HOME”\AppData\Local\Microsoft Teams Network Assessment Tool\”
+    ```
 
 3. Press tab to tab through files in that directory, when you see the file <number>_quality_check_results.csv press **enter** to open the file. 
 

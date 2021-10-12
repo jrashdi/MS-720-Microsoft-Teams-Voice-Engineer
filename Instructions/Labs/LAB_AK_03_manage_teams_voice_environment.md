@@ -49,33 +49,6 @@ In this task you will sign into the Microsoft Teams Admin Center and make change
 
 The changes are now applied, and a banner will show for calls directed to Isaiah on Katie’s Teams client, allowing them to answer in the event that Isaiah is not able to.
 
-### Task 2 - Enable user for Teams Direct Routing
-
-In this task, an existing user who isn’t enabled for voice services must be enabled for Direct Routing. We’ll ensure the necessary licenses are assigned, then enable the user for Direct Routing.
-
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
-
-2. Select Start, type PowerShell and open a non-Administrative **Windows PowerShell** window.
-
-3. Use the following cmdlet to import the module and connect **to Microsoft Teams**:
-
-    ```powershell
-    Import-Module MicrosoftTeams  
-    ‎Connect-MicrosoftTeams
-    ```
-
-4. When prompted for credentials, enter the credentials of **Katie Jordan.**
-
-5. Type the following command to enable Alex Wilber for **Direct Routing**:
-
-    ```powershell
-    Set-CsUser -Identity AlexW@<tenant>.onmicrosoft.com -EnterpriseVoiceEnabled $true -HostedVoiceMail $true -OnPremLineURI tel:+14255551122
-    ```
-
-6. Close the PowerShell Window at the end of the task.
-
-Alex Wilber is now configured to use Direct Routing.
-
 ### Task 3 - Configure call delegation
 
 In this task you will configure Alex Wilber so that Katie Jordan is a delegate of Alex Wilber and is allowed to make calls on their behalf, but not receive calls.
@@ -246,7 +219,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 18. Enter **1** to create the account in AD, Exchange and Skype, and then press Enter.
 
-19.  Enter **2** to create the account in the cloud, then press Enter.
+19. Enter **2** to create the account in the cloud, then press Enter.
 
 20. Enter **2** when asked if your users are synced to Office 365, then press Enter.
 
@@ -266,7 +239,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 27. The script will state that the mailbox has been created. An opportunity to automatically configure the calendar processing defaults, so that Automatic Calendar Processing is enabled will be presented. Enter **1** for Yes, then press Enter.
 
-28. When prompted to provision Skype, enter **2** for in the cloud, then press **Enter**.#
+28. When prompted to provision Skype, enter **2** for in the cloud, then press **Enter**.
 
 29. Enter **2** when asked to confirm if the Skype for Business Online admin account is different from the Global Administrator account, then press Enter.
 
@@ -280,7 +253,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 34. Close the PowerShell Window at the end of the task.
 
-Upon completion of the script a summary of actions will be stated, including a statement that the script has **Successfully configured a room mailbox for the account**. The account can now be signed-in to a Microsoft Teams Room system using the password provided in step **21.**
+Upon completion of the script a summary of actions will be stated, including a statement that the script has **Successfully configured a room mailbox for the account**. The account can now be signed-in to a Microsoft Teams Room system using the password provided in step **21**.
 
 ### Task 3 - Prepare to manage devices by creating tags in the Teams Admin Center
 
