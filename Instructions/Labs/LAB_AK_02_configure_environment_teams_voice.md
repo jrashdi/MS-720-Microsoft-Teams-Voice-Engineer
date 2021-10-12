@@ -5,7 +5,7 @@ lab:
     module: 'Module 01: Plan and configure Teams Phone'
 ---
 
-# Lab 02: Configure your environment for Teams Voice Usage
+# Lab 02: Configure your environment for Teams Phone
 # Student lab answer key
 
 ## Lab scenario
@@ -42,7 +42,7 @@ Finally we will configure Call Queues and Auto Attendants for inbound calls to C
 
 ## Instructions
 
-## Exercise 1: Evaluate your network requirements with the Network Planner
+## Exercise 1: Evaluate your network with the Network Planner
 
 ### Exercise Duration
 
@@ -224,7 +224,7 @@ The Teams Network Assessment Tool is run from the command line. We will now run 
 
 6. Enter **NetworkAssessmentTool.exe** and press enter to run that program.
 
-7. You will get a **Windows Defender Firewall Prompt;** Ensure Public networks is ticked and select **allow access.**
+7. You will get a **Windows Defender Firewall Prompt;** Ensure Public networks is ticked and select **allow access**.
 
 8. The test will complete, and you will see Service connectivity result has been written to: and a file path, and be put back at the command prompt.
 
@@ -250,7 +250,7 @@ The network quality check (performance test) is run with the NetworkAssessmentTo
 
 1. You are still signed in to CLIENT01 as “Lab User” with the command prompt running.
 
-2. enter **cd** **C****:\NetworkTest** and press enter, this changes our directory to the NetworkTest Directory.
+2. Enter **cd C:\NetworkTest** and press enter, this changes our directory to the NetworkTest Directory.
 
 3. Enter **NetworkAssessmentTool.exe /qualitycheck** and press enter to run that program.
 
@@ -258,7 +258,7 @@ The network quality check (performance test) is run with the NetworkAssessmentTo
 
 5. The test will run for 300 seconds with tests every 5 seconds, we will finish the test early, after 10 or more tests have been completed, press **Ctrl+C** to stop the test.
 
-6. When the test is complete, you will see the output **Call Quality Check Has Finished Call Quality Check result has been written to:** **C:\Users\LabUser\AppData\Local\Microsoft Teams Network Assessment Tool\****&lt;Number&gt;quality_check_results.csv**
+6. When the test is complete, you will see the output **Call Quality Check Has Finished Call Quality Check result has been written to: C:\Users\LabUser\AppData\Local\Microsoft Teams Network Assessment Tool\\<Number\>quality_check_results.csv**
 
 ### Task 5 - Interpret Results of the Network Quality Check
 
@@ -274,7 +274,11 @@ Review Packet Loss, Latency and Jitter by following these steps:
 
 1. You are still signed in to CLIENT01 as “Lab User” and at the command prompt.
 
-2. Enter **cd $HOME”\AppData\Local\Microsoft Teams Network Assessment Tool\”**.
+2. Enter the following into the command prompt:
+
+    ```console
+    cd $HOME”\AppData\Local\Microsoft Teams Network Assessment Tool\”
+    ```
 
 3. Press tab to tab through files in that directory, when you see the file <number>_quality_check_results.csv press **enter** to open the file. 
 
@@ -294,7 +298,7 @@ Note, due to performing the test on a lab VM, you may see unusual or high result
 
 At the end of this task, you have successfully reviewed the results of the Network Quality Check.
 
-## Exercise 3: Configure a basic network topology for Dynamic Emergency Calling 
+## Exercise 3: Configure a basic network topology for dynamic emergency calling 
 
 ### Exercise Duration
 
@@ -486,7 +490,7 @@ In this task you will configure an emergency calling policy. Emergency calling p
 
 You have successfully setup notifications for Alex Wilber whenever emergency calls are made.
 
-## Exercise 4: Configure Voice Policies
+## Exercise 4: Configure voice policies
 
 ### Exercise Duration
 
@@ -634,9 +638,9 @@ There is a persistent nuisance caller calling users in the Bellevue office and w
 
 4. Windows PowerShell will load, enter the following at the command to connect to Microsoft Teams.
 
-```powershell
-Connect-MicrosoftTeams
-```
+    ```powershell
+    Connect-MicrosoftTeams
+    ```
 
 5. It may take around a minute to connect, when prompted enter the username of **Katie Jordan** and select **Next**.
 
@@ -646,11 +650,9 @@ Connect-MicrosoftTeams
 
 8. Run the following to block incoming calls.
 
- 
-
-```powershell
-New-CsInboundBlockedNumberPattern -Name "BlockNusance1" -Enabled $True -Description "Block Fabrikam" -Pattern "^\+?14125551111"
-```
+    ```powershell
+    New-CsInboundBlockedNumberPattern -Name "BlockNusance1" -Enabled $True -Description "Block Fabrikam" -Pattern "^\+?14125551111"
+    ```
 
 9. Close the PowerShell window at the end of the task with the **X** in the upper right-side corner.
 
@@ -774,7 +776,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 Now we confirmed that Alex can make a PSTN call in Teams
 
-## Exercise 6: Configure Audio Conferencing Settings
+## Exercise 6: Configure audio conferencing settings
 
 ### Exercise Duration
 
@@ -858,7 +860,7 @@ You have successfully ordered a new dedicated conference toll phone number throu
 
 You have successfully setup a new dedicated conference bridge number.
 
-## Exercise 7: Configure Call Queues and Auto Attendants
+## Exercise 7: Configure call queues and auto attendants
 
 ### Exercise Duration
 
