@@ -26,7 +26,7 @@ You have just started the pilot project; therefore, in this first lab you will s
 
   - **Estimated Time to complete**: 25 minutes
 
-In this exercise, you will run scripts designed to provision user accounts, groups, teams, and other resources used by the labs in this course. This script will also add your lab's custom domain to Office 365. If you have already added your lab's custom domain, the script will verify that it exists. The script will also add your lab's public DNS records to RRAS01, create a certificate request, and create the configuration file for the AudioCodes Mediant virtual edition SBC used in direct routing lab.
+In this exercise, you will run scripts designed to provision user accounts, groups, teams, and other resources used by the labs in this course. This script will also add your lab's custom domain to Office 365. If you have already added your lab's custom domain, the script will verify that it exists. 
 
 ### Task 1 - Identify your lab's public IP address
 
@@ -114,37 +114,6 @@ If the reported public IP address is not the same as **&lt;PublicIP&gt;**, verif
 As soon as the public certificate request job is complete, you may proceed to the next task and request your public certificate. After requesting the public certificate, wait for the script to finish. If the script takes longer than 10 minutes to complete, select **Cancel** and run the script again.
 
 As soon as the script finishes successfully, you have successfully configured your lab environment with the provided scripts.
-
-### Task 4 - Request your public certificate from DigiCert
-
-In the following task you will request your public certificate for the SBC (Session Border Controller) so you can use it later in the labs. This is used to authenticate connections to multiple tenants and networks served from a single SBC.
-
-1. You are still signed in to CLIENT01 as “Lab User” with the password provided to you.
-
-1. Open File Explorer and then browse to **C:\LabFiles**.
-
-1. Select **CertReq-Lab&lt;customlabnumber&gt;.O365Ready.com.txt**. This certificate request was created by the configuration script.
-
-1. In Notepad, select all the text in the file and then press Ctrl+C or right-click or tap and hold and select **Copy** to copy the contents to the clipboard.
-
-1. Open Microsoft Edge, open a new tab and then browse to **https://www.digicert.com/friends/exchange.php**.
-
-1. On the Microsoft Event CSR Submission page, in the **Paste CSR** box, right-click or tap and hold inside the box, and then select **Paste**.
-
-1. Verify that you have pasted the contents of your certificate request.
-
-1. Under **Certificate Details**, review the common name and subject alternative names (SAN) information that will be assigned to the certificate.  
-‎All SAN entries may not be used for this lab.
-
-1. Under Certificate Delivery, in the **Email Address** and **Email Address (again)** boxes, enter the MOD Administrators account name, which is also used as the users email address.
-
-1. Select the **I agree to the Terms of Service above** check box.
-
-1. Select **Submit**.
-
-1. Close File Explorer.
-
-You have successfully requested the certificate from DigiCert and will download it later.
 
 ## Exercise 2: Assign permissions
 
@@ -326,39 +295,31 @@ In this task you will install the latest Teams PowerShell module on your lab cli
 
 1. When Windows PowerShell window has opened, enter the following cmdlet to download the Microsoft Teams PowerShell module from the PSGallery and Install it:
 
-```powershell
-Install-Module -Name MicrosoftTeams -Repository PSGallery -Force
-```
-
- 
+    ```powershell
+    Install-Module -Name MicrosoftTeams -Repository PSGallery -Force
+    ```
 
 1. Once the module is installed you will see the command prompt again.
 
 1. Enter the following cmdlet to import the newly installed Microsoft Teams PowerShell module:
 
-```powershell
-Import-Module -Name MicrosoftTeams
-```
-
- 
+    ```powershell
+    Import-Module -Name MicrosoftTeams
+    ```
 
 1. After importing the module, you are back on the command prompt again. Enter the following cmdlet to get the module version and available commands:
 
-```powershell
-Get-Module -Name MicrosoftTeams
-```
-
- 
+    ```powershell
+    Get-Module -Name MicrosoftTeams
+    ```
 
 1. You should see a version number of 2.5.1 or above and a multi value field with different cmdlets available.
 
 1. Now login to Microsoft Teams via PowerShell to confirm you can connect. At the command prompt type the following cmdlet:
 
-```powershell
-Connect-MicrosoftTeams
-```
-
- 
+    ```powershell
+    Connect-MicrosoftTeams
+    ```
 
 1. When the **Sign in to your account** window opens, enter the credentials of Katie Jordan to sign in with your Teams Administrator user.
 
@@ -366,21 +327,17 @@ Connect-MicrosoftTeams
 
 1. To check you are signed in correctly, you will be able to retrieve objects from your tenant. To get a list of users, run the following command:
 
-```powershell
-Get-CSOnlineUser
-```
-
- 
+    ```powershell
+    Get-CSOnlineUser
+    ```
 
 1. You should see some users and their attributes scroll across the screen. If you see this, you have signed in successfully and can interact with Teams in your tenant.
 
 1. Disconnect your session by running the following command at the command prompt.
 
-```powershell
-Disconnect-MicrosoftTeams
-```
-
- 
+    ```powershell
+    Disconnect-MicrosoftTeams
+    ```
 
 1. You can close the Windows PowerShell window by selecting the **X** in the top right.
 

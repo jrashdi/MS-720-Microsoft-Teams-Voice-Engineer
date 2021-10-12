@@ -634,9 +634,9 @@ There is a persistent nuisance caller calling users in the Bellevue office and w
 
 4. Windows PowerShell will load, enter the following at the command to connect to Microsoft Teams.
 
-```powershell
-Connect-MicrosoftTeams
-```
+    ```powershell
+    Connect-MicrosoftTeams
+    ```
 
 5. It may take around a minute to connect, when prompted enter the username of **Katie Jordan** and select **Next**.
 
@@ -646,11 +646,9 @@ Connect-MicrosoftTeams
 
 8. Run the following to block incoming calls.
 
- 
-
-```powershell
-New-CsInboundBlockedNumberPattern -Name "BlockNusance1" -Enabled $True -Description "Block Fabrikam" -Pattern "^\+?14125551111"
-```
+    ```powershell
+    New-CsInboundBlockedNumberPattern -Name "BlockNusance1" -Enabled $True -Description "Block Fabrikam" -Pattern "^\+?14125551111"
+    ```
 
 9. Close the PowerShell window at the end of the task with the **X** in the upper right-side corner.
 

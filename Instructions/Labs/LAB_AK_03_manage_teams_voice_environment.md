@@ -242,7 +242,6 @@ In this task, we will create and license a Microsoft Teams Room device account u
     .\SkypeRoomProvisioningScript.ps1
     ```
 
-
 17. From the script menu choice, enter **2** for a Skype Room Systems v2 device, and then press Enter.
 
 18. Enter **1** to create the account in AD, Exchange and Skype, and then press Enter.
@@ -257,7 +256,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 23. Enter the following display name for the account and then press Enter.
 
-**Bellevue Board Room**
+    - **Bellevue Board Room**
 
 24. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM SKU**
 
@@ -419,29 +418,29 @@ We will now confirm the rule works with a real user
 
 Now we have proven the rule works, we will break the rule and confirm the rule.
 
-4. You are still signed into CLIENT01 as “Lab User” from the previous task.
+1. You are still signed into CLIENT01 as “Lab User” from the previous task.
 
-5. Sign out of Microsoft Teams Desktop client, select the **MB** account icon and **Sign out.**
+2. Sign out of Microsoft Teams Desktop client, select the **MB** account icon and **Sign out.**
 
-6. Open Microsoft Edge from the task bar and browse to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
+3. Open Microsoft Edge from the task bar and browse to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
-7. Select **Voice** and **Dial Plan**. 
+4. Select **Voice** and **Dial Plan**. 
 
-13. Select the **Global (org wide default)** dial plan.
+5. Select the **Global (org wide default)** dial plan.
 
-14. Select the **Converts 7786 to US support number** rule to edit it.
+6. Select the **Converts 7786 to US support number** rule to edit it.
 
-15. Note it will be converted to an advanced regular expression now.
+7. Note it will be converted to an advanced regular expression now.
 
-16. In the field the number dialed matches this regular expression, it will read ^(7\d{3})$
+8. In the field the number dialed matches this regular expression, it will read ^(7\d{3})$
 
-17. Replace the 7 with a 6 to now read, ^(6\d{3})$ 
+9. Replace the 7 with a 6 to now read, ^(6\d{3})$ 
 
-18. Test the rule by entering 7786 and pressing Test. The output should be the translated number isn't an E.164 phone number.
+10. Test the rule by entering 7786 and pressing Test. The output should be the translated number isn't an E.164 phone number.
 
-19. Select **Save**.
+11. Select **Save**.
 
-20. At the dial plan page, again select **Save** to update the global dial plan.
+12. At the dial plan page, again select **Save** to update the global dial plan.
 
 Now we have broken our dial plan, we will sign into Teams again and prove it is no longer working
 
@@ -586,157 +585,7 @@ If they front door locations do not have green ticks and they are not using any 
 
 You have successfully tested network connectivity and performance from a user’s machine using the Microsoft 365 network test tool.
 
-### Task 5 - Investigate and diagnose calling issues with SBC SIP logs
-
-When investigating calling issues with Direct Routing you may need to review call logs, or Session Initiation Protocol (SIP) logs, SIP is the protocol used between Microsoft Teams Phone service, your Session Border Controller and your PSTN operator. 
-
-In this lab you will in install a Syslog server to collect logs from the AudioCodes SBC, configure the AudioCodes SBC to send logs to the Syslog server, and place a call and review the logs.
-
- First, you need to install AudioCodes syslog Viewer in RRAS01:
-
-1. Switch to RRAS01 and sign in with the credentials provided in the lab.
-
-2. Open Microsoft Edge and browse to [http://redirect.audiocodes.com/install/index.html](http://redirect.audiocodes.com/install/index.html)
-
-3. Under Syslog viewer for Windows, Press the Download Button.
-
-4. When the file is downloaded, select **Open**.
-
-5. On Welcome to the Syslog viewer Setup Wizard, select Next.
-
-6. On Select Destination Location, select Next.
-
-7. On Select Start Menu folder, select Next.
-
-8. The app will install, when complete leave Run application ticked and click finish.
-
-You have successfully installed AudioCodes Syslog viewer which is also a listening syslog server. You can validate it is listening on UDP port 514 by running the following
-
-1. Select start, type cmd, see Command prompt, right select and run as administrator.
-
-2. At the command prompt use netstat to find the processes listening on port 514:
-
-    ```console
-    netstat -na | find "514" |
-    ```
-
-3. At the top of the output you will see This is the process listening on UDP 514:
-    
-    ```console
-    UDP 0.0.0.0:514 *.* |
-    ```
-
-4. Leave the Syslog viewer running.
-
-5. To configure the AudioCodes SBC to point to the Syslog server, we need to know the server public IP address, still in the command line, type the following.
-
-    ```console
-    Ipconfig |
-    ```
-
-6. In the results, note down the Ethernet adapter External IPv4 Address.
-
-7. Since windows firewall is running on the server Public interface, we need to open 514 UDP on the firewall, by running the following command:
-
-    ```console
-    netsh advfirewall firewall add rule name= "Open Port 514" dir=in action=allow protocol=UDP localport=514 |
-    ```
-
-8. You should get OK returned at the command line.
-
-9. Close the command window.
-
-Now that we have a syslog viewer running and we know what IP it is listening on, we need to direct logs from the SBC to our syslog server
-
-1. Remaining on RRAS01 server
-
-2. Launch Microsoft Edge and navigate to 192.168.0.200 (this is the AudioCodes SBC IP address)
-
-3. Login to your SBC username Admin, Password Admin
-
-4. go to Troubleshoot on the top menu
-
-5. Under Logging select Syslog Settings 
-
-6. Set the following
-
-	- Enable Syslog: enable (the default)
-
-	- Syslog Server IP: Public IP address from the task above
-
-	- Syslog Server Port: 514 (the default)
-
-7. Select Apply
-
-8. Select Admin, Logout on the top right of the interface
-
-9. At the login screen, again login SBC username Admin, Password Admin
-
-10. Go back to Syslog viewer, you should see a logout and login event in the syslog
-
-You have successfully setup your AudioCodes SBC to send Syslogs to the Syslog viewer and can see logs being sent from the SBC to the Syslog viewer.
-
-Now perform a call with Alex Wilber our user who is configured for Direct Routing
-
-First, we will sign in the 3CX softphone
-
-1. You are still signed into CLIENT01 as “Lab User” from the previous task
-
-2. Select **Start** and then enter **3CX Phone** and select it
-
-3. In the softphone, on the top right side of the screen, select **Lab User***.
-
-4. Verify that on the **Account windows, the Hook** is displayed on the screen for the LabUser.
-
-5. Select **OK** to close the Account window.
-
-6. Start the Teams Desktop client by running it from the desktop.
-
-7. You should still be signed in as Alex Wilber.
-
-8. Switch to the 3CX softphone on CLIENT01.
-
-9. In the 3CX softphone **14255551234**
-
-10. The Teams client will ring, answer the Teams client.
-
-11. If your lab machine prompted, you to use your microphone select **allow.**
-
-12. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access.**
-
-13. Note the call connects, leave it connected for 60 seconds.
-
-14. Press the red hang-up button in Teams to disconnect the call to disconnect the call.
-
-Review the logs in Syslog Viewer
-
-1. On RRAS01 bring the Syslog viewer back into focus
-
-2. You should see many lines of logs 
-
-3. Select tools on the top menu then SIP flow diagram, this draws an interactive ladder diagram of the SIP signaling for calls
-
-4. The top-right pane contains list of all sessions found in the current display buffer. For each session some useful summary information is displayed. 
-
-5. The bottom-right pane contains the details of the currently selected message. 
-
-6. The left pane contains the ladder diagram. Click on the message to select it. Note that when you do so, "message details" pane is updated and cursor in the "main window" is re-positioned on a line that corresponds to the selected message (so that you can jump to it and check what happened near the same time).
-
-7. You can now see a complete SIP ladder diagram of your call, click on and review
-
-	- The Invite, which sets up the call
-
-	- The 183 Session Progress
-
-	- The BYE which ends the session.
-
-	- You should not see any 5xx or 6xx SIP codes, which indicate errors
-
-If you are seeing 5xx and 6xx error codes, confirm the number dialed is correct and has been normalized correctly to an E.164 format that the PSTN carrier supports. If that is correct confirm that number is dialable on a different system, to prove the number is in service and works. You could, for example, dial the number from a cell phone. If the number works outside of this system and is formatted correctly, raise a support issue with your PSTN operator.
-
-You have successfully reviewed a Teams Direct Routing call SIP log
-
-### Task 6 - Inspect PSTN Usage Reports
+### Task 5 - Inspect PSTN Usage Reports
 
 The Teams PSTN (Public Switched Telephone Network) usage report in the Microsoft Teams admin center gives you an overview of calling and audio conferencing activity in your organization. 
 
@@ -796,10 +645,9 @@ The report shows:
 
 - **Capability** is the license used for the call.
 
- 
 You have successfully generated and reviewed the PSTN usage report
 
-### Task 7 - Review Calls in Call Analytics
+### Task 6 - Review Calls in Call Analytics
 
 If we want to review the usage and performance of an individuals Teams calling, the first place to look is Call Analytics in the Teams Admin Center. In this task we will review Alex Wilber’s calls in Call Analytics
 
@@ -819,7 +667,7 @@ If we want to review the usage and performance of an individuals Teams calling, 
 
 You can see device, system, connectivity and network information. Note that since we are running tests from a virtual machine information will not be complete, for example device information may not be populated.
 
-8. In the O**verview** tab Select **Network** and review the network metrics.
+8. In the **Overview** tab Select **Network** and review the network metrics.
 
 9. Select the **Advanced** tab to see all key metrics on one page.
 
@@ -827,7 +675,7 @@ You can see device, system, connectivity and network information. Note that sinc
 
 You now know how to access and review call and meeting information in Call Analytics in the Teams Admin Center.
 
-### Task 8 - Review Calls in Call Quality Dashboard
+### Task 7 - Review Calls in Call Quality Dashboard
 
 A Voice Administrator should look at the call and meeting usage and performance across the entire environment. This can be done by reviewing the Microsoft Call Quality Dashboard
 
@@ -835,7 +683,7 @@ In this task you open and review Call Quality Dashboard
 
 1. You are still signed into CLIENT01 as “Lab User” and in the **Microsoft Teams admin center** as **MOD Administrator**.
 
-2. At the bottom of the left menu, select **Call Quality Dashboard.**
+2. At the bottom of the left menu, select **Call Quality Dashboard**.
 
 3. This will cause a new browser tab to open going to [https://cqd.teams.microsoft.com/](https://cqd.teams.microsoft.com/).
 
