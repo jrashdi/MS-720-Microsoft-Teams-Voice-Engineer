@@ -482,13 +482,13 @@ In this task you will configure an emergency calling policy. Emergency calling p
 
 6. Under **Notification mode**, select **Send notification only**: A Teams chat message is sent to the users and groups that you specify.
 
-7. In **Users and groups for emergency calls notifications**, enter Alex and then select Alex Wilber and select **Add.**
+7. In **Users and groups for emergency calls notifications**, enter Isaiah and then select Isaiah Langer and select **Add.**
 
 8. Select **Apply.**
 
 9. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
 
-You have successfully setup notifications for Alex Wilber whenever emergency calls are made.
+You have successfully setup notifications for Isaiah Langer whenever emergency calls are made.
 
 ## Exercise 4: Configure voice policies
 
@@ -894,7 +894,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 11. Set **Language** to **English (United States).**
 
-12. Under **Call answering** select **Choose users and group, Add users,** search for Alex Wilber. and select **Add.**
+12. Under **Call answering** select **Choose users and group, Add users,** search for Isaiah Langer. and select **Add.**
 
 13. Leave the other options as default
 
