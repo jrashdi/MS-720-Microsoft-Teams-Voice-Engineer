@@ -668,7 +668,7 @@ In this exercise, you will setup a user for Teams Phone with a Microsoft Calling
 
 ### Task 1 - Order a phone number
 
-In this task you will order a phone number in the Teams Admin Center to assign to Alex Wilber.
+In this task you will order a phone number in the Teams Admin Center to assign to Isaiah Langer.
 
 1. You are still signed in to CLIENT01 as “Lab User” and in the **Microsoft Teams admin center** as **Katie Jordan**
 
@@ -683,22 +683,24 @@ In this task you will order a phone number in the Teams Admin Center to assign t
 6. Select **United States** as **Country or region.**
 
 7. For Number Type, select User (subscriber).
+						
+8. For Operator, select Microsoft.						
 
-8. The Quantity field will now appear, enter 1.
+9. The Quantity field will now appear, enter 1.
 
-9. For **Search for new numbers** select **Search by area code** and enter **206**.
+10. For **Search for new numbers** select **Search by area code** and enter **206**.
 
-Note: The phoner numbers can be subject to changes, dependent on the lab provider and possibly needs to be adjusted.
+Note: The phone numbers can be subject to changes, dependent on the lab provider and possibly needs to be adjusted.
 
-10. When all fields are complete, select **Next**. Microsoft will now reserve and present some numbers for you. If there are no numbers available for your selected State/City combination, select another State/City and try again.
+11. When all fields are complete, select **Next**. Microsoft will now reserve and present some numbers for you. If there are no numbers available for your selected State/City combination, select another State/City and try again.
 
-11. You should see 1 206 area code number, select **Place Order.**
+12. You should see 1 206 area code number, select **Place Order.** If you chose a different area code the number should reflect that area code.
 
-12. You will see “Thank you, your order has been placed!”, select **Finish.**
+13. You will see “Thank you, your order has been placed!”, select **Finish.**
 
-13. In the voice, under **phone numbers**, you should see your number. Note in some cases this may take 5-10 minutes to appear.
+14. In the voice, under **phone numbers**, you should see your number. Note in some cases this may take 5-10 minutes to appear.
 
-14. Leave the browser window open at the end of the task.
+15. Leave the browser window open at the end of the task.
 
 You have successfully ordered a phone number through the Teams admin center.
 
@@ -902,7 +904,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 15. Leave the Teams Admin Center Open for the next steps
 
-You have successfully created the Sales CQ call queue and added Alex Wilber as an agent
+You have successfully created the Sales CQ call queue and added Isaiah Langer as an agent
 
 Now we will Create an Auto attendant and direct one of the options to send calls to our Sales CQ call queue. This will ready the Microsoft 365 Auto Attendant to become functional. 
 
@@ -918,7 +920,7 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 6. select **Next.**
 
-7. Under **Call flow**, select **Add a greeting message** and enter, “Welcome for calling Contoso, your call is important to us, please be patient while we handle your call”.
+7. Under **Call flow**, select **Add a greeting message** and enter, “Thank you for calling Contoso, your call is important to us, please be patient while we handle your call”.
 
 8. Under **Then route the call**, select **Redirect Call**, then select Redirect to **Voice App,** enter **Sales CQ,** then select **Next**
 
@@ -992,7 +994,7 @@ In this task you will create the relevant holiday configuration. Holidays differ
 
 1. You are still signed in to CLIENT01 as “Lab User” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-1. In the Microsoft Teams admin center, go to **Org-wide settings &gt; Holidays**.
+1. In the Microsoft Teams admin center, go to **Voice &gt; Holidays**.
 
 2. Select **New holiday**.
 
