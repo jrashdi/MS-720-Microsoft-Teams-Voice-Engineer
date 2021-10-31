@@ -123,29 +123,31 @@ Outbound calls from Megan Bowen have been restricted.
 
   - **Estimated Time to complete**: 30 minutes
 
-In this exercise we will watch a demonstration video to show the end-to-end process for provisioning a Teams IP Phone. We will then create and license an account to use with a Microsoft Teams Room system.
+In this exercise we will begin the provisioning process for a Teams Phone. We will then create and license an account to use with a Microsoft Teams Room system.
 
 ### Task 1 - Perform remote provisioning of Teams Phones
 
-In the demonstration video, we gather information required to perform remote provisioning of a Teams IP Phone at Contoso’s Bellevue location.
-
-On the Teams Phone, we then enter provisioning information to ensure it is ready to be signed in by a user and can be managed by our organization. The following steps are performed.
+In this task you will provision a Teams Phone device in the Teams administration center.
 
 1. Open Microsoft Edge from the task bar and browse to the **Microsoft Teams admin center** at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
 2. Sign in as **Katie Jorden**, who has the Teams Administrator role.
 
-3. Select **Devices** and then select **IP Phones**.
+3. Select **Teams devices** and then select **Phones**.
 
-4. Select **Actions in the upper right corner**, then from the drop-down menu, select **Provision Devices.**
+4. Select **Actions** in the upper right corner, then from the drop-down menu, select **Provision Devices.**
 
 5. The **Provision devices** page shows. Under **Waiting on activation** select **Add MAC addresses manually**.
 
-6. In the **Add MAC** addresses dialogue, enter the MAC address and location, Bellevue, for the Teams IP Phone.
+6. In the **Add MAC** addresses dialogue, enter the MAC address of ++ab-cd-12-34-ef-56++ and location, Bellevue, for the Teams IP Phone.
+
+	[!NOTE] In a production environment you would enter the actual MAC address of the device you want to connect.
 
 7. Select **Apply** to save the change.
 
 8. The **Waiting on activation page** will show the Teams IP Phone’s MAC address and location. Select the MAC address from the list, then select **Generate verification code**
+
+[!NOTE] Since there are no physical phones to connect to the lab environment, the lab is complete here. The steps below are strictly informational to demonstrate the remainder of the process. You may now proceed to the next task.
 
 9. On the Teams IP Phone, select **Settings,** then choose **Provision phone**
 
