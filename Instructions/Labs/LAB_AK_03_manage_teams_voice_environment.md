@@ -139,7 +139,7 @@ In this task you will provision a Teams Phone device in the Teams administration
 
 5. The **Provision devices** page shows. Under **Waiting on activation** select **Add MAC addresses manually**.
 
-6. In the **Add MAC** addresses dialogue, enter the MAC address of ++ab-cd-12-34-ef-56++ and location, Bellevue, for the Teams IP Phone.
+6. In the **Add MAC** addresses dialogue, enter the MAC address of "ab-cd-12-34-ef-56" and location, Bellevue, for the Teams IP Phone.
 
 	In a production environment you would enter the actual MAC address of the device you want to connect.
 
@@ -177,7 +177,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 5. Search for **Microsoft Teams Room Standard** from the list of available services and select **Details**.
 
-6. Select **Start free trial,** then on the following page, choose **Try now.**
+6. Select **Start free trial,** then on the following page, choose **Try now.**, then select **Continue** on the order receipt page.
 
 7. Download the SkypeRoomProvisioning.ps1 script from the Microsoft website: [https://go.microsoft.com/fwlink/?linkid=870105](https://go.microsoft.com/fwlink/?linkid=870105)
 
@@ -233,7 +233,9 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
     - **Bellevue Board Room**
 
-24. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM SKU**
+24. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM SKU**. 
+
+25. Choose **2** to proceed without any additional licenses.
 
 25. To provision the Exchange Room mailbox, choose **2** to provision the user in the cloud, then press Enter.
 
