@@ -6,7 +6,7 @@ lab:
     module: 'Module 1: Plan and configure Teams Phone'
 ---
 
-# Lab 04: Manage your Teams Phone environment
+# Lab 03: Manage your Teams Phone environment
 # Student lab answer key
 
 ## Lab Scenario
@@ -49,15 +49,15 @@ In this task you will sign into the Microsoft Teams Admin Center and make change
 
 The changes are now applied, and a banner will show for calls directed to Isaiah on Katie’s Teams client, allowing them to answer in the event that Isaiah is not able to.
 
-### Task 3 - Configure call delegation
+### Task 2 - Configure call delegation
 
-In this task you will configure Alex Wilber so that Katie Jordan is a delegate of Alex Wilber and is allowed to make calls on their behalf, but not receive calls.
+In this task you will configure Isaiah Langer so that Katie Jordan is a delegate of Isaiah Langer and is allowed to make calls on their behalf, but not receive calls.
 
 1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
 
 2. Select **Users** and **Manage users**.
 
-3. Find **Alex Wilber** and select the name to open the user’s properties.
+3. Find **Isaiah langer** and select the name to open the user’s properties.
 
 4. On the user’s properties page, select the **Voice** tab.
 
@@ -71,7 +71,7 @@ In this task you will configure Alex Wilber so that Katie Jordan is a delegate o
 
 The changes are now active.
 
-### Task 4 - Enable audio conferencing
+### Task 3 - Enable audio conferencing
 
 In this task you validate audio conferencing is enabled for Katie Jordan and change the default settings.
 
@@ -95,7 +95,7 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 You have successfully modified the audio-conferencing settings for Katie Jordan. 
 
-### Task 5 - Assign a dial out policy
+### Task 4 - Assign a dial out policy
 
 In this task you will assign a new Dial out policy to Megan Bowen, to restrict her from making outbound calls.
 
