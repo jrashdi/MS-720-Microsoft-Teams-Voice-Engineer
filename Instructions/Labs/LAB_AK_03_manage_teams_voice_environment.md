@@ -187,7 +187,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 10. Change directory to a location suitable for creating a script, and then create a new file named SkypeRoomProvisioningScript.ps1 by entering the following command.
 
-    ```console
+    ```PowerShell
     cd $HOME\Documents
     
     notepad .\SkypeRoomProvisioningScript.ps1
@@ -198,6 +198,22 @@ In this task, we will create and license a Microsoft Teams Room device account u
 12. In the Notepad Window for SkypeRoomProvisioningScript.ps1.txt, copy all text using **CTRL-A** and then **CTRL-C.**
 
 13. In the Notepad Window for SkypeRoomProvisioningScript.ps1, use **CTRL-V** to paste the PowerShell script from the clipboard, and then select **File** then select **Save**.
+
+14. In Notepad, use the Find feature to locate the line with the text "New-CsOnlineSession" 
+
+15. Replace that line and the one following it with the following code:
+
+	```
+	Connect-MicrosoftTeams -Credential $credSkype
+	```
+	
+    The lines of code in that script should look like the example below.
+    
+    	```
+	try
+	{
+	  Connect-MicrosoftTeams -Credential $credSkype
+	}
 
 14. Make sure you have the latest MSOnline PowerShell module installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
 
@@ -233,30 +249,40 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
     - **Bellevue Board Room**
 
-24. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM SKU**. 
+24. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM** SKU. 
 
-25. Choose **2** to proceed without any additional licenses.
+25. Choose **1** to add another license. Select the **ENTERPRISEPREMIUM** SKU.
 
-25. To provision the Exchange Room mailbox, choose **2** to provision the user in the cloud, then press Enter.
+26. Choose **2** to proceed without adding any additional licenses. 
 
-26. Enter **2** when asked to confirm if the Exchange Online admin account is different from the Global Administrator account, then press Enter. The process will take approximately 10 minutes to complete.
+26. To provision the Exchange Room mailbox, choose **2** to provision the user in the cloud, then press Enter.
 
-27. The script will state that the mailbox has been created. An opportunity to automatically configure the calendar processing defaults, so that Automatic Calendar Processing is enabled will be presented. Enter **1** for Yes, then press Enter.
+27. Enter **2** when asked to confirm if the Exchange Online admin account is different from the Global Administrator account, then press Enter. The process will take approximately 10 minutes to complete.
 
-28. When prompted to provision Skype, enter **2** for in the cloud, then press **Enter**.
+28. The script will state that the mailbox has been created. An opportunity to automatically configure the calendar processing defaults, so that Automatic Calendar Processing is enabled will be presented. Enter **1** for Yes, then press Enter.
 
-29. Enter **2** when asked to confirm if the Skype for Business Online admin account is different from the Global Administrator account, then press Enter.
+29. When prompted to provision Skype, enter **2** for in the cloud, then press **Enter**.
 
-30. The account will now be enabled for Microsoft Teams (based upon the tenant being in **Teams Only Mode**) and the script will attempt to set up the account as a meeting room. This may take approximately 5 minutes.
+30. Enter **2** when asked to confirm if the Skype for Business Online admin account is different from the Global Administrator account, then press Enter.
 
-31. When prompted to configure **Enterprise Voice** for the room, choose **1** for Yes, then press Enter.
+31. The account will now be enabled for Microsoft Teams (based upon the tenant being in **Teams Only Mode**) and the script will attempt to set up the account as a meeting room. This may take approximately 5 minutes.
 
-32. Enter the following E.164 number for the room, without a **tel:+** prefix: 14255551123 
+32. When prompted to configure **Enterprise Voice** for the room, choose **1** for Yes, then press Enter.
 
-33. Check the LineURI stated is correct and shows as tel:+14255551123 and then choose **1** to accept, then press Enter.
+33. Enter the following E.164 number for the room, without a **tel:+** prefix: 14255551123 
 
-34. Close the PowerShell Window at the end of the task.
+34. Check the LineURI stated is correct and shows as tel:+14255551123 and then choose **1** to accept, then press Enter.
 
+35. Close the PowerShell Window at the end of the task.
+
+
+If the script fails to create the room, open a new Administrator PowerShell console and run the following commands. Use your **MOD Administrator** credentials to log in, and use the email address of the Bellevue Board Room you created via the script.
+
+	```PowerShell
+	Connect-MicrosoftTeams
+	$mtr = get-csonlineuser -identity "mtr@<your lab domain>"
+	Enable-CsMeetingRoom -Identity $mtr.UserName -SipAddressType EmailAddress -RegistrarPool $mtr.RegistrarPool
+	```
 Upon completion of the script a summary of actions will be stated, including a statement that the script has **Successfully configured a room mailbox for the account**. The account can now be signed-in to a Microsoft Teams Room system using the password provided in step **21**.
 
 ### Task 3 - Prepare to manage devices by creating tags in the Teams Admin Center
@@ -359,11 +385,11 @@ You have successfully added a normalization rule to a dial plan to meet the exte
 
 We will now confirm the rule works with a real user
 
-1. You are still signed into CLIENT01 as “Lab User” from the previous task.
+1. Sign into CLIENT02 as “Isaiah Langer”, required. You may still be signed in from a previous task.
 
 2. From the desktop select and run Microsoft Teams client.
 
-3. You should still be signed in as Megan Bowen on the Teams Desktop client. If not, sign in using the credentials of Megan Bowen.
+3. You should still be signed in as Isaiah Longer on the Teams Desktop client. If not, sign in using the credentials of Isaiah.
 
 4. You will be prompted with **Stay signed into all your apps** select **No, sign in to this app only.**
 
@@ -379,7 +405,7 @@ We will now confirm the rule works with a real user
 
 	- You're ready!, select **Let’s go.**
 
-6. **I**f you are prompted **Get the Teams mobile app**, select the top right **X** to close the prompt.
+6. If you are prompted **Get the Teams mobile app**, select the top right **X** to close the prompt.
 
 7. Select the calls button on the left rail.
 
@@ -396,8 +422,6 @@ We will now confirm the rule works with a real user
 Now we have proven the rule works, we will break the rule and confirm the rule.
 
 1. You are still signed into CLIENT01 as “Lab User” from the previous task.
-
-2. Sign out of Microsoft Teams Desktop client, select the **MB** account icon and **Sign out.**
 
 3. Open Microsoft Edge from the task bar and browse to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
@@ -421,15 +445,15 @@ Now we have proven the rule works, we will break the rule and confirm the rule.
 
 Now we have broken our dial plan, we will sign into Teams again and prove it is no longer working
 
-1. You are still signed into CLIENT01 as “Lab User” from the previous task.
+1. You are still signed into CLIENT02 as “Isaiah” from the previous task.
 
 2. From the desktop select and run Microsoft Teams client.
 
 3. Select Get started.
 
-4. When prompted for sign in, enter Alex Wilber’s username and select **Next.**
+4. When prompted for sign in, enter Isaih Langer’s username and select **Next.**
 
-5. When prompted enter Alex Wilber’s password and select **Next.**
+5. When prompted enter Isaiah Langer’s password and select **Next.**
 
 6. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only.**
 
@@ -463,11 +487,11 @@ You have successfully created a dial plan, proven it works, broken it and seen t
 
 Users can check on the network performance of their calls live during the call. In this task we will test the Team call health feature
 
-1. You are still signed into CLIENT01 as “Lab User” from the previous task
+1. You are still signed into CLIENT02 as “Isaiah Langer” from the previous task
 
 2. From the desktop select and run **Microsoft Teams** client
 
-3. You should still be signed in as **Alex Wilber**.
+3. You should still be signed in as **Isaiah Langer**.
 
 4. Select the calls button on the left rail.
 
