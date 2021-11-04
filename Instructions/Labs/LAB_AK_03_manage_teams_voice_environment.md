@@ -1,7 +1,6 @@
-
 ---
 lab:
-    title: 'Lab: Manage your Teams Voice Environment'
+    title: 'Lab 03: Manage your Teams Voice Environment'
     type: 'Answer Key'
     module: 'Module 1: Plan and configure Teams Phone'
 ---
@@ -63,7 +62,7 @@ In this task you will configure Isaiah Langer so that Katie Jordan is a delegate
 
 5. Scroll down to **Call delegation** and select **Add people**
 
-6. Search for **Katie Jordan**, and select **Add** to include them on the **People list**, then select **Apply.**
+6. Search for **Katie Jordan**, and select **Add** to include them on the **People list**, then select **Apply**.
 
 7. In the list below **Call delegation**, find **Katie Jordan** and Change the **Permission** value from **Make and receive calls** to **Make calls**. Switch the **Allow changing call settings** radio button to **Off**.
 
@@ -81,9 +80,9 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 3. Find **Katie Jordan** and select the name to open the user’s properties.
 
-4. On the user’s properties page, select the **Account** tab and under **Audio Conferencing** select **Edit.**
+4. On the user’s properties page, select the **Account** tab and under **Audio Conferencing** select **Edit**.
 
-5. Check if **Audio Conferencing** is switched to **On.**
+5. Check if **Audio Conferencing** is switched to **On**.
 
 6. Set **Include toll-free numbers in meeting requests from user** to **Off**.
 
@@ -135,7 +134,7 @@ In this task you will provision a Teams Phone device in the Teams administration
 
 3. Select **Teams devices** and then select **Phones**.
 
-4. Select **Actions** in the upper right corner, then from the drop-down menu, select **Provision Devices.**
+4. Select **Actions** in the upper right corner, then from the drop-down menu, select **Provision Devices**.
 
 5. The **Provision devices** page shows. Under **Waiting on activation** select **Add MAC addresses manually**.
 
@@ -147,7 +146,7 @@ In this task you will provision a Teams Phone device in the Teams administration
 
 8. The **Waiting on activation page** will show the Teams IP Phone’s MAC address and location. Select the MAC address from the list, then select **Generate verification code**
 
-**Since there are no physical phones to connect to the lab environment, the lab is complete here. The steps below are strictly informational to demonstrate the remainder of the process. You may now proceed to the next task.**
+**Since there are no physical phones to connect to the lab environment, the lab is complete here. The steps below are strictly informational to demonstrate the remainder of the process. You may now proceed to the next task**.
 
 9. On the Teams IP Phone, select **Settings,** then choose **Provision phone**
 
@@ -177,11 +176,11 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 5. Search for **Microsoft Teams Room Standard** from the list of available services and select **Details**.
 
-6. Select **Start free trial,** then on the following page, choose **Try now.**, then select **Continue** on the order receipt page.
+6. Select **Start free trial,** then on the following page, choose **Try now**., then select **Continue** on the order receipt page.
 
 7. Download the SkypeRoomProvisioning.ps1 script from the Microsoft website: [https://go.microsoft.com/fwlink/?linkid=870105](https://go.microsoft.com/fwlink/?linkid=870105)
 
-8. Open File Explorer and navigate to the **Downloads** folder and open **SkypeRoomProvisioningScript.ps1.txt.**
+8. Open File Explorer and navigate to the **Downloads** folder and open **SkypeRoomProvisioningScript.ps1.txt**.
 
 9. Launch a Windows PowerShell command prompt as an Administrative user.
 
@@ -195,7 +194,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 11. When prompted **Do you want to create a new file?** select **Yes**
 
-12. In the Notepad Window for SkypeRoomProvisioningScript.ps1.txt, copy all text using **CTRL-A** and then **CTRL-C.**
+12. In the Notepad Window for SkypeRoomProvisioningScript.ps1.txt, copy all text using **CTRL-A** and then **CTRL-C**.
 
 13. In the Notepad Window for SkypeRoomProvisioningScript.ps1, use **CTRL-V** to paste the PowerShell script from the clipboard, and then select **File** then select **Save**.
 
@@ -203,17 +202,18 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 15. Replace that line and the one following it with the following code:
 
-	```
+	```PowerShell
 	Connect-MicrosoftTeams -Credential $credSkype
 	```
 	
     The lines of code in that script should look like the example below.
     
-    	```
+    ```PowerShell
 	try
 	{
 	  Connect-MicrosoftTeams -Credential $credSkype
-	}
+    }
+    ```
 
 14. Make sure you have the latest MSOnline PowerShell module installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
 
@@ -293,7 +293,7 @@ In this task you will configure device tags to allow Contoso to identify devices
 
 2. Navigate to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
-3. Select **Teams devices**, then select **Phones.**
+3. Select **Teams devices**, then select **Phones**.
 
 4. Select **Actions**, then from the upper right-side and select **All Device tags**.
 
@@ -309,7 +309,7 @@ In this task you will configure device tags to allow Contoso to identify devices
 
 10. Leave the browser window open for the next task.
 
-As devices are provisioned or joined, they will be displayed in the **Devices** section of the Teams Admin Center. Although no devices are available during the lab exercise, you will expect after a device is added that you can then assign the tags to a device, by selecting the **Device** in the list and then selecting **Manage Tags**, then searching for a tag, and selecting **Apply.**
+As devices are provisioned or joined, they will be displayed in the **Devices** section of the Teams Admin Center. Although no devices are available during the lab exercise, you will expect after a device is added that you can then assign the tags to a device, by selecting the **Device** in the list and then selecting **Manage Tags**, then searching for a tag, and selecting **Apply**.
 
 After applying a tag to devices, you can then use the **Search** box in the device list to choose **Select what you want to search by**, and then choosing **Tags**. Enter the tag you’ve assigned to devices, and these devices will be displayed in the search results.
 
@@ -329,19 +329,19 @@ Megan Bowen has reported they are not receiving voicemails. Microsoft offers som
 
 2. Navigate to the **Microsoft 365 admin center** at admin.microsoft.com.
 
-3. On the left menu, select **Show all**, then **Users** and **Active Users.** 
+3. On the left menu, select **Show all**, then **Users** and **Active Users**. 
 
 4. Find Megan Bowen and note down their username and email address, you will need it to run the test. Note this is one value in the format MeganB@\<TenantPrefix\>.onmicrosoft.com
 
-5. On the left menu, select **show all**, then **Support** and under the support menu **New service request.**
+5. On the left menu, select **show all**, then **Support** and under the support menu **New service request**.
 
 6. In the **Tell us about the problem so we can help you solve it** dialogue, enter **Diag: Voicemail** and press enter to jump straight to the voicemail diagnostics test.
 
-7. You will see the following diagnostics test **We understand you are having issues with receiving voicemails in Teams.** Under Username or Email enter Megan Bowen’s Username and email.
+7. You will see the following diagnostics test **We understand you are having issues with receiving voicemails in Teams**. Under Username or Email enter Megan Bowen’s Username and email.
 
-8. Select **Run Tests.**
+8. Select **Run Tests**.
 
-9. The result should be **No Teams Voicemail issues were detected.**
+9. The result should be **No Teams Voicemail issues were detected**.
 
 You have successfully used the Microsoft 365 self-help diagnostics to confirm that there are no configuration issues with Megan Bowen’s voicemail.
 
@@ -377,7 +377,7 @@ Firstly, we will create a dial plan rule, in this scenario, the organization wou
 
 10. Test the rule by entering **7786** and pressing Test. The output should be **+18776967786**, if the output is correct select **Save**.
 
-11. You will see your new rule in the global dial plan, select **Save.**
+11. You will see your new rule in the global dial plan, select **Save**.
 
 12. Close the browser window.
 
@@ -391,19 +391,19 @@ We will now confirm the rule works with a real user
 
 3. You should still be signed in as Isaiah Longer on the Teams Desktop client. If not, sign in using the credentials of Isaiah.
 
-4. You will be prompted with **Stay signed into all your apps** select **No, sign in to this app only.**
+4. You will be prompted with **Stay signed into all your apps** select **No, sign in to this app only**.
 
 5. If you are prompted with the Teams welcome information:
 
-	- **Bring your team together,** select **Next.**
+	- **Bring your team together,** select **Next**.
 
-	- Chat 1:1 and with groups, select **Next.**
+	- Chat 1:1 and with groups, select **Next**.
 
-	- Connect through online meetings, select **Next.**
+	- Connect through online meetings, select **Next**.
 
-	- Files, notes, apps, and more, all in one place, select **Next.**
+	- Files, notes, apps, and more, all in one place, select **Next**.
 
-	- You're ready!, select **Let’s go.**
+	- You're ready!, select **Let’s go**.
 
 6. If you are prompted **Get the Teams mobile app**, select the top right **X** to close the prompt.
 
@@ -411,9 +411,9 @@ We will now confirm the rule works with a real user
 
 8. Dial **7786** and press call.
 
-9. If your lab machine prompted you to use your microphone select **Allow.**
+9. If your lab machine prompted you to use your microphone select **Allow**.
 
-10. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access.**
+10. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**.
 
 11. Note that the number has been translated to +18776967786 and the call connects. It is an contact center that will stay connected for around a minute then automatically hang up.
 
@@ -423,25 +423,25 @@ Now we have proven the rule works, we will break the rule and confirm the rule.
 
 1. You are still signed into CLIENT01 as “Lab User” from the previous task.
 
-3. Open Microsoft Edge from the task bar and browse to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
+2. Open Microsoft Edge from the task bar and browse to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
-4. Select **Voice** and **Dial Plan**. 
+3. Select **Voice** and **Dial Plan**. 
 
-5. Select the **Global (org wide default)** dial plan.
+4. Select the **Global (org wide default)** dial plan.
 
-6. Select the **Converts 7786 to US support number** rule to edit it.
+5. Select the **Converts 7786 to US support number** rule to edit it.
 
-7. Note it will be converted to an advanced regular expression now.
+6. Note it will be converted to an advanced regular expression now.
 
-8. In the field the number dialed matches this regular expression, it will read ^(7\d{3})$
+7. In the field the number dialed matches this regular expression, it will read ^(7\d{3})$
 
-9. Replace the 7 with a 6 to now read, ^(6\d{3})$ 
+8. Replace the 7 with a 6 to now read, ^(6\d{3})$ 
 
-10. Test the rule by entering 7786 and pressing Test. The output should be the translated number isn't an E.164 phone number.
+9. Test the rule by entering 7786 and pressing Test. The output should be the translated number isn't an E.164 phone number.
 
-11. Select **Save**.
+10. Select **Save**.
 
-12. At the dial plan page, again select **Save** to update the global dial plan.
+11. At the dial plan page, again select **Save** to update the global dial plan.
 
 Now we have broken our dial plan, we will sign into Teams again and prove it is no longer working
 
@@ -451,31 +451,31 @@ Now we have broken our dial plan, we will sign into Teams again and prove it is 
 
 3. Select Get started.
 
-4. When prompted for sign in, enter Isaih Langer’s username and select **Next.**
+4. When prompted for sign in, enter Isaiah Langer’s username and select **Next**.
 
-5. When prompted enter Isaiah Langer’s password and select **Next.**
+5. When prompted enter Isaiah Langer’s password and select **Next**.
 
-6. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only.**
+6. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only**.
 
 7. If you are prompted with the Teams welcome information.
 
-	- **Bring your team together,** select **Next.**
+	- **Bring your team together,** select **Next**.
 
-	- Chat 1:1 and with groups, select **Next.**
+	- Chat 1:1 and with groups, select **Next**.
 
-	- Connect through online meetings, select **Next.**
+	- Connect through online meetings, select **Next**.
 
-	- Files, notes, apps, and more, all in one place, select **Next.**
+	- Files, notes, apps, and more, all in one place, select **Next**.
 
-	- You're ready!, select **Let’s go.**
+	- You're ready!, select **Let’s go**.
 
 8. Once signed in, Select the calls button on the left rail.
 
 9. Dial 7786 and press call.
 
-10. If your lab machine prompted you to use your microphone select **Allow.**
+10. If your lab machine prompted you to use your microphone select **Allow**.
 
-11. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access.**
+11. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**.
 
 12. Note that Teams attempts to ring the number but it does not connect or you get the Teams. Announcement Service telling you the call cannot connect.
 
@@ -497,9 +497,9 @@ Users can check on the network performance of their calls live during the call. 
 
 5. Dial +1-877-696-7786 and press call.
 
-6. If your lab machine prompted you to use your microphone select **allow.**
+6. If your lab machine prompted you to use your microphone select **allow**.
 
-7. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access.**
+7. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**.
 
 8. The call should establish and you should hear a Microsoft support virtual agent.
 
@@ -540,9 +540,9 @@ A Teams Phone user working from home reports they are having call quality issues
 
 2. Open Microsoft Edge from the task bar and browse to [https://connectivity.office.com/](https://connectivity.office.com/).
 
-3. Ensure **Automatically detect location** is selected and select **Run test.**
+3. Ensure **Automatically detect location** is selected and select **Run test**.
 
-4. Microsoft Edge may prompt you that connectivity.office.com wants to know your location, if it does, select **Allow.**
+4. Microsoft Edge may prompt you that connectivity.office.com wants to know your location, if it does, select **Allow**.
 
 5. The browser will prompt you to Open or Save as a new download, select **open** and Office 365 Network Onboarding Advanced Tests box will appear and start running tests.
 
@@ -562,15 +562,15 @@ A Teams Phone user working from home reports they are having call quality issues
 
 13. Open Microsoft Edge and browse to [https://connectivity.office.com/](https://connectivity.office.com/).
 
-14. Ensure **Automatically detect location** is selected and select **Run test.**
+14. Ensure **Automatically detect location** is selected and select **Run test**.
 
-15. Microsoft Edge may prompt you that connectivity.office.com wants to know your location, if it does, select **Allow.**
+15. Microsoft Edge may prompt you that connectivity.office.com wants to know your location, if it does, select **Allow**.
 
 16. The browser will prompt you to Open or Save as a new download, select **open** and Office 365 Network Onboarding Advanced Tests box will appear and start running tests.
 
-17. You will see a green progress bar and “testing in progress”, wait for all tests to complete. You maybe prompted with Windows Defender Firewall prompts from NetworkOnboardingClient – select **Allow Access.**
+17. You will see a green progress bar and “testing in progress”, wait for all tests to complete. You maybe prompted with Windows Defender Firewall prompts from NetworkOnboardingClient – select **Allow Access**.
 
-18. Once the Office 365 Network Onboarding Advanced Tests box says testing is complete, select **Close.**
+18. Once the Office 365 Network Onboarding Advanced Tests box says testing is complete, select **Close**.
 
 19. Microsoft Edge should still be open, you can now see a summary of the results
 
@@ -598,13 +598,13 @@ In this task we will review the PSTN Usage report.
 
 3. You should be singed in as **MOD Administrator**.
 
-4. Select **Analytics &amp; reports** on the left menu then **Usage reports.**
+4. Select **Analytics &amp; reports** on the left menu then **Usage reports**.
 
 5. Under report select the **PSTN and SMS (preview) usage** report.
 
-6. Under Date range select **last 7 days.**
+6. Under Date range select **last 7 days**.
 
-7. Select **Run report.**
+7. Select **Run report**.
 
 You will see a report showing all the PSTN calls made in the last 7 days. You should see the test calls we made with Alex Wilber in this exercise. Note, it may take some time for the call records to show. 
 
@@ -656,7 +656,7 @@ If we want to review the usage and performance of an individuals Teams calling, 
 
 2. Select **Users** and **Manage users** on the left menu.
 
-3. Find and select **Alex Wilber.**
+3. Find and select **Alex Wilber**.
 
 4. Select the **Meetings &amp; calls** tab.
 

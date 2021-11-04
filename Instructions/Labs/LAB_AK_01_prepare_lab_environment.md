@@ -183,7 +183,7 @@ In the following task you will add the custom domain to Megan Bowen.
 
 1. In the Megan Bowen user card, select the **Account** tab under **Username and email** select **Manage username and email**.
 
-1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencial symbol, select the textbox under **Domains** and select **Lab&lt;customlabnumber&gt;.O365Ready.com**.
+1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencil symbol, select the textbox under **Domains** and select **Lab&lt;customlabnumber&gt;.O365Ready.com**.
 
 1. Select **Done**, then select **Save changes**.
 
@@ -229,7 +229,7 @@ As an admin, you can enable users to make phone calls with a Domestic Calling Pl
 
 1. In the **Add-ons** list, locate and then select **Microsoft 365 Domestic Calling Plan for US and Canada Trial**, note you may need to expand the list to see all the add-ons and be sure to select the trial version.
 
-1. Select **Details** and select **Start free trial.** 
+1. Select **Details** and select **Start free trial**. 
 
 1. On the Check out page, select **Try now**.
 
@@ -249,9 +249,9 @@ As an admin, you can assign the calling plan license that gives users the right 
 
 1. In the **Active users** list, select **Isaiah Langer**.
 
-1. In the **Isaiah Langer** card, select **Reset Password.**
+1. In the **Isaiah Langer** card, select **Reset Password**.
 
-1. Deselect **Automatically create a password** and **Require this user to change their password when they first sign in.**
+1. Deselect **Automatically create a password** and **Require this user to change their password when they first sign in**.
 
 1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of “Lab User” from CLIENT01.
 

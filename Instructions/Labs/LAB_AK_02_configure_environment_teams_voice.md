@@ -64,7 +64,7 @@ In the following task you will create a custom user persona of a network user. I
 
 4. Sign in with the credentials of **Katie Jordan**, the Teams Administrator for this lab.
 
-5. Expand the left navigation menu, select and expand **Planning** and select **Network planner.**
+5. Expand the left navigation menu, select and expand **Planning** and select **Network planner**.
 
 6. Select **Personas**, you will see the default personas provided by Microsoft.
 
@@ -88,33 +88,33 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 1. You are in **Network Planner** in the **Microsoft Teams admin center** on CLIENT01 as “Lab User” and signed in as **Katie Jordan**.
 
-2. Select **Network plans.**
+2. Select **Network plans**.
 
-3. You will see a prompt: “You haven't added any network plans yet.” Select **Add.**
+3. You will see a prompt: “You haven't added any network plans yet.” Select **Add**.
 
-4. Enter **Plan 1** for your name and **Plan 1** for your description and select **Apply.**
+4. Enter **Plan 1** for your name and **Plan 1** for your description and select **Apply**.
 
 5. Once created select **Plan 1** in the list.
 
-6. You will be prompted “You haven't added any network sites yet.” Select **Add a network site.**
+6. You will be prompted “You haven't added any network sites yet.” Select **Add a network site**.
 
 7. Enter the **name** as **Tacoma** **Site**.
 
 8. Enter the **friendly description** as **Tacoma Office**.
 
-9. You do not need to enter a street address, so skip **Create an address.**
+9. You do not need to enter a street address, so skip **Create an address**.
 
 10. Enter the **network users** as **50**, as we have 50 users in the Tacoma office.
 
 11. Network subnets are just for reference in the report, our Tacoma offices network subnet is **10.10.1.0** with a network range of **24**. Enter these values.
 
-12. Tacoma has local internet breakout, enter **50** for **Internet link capacity.**
+12. Tacoma has local internet breakout, enter **50** for **Internet link capacity**.
 
-13. It is not **connected to a WAN** or **ExpressRoute**, so leave those at the default of **off.**
+13. It is not **connected to a WAN** or **ExpressRoute**, so leave those at the default of **off**.
 
-14. There is no local PSTN on the Tacoma site, so leave **PSTN egress** as **Use VoIP only.**
+14. There is no local PSTN on the Tacoma site, so leave **PSTN egress** as **Use VoIP only**.
 
-15. Select **Save.**
+15. Select **Save**.
 
 16. Now select **Add network site** to add our second site, Bellevue.
 
@@ -122,19 +122,19 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 18. Enter the **friendly description** as **Bellevue Office**.
 
-19. You do not need to enter a street address, so skip **Create an address.**
+19. You do not need to enter a street address, so skip **Create an address**.
 
 20. Enter the **network users** as **90**, as we have 90 users in the Bellevue office.
 
 21. Network subnets are just for reference in the report, our Bellevue offices network subnet is **10.10.20.0** with a network range of **24**. Enter these values.
 
-22. Tacoma has local internet breakout, enter **20** for **Internet link capacity.**
+22. Tacoma has local internet breakout, enter **20** for **Internet link capacity**.
 
-23. It is not **connected to a WAN** or **ExpressRoute**, so leave those at the default of **off.**
+23. It is not **connected to a WAN** or **ExpressRoute**, so leave those at the default of **off**.
 
 24. There is no local PSTN on the Tacoma site, so leave **PSTN egress** as **Use VoIP only**
 
-25. Select **Save.**
+25. Select **Save**.
 
 26. Leave this window open for the next Network planner task.
 
@@ -146,23 +146,23 @@ In the following task you will run the Network Planner report and review the res
 
 1. You are in **Network Planner** in the **Microsoft Teams admin center** on CLIENT01 as “Lab User” and signed in as Katie Jordan.
 
-2. Select **Report.**
+2. Select **Report**.
 
-3. You will be prompted with “You haven't generated any reports yet.” Select **Start a report.**
+3. You will be prompted with “You haven't generated any reports yet.” Select **Start a report**.
 
-4. Enter the report **name** as **Network Report 1.**
+4. Enter the report **name** as **Network Report 1**.
 
 5. Enter a **friendly** **description** as **Network report for Tacoma and Bellevue**.
 
-6. For each site we must now define the number of users of each profile type. For **Tacoma Site**, select **Office worker** and set **Network users** to **30.**
+6. For each site we must now define the number of users of each profile type. For **Tacoma Site**, select **Office worker** and set **Network users** to **30**.
 
-7. Select **Audio Only User** and set network users to **20.**
+7. Select **Audio Only User** and set network users to **20**.
 
-8. For **Bellevue Site**, select **Office worker** and set **Network users** to **80.**
+8. For **Bellevue Site**, select **Office worker** and set **Network users** to **80**.
 
 9. Select **Audio Only User** and set network users to **10**.
 
-10. Now select **Generate report.**
+10. Now select **Generate report**.
 
 11. Close the browser window at the end of the task.
 
@@ -196,15 +196,15 @@ In this task you will sign into a client machine provided by your training provi
 
 8. Select **Next** on the installer.
 
-9. **Tick** to accept the terms in the license agreement and select **Next.**
+9. **Tick** to accept the terms in the license agreement and select **Next**.
 
 10. Change the **destination folder** install path to **C:\NetworkTest**, select next.
 
-11. Select **Install.**
+11. Select **Install**.
 
 12. Once the installer completes, select **Finish** to exit.
 
-13. At the **Install successfully completed** prompt, select **Close.**
+13. At the **Install successfully completed** prompt, select **Close**.
 
 You have successfully installed the Teams Network Assessment Tool onto Client01.
 
@@ -214,9 +214,9 @@ The Teams Network Assessment Tool is run from the command line. We will now run 
 
 1. You are still signed in to CLIENT01 as “Lab User” with the password provided to you.
 
-2. Select **Start**, enter command prompt, find command prompt and right select it and chose **Run as administrator.**
+2. Select **Start**, enter command prompt, find command prompt and right select it and chose **Run as administrator**.
 
-3. At the “do you want to allow this app to make changes to your device” prompt, select **Yes.**
+3. At the “do you want to allow this app to make changes to your device” prompt, select **Yes**.
 
 4. The command prompt will appear.
 
@@ -318,37 +318,37 @@ In this task you will sign into client01 and the Teams Admin Center and add our 
 
 4. Expand the left navigation menu and select to expand **Locations,** then select **Network topology**.
 
-5. You will be prompted with **You haven't created any network sites yet.** Select **Add.**
+5. You will be prompted with **You haven't created any network sites yet**. Select **Add**.
 
-6. Enter the **name** for the first Network Site as **Tacoma Network Site** and **Description** as **Tacoma Office.**
+6. Enter the **name** for the first Network Site as **Tacoma Network Site** and **Description** as **Tacoma Office**.
 
 7. Select **Add a Network Region,** enter **UK** and select **Add**.
 
-8. Select UK (select the circle) then select **Link.**
+8. Select UK (select the circle) then select **Link**.
 
-9. Select **Add subnets.**
+9. Select **Add subnets**.
 
 10. Leave IP version as IPv4 and enter IP address as **10.10.1.0** with network range as **24**.
 
-11. For Description enter **Tacoma Subnet.**
+11. For Description enter **Tacoma Subnet**.
 
-12. Select **Apply.**
+12. Select **Apply**.
 
 13. You have now added a subnet for the Tacoma site, select **Save** to save the Tacoma site, note you may need to scroll down the page.
 
 14. You can now see the Tacoma Network Site in the Network Sites List.
 
-15. To add the Bellevue site select **Add.**
+15. To add the Bellevue site select **Add**.
 
 16. Enter the **name** for the first Network Site as **Bellevue Network Site** and **Description** as **Bellevue Office**.
 
-17. Select **Add a Network Region,** select **UK** and select **Link.**
+17. Select **Add a Network Region,** select **UK** and select **Link**.
 
 18. Select **Add subnets**.
 
 19. Leave IP version as IPv4 and enter IP address as **10.10.20.0** with network range as **24**.
 
-20. For Description enter **Bellevue Subnet.**
+20. For Description enter **Bellevue Subnet**.
 
 21. Select **Apply**.
 
@@ -372,7 +372,7 @@ In this task you will add a trusted IP addresses for each the Tacoma and Bellevu
 
 4. You can add a specific IP or a subnet of public IPs, For the Bellevue office add **151.101.128.81** and **32** as the network range and in the description enter **Bellevue Office Public IP**.
 
-5. Select **Apply.**
+5. Select **Apply**.
 
 6. Select **Add** to add our second Public IP address.
 
@@ -388,11 +388,11 @@ In this task you will create an emergency location. This is needed before you ca
 
 1. From the last task you are still signed in to CLIENT01 as “Lab User” and have the **Microsoft Teams Admin Center** open as **Katie Jordan**.
 
-2. Select the **Locations** then **Emergency addresses.**
+2. Select the **Locations** then **Emergency addresses**.
 
-3. On the toolbar, select the **Add.**
+3. On the toolbar, select the **Add**.
 
-4. In the New Address pane, add a name for your Emergency address, **Bellevue Office Address.**
+4. In the New Address pane, add a name for your Emergency address, **Bellevue Office Address**.
 
 5. Select the **Country or region** menu and then select **United States**.
 
@@ -400,7 +400,7 @@ In this task you will create an emergency location. This is needed before you ca
 
 7. In the **Street Number** box, enter **700**.
 
-8. In the **Street Name** box, enter **Bellevue Way Northeast****.**
+8. In the **Street Name** box, enter **Bellevue Way Northeast******.
 
 9. In the **City** box, enter **Bellevue**.
 
@@ -416,9 +416,9 @@ In this task you will create an emergency location. This is needed before you ca
 
 15. Leave ELIN as blank.
 
-16. Tick the **I acknowledge and agree…** checkbox under **Emergency calling disclaimer.**
+16. Tick the **I acknowledge and agree…** checkbox under **Emergency calling disclaimer**.
 
-17. On the new **Important Information** window select **Cancel.**
+17. On the new **Important Information** window select **Cancel**.
 
 18. Select **Save**.
 
@@ -476,15 +476,15 @@ In this task you will configure an emergency calling policy. Emergency calling p
 
 3. Select **Add** to add an Emergency Policy.
 
-4. For **Name** enter **Contoso Emergency Policy.**
+4. For **Name** enter **Contoso Emergency Policy**.
 
 5. For **Description** enter **Contoso Emergency Policy**.
 
 6. Under **Notification mode**, select **Send notification only**: A Teams chat message is sent to the users and groups that you specify.
 
-7. In **Users and groups for emergency calls notifications**, enter Isaiah and then select Isaiah Langer and select **Add.**
+7. In **Users and groups for emergency calls notifications**, enter Isaiah and then select Isaiah Langer and select **Add**.
 
-8. Select **Apply.**
+8. Select **Apply**.
 
 9. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
 
@@ -534,7 +534,7 @@ Since we want all users to be able to do 5xx extension dialing, we will add a ne
 
 13. Test the rule by entering **503** and selecting **Test**. The output should be +44208566503, if the output is correct select **Save**.
 
-14. You will see your rule as rule 1 in the global dial plan, select **Save.**
+14. You will see your rule as rule 1 in the global dial plan, select **Save**.
 
 15. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
 
@@ -556,11 +556,11 @@ At Contoso you need to enable the option of convenience recording 1:1 calls, whi
 
 5. Under add a **friendly description** enter **Busy on busy and allow call recording**.
 
-6. Switch **Cloud recording for calling** to **On.**
+6. Switch **Cloud recording for calling** to **On**.
 
-7. For **Busy on busy when in a call** to **Enabled.**
+7. For **Busy on busy when in a call** to **Enabled**.
 
-8. Select **Save.**
+8. Select **Save**.
 
 9. While still in Voice and calling policies, select the **Group policy assignment** tab.
 
@@ -572,7 +572,7 @@ At Contoso you need to enable the option of convenience recording 1:1 calls, whi
 
 13. For select a policy select the new **Busy on busy and call recording** policy.
 
-14. Select **Apply.**
+14. Select **Apply**.
 
 15. Leave the browser open in the Microsoft Teams admin center at the end of this task.
 
@@ -594,7 +594,7 @@ Call Park is disabled by default. Our organization would like the option to use 
 
 4. Switch **Allow call park** to **On**.
 
-5. Select **Save.**
+5. Select **Save**.
 
 6. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
 
@@ -608,9 +608,9 @@ By default, the user's phone number is displayed when an outbound call is made t
 
 1. You are still signed in to CLIENT01 as “Lab User” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-2. Select **Voice** and **Caller ID policies.**
+2. Select **Voice** and **Caller ID policies**.
 
-3. Select **Add.**
+3. Select **Add**.
 
 4. For **name** enter **Block outbound caller ID**.
 
@@ -620,7 +620,7 @@ By default, the user's phone number is displayed when an outbound call is made t
 
 7. For **Replace the caller ID with** select **Anonymous**.
 
-8. Select **Save.**
+8. Select **Save**.
 
 9. Leave the browser window open at the end of this task.
 
@@ -672,7 +672,7 @@ In this task you will order a phone number in the Teams Admin Center to assign t
 
 1. You are still signed in to CLIENT01 as “Lab User” and in the **Microsoft Teams admin center** as **Katie Jordan**
 
-2. In the **Microsoft Teams admin center**, select **Voice** on the left menu, then select **Phone numbers.**
+2. In the **Microsoft Teams admin center**, select **Voice** on the left menu, then select **Phone numbers**.
 
 3. Under **Numbers**, select **Add**.
 
@@ -680,7 +680,7 @@ In this task you will order a phone number in the Teams Admin Center to assign t
 
 5. For friendly description enter **Bellevue user numbers order**.
 
-6. Select **United States** as **Country or region.**
+6. Select **United States** as **Country or region**.
 
 7. For Number Type, select User (subscriber).
 						
@@ -694,9 +694,9 @@ Note: The phone numbers can be subject to changes, dependent on the lab provider
 
 11. When all fields are complete, select **Next**. Microsoft will now reserve and present some numbers for you. If there are no numbers available for your selected State/City combination, select another State/City and try again.
 
-12. You should see 1 206 area code number, select **Place Order.** If you chose a different area code the number should reflect that area code.
+12. You should see 1 206 area code number, select **Place Order**. If you chose a different area code the number should reflect that area code.
 
-13. You will see “Thank you, your order has been placed!”, select **Finish.**
+13. You will see “Thank you, your order has been placed!”, select **Finish**.
 
 14. In the voice, under **phone numbers**, you should see your number. Note in some cases this may take 5-10 minutes to appear.
 
@@ -748,19 +748,19 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 9. When prompted enter Isaiah Langer’s password reset in a previous exercise.
 
-10. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only.**
+10. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only**.
 
 11. If you are prompted with the Teams welcome information:
 
-	- Bring your team together**,** select **Next.**
+	- Bring your team together**,** select **Next**.
 
-	- Chat 1:1 and with groups, select **Next.**
+	- Chat 1:1 and with groups, select **Next**.
 
-	- Connect through online meetings, select **Next.**
+	- Connect through online meetings, select **Next**.
 
-	- Files, notes, apps, and more, all in one place, select **Next.**
+	- Files, notes, apps, and more, all in one place, select **Next**.
 
-	- You're ready!, select **Let’s go.**
+	- You're ready!, select **Let’s go**.
 
 12. If you are prompted **Get the Teams mobile app**, select the top right X to close the prompt.
 
@@ -768,7 +768,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 14. Dial +18776967786 and press call.
 
-15. If your lab machine prompted, you to use your microphone select **Allow.**
+15. If your lab machine prompted, you to use your microphone select **Allow**.
 
 16. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**
 
@@ -816,27 +816,27 @@ In this task you will order a new Dedicated conference bridge toll number. This 
 
 1. You are still signed in to CLIENT01 as “Lab User” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-2. Navigate and select **Voice** on the left menu, then select **Phone numbers.**
+2. Navigate and select **Voice** on the left menu, then select **Phone numbers**.
 
 3. Under **Phone numbers**, select the **Add**.
 
-4. At the top of the page, enter a name for your order **Dedicated conference number.**
+4. At the top of the page, enter a name for your order **Dedicated conference number**.
 
 5. For friendly description enter **Dedicated conference number**.
 
-6. Select United States as **Country or region.**
+6. Select United States as **Country or region**.
 
-7. For **Number Type**, select **Dedicated conference bridge (Toll).**
+7. For **Number Type**, select **Dedicated conference bridge (Toll)**.
 
 8. The Quantity field will now appear, enter 1.
 
-9. For **Search for new numbers** select **search by area code** and enter **920.**
+9. For **Search for new numbers** select **search by area code** and enter **920**.
 
 10. When all fields are complete, select **Next,** Microsoft will now reserve and present some numbers for you. If you see “We can't find any phone numbers for the area code you entered.” Try another US area code for this exercise. If you really did want a specific city, you would contact the PSTN service desk to find out if/when there is availability.
 
-11. You should see 1 reserved number, select **Place Order.**
+11. You should see 1 reserved number, select **Place Order**.
 
-12. You will see “Thank you, your order has been placed!”, select **Finish.**
+12. You will see “Thank you, your order has been placed!”, select **Finish**.
 
 13. In the voice, under **Phone numbers**, you should see your number. Note in some cases this may take 5-10 minutes to appear.
 
@@ -854,7 +854,7 @@ You have successfully ordered a new dedicated conference toll phone number throu
 
 4. Select the new conference number you acquired in task 2.
 
-5. Select **Apply.**
+5. Select **Apply**.
 
 6. You will be back at the list of conference bridge numbers, sort the list by type to confirm you have a new Dedicated conference bridge.
 
@@ -876,31 +876,31 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 1. You are still signed in to CLIENT01 as “Lab User” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-2. Select **Voice** and then select **Call queues.**
+2. Select **Voice** and then select **Call queues**.
 
 3. Select **Add** and enter the **Sales CQ** as the name
 
-4. Under **Resource accounts**, select **Add.**
+4. Under **Resource accounts**, select **Add**.
 
-5. Enter **Sales** in the search box, when no results are found, select **Add resource account.**
+5. Enter **Sales** in the search box, when no results are found, select **Add resource account**.
 
 6. Enter **Sales CQ** as **Display name**
 
 7. **SalesCQ** as **Username,** leave domain as is**,** 
 
-8. **Resource account type** select **Call queue,** then select **Save.**
+8. **Resource account type** select **Call queue,** then select **Save**.
 
-9. Once saved, you will see Sales CQ under accounts to add, select **Add.**
+9. Once saved, you will see Sales CQ under accounts to add, select **Add**.
 
 10. You do not need to assign a Calling ID for this lab
 
-11. Set **Language** to **English (United States).**
+11. Set **Language** to **English (United States)**.
 
-12. Under **Call answering** select **Choose users and group, Add users,** search for Isaiah Langer. and select **Add.**
+12. Under **Call answering** select **Choose users and group, Add users,** search for Isaiah Langer. and select **Add**.
 
 13. Leave the other options as default
 
-14. Scroll down the page and select **Save.** You will see your call queue in the call queues list
+14. Scroll down the page and select **Save**. You will see your call queue in the call queues list
 
 15. Leave the Teams Admin Center Open for the next steps
 
@@ -910,7 +910,7 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 1. You are still signed in to CLIENT01 as “Lab User” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-2. Under **Voice**, select **Auto Attendants** and select **Add.**
+2. Under **Voice**, select **Auto Attendants** and select **Add**.
 
 3. Enter **Sales AA** for the name**,** 
 
@@ -918,7 +918,7 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 5. Leave the Language as default
 
-6. select **Next.**
+6. select **Next**.
 
 7. Under **Call flow**, select **Add a greeting message** and enter, “Thank you for calling Contoso, your call is important to us, please be patient while we handle your call”.
 
@@ -928,9 +928,9 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 10. Under set Holiday call settings select **Next,** 
 
-11. Under Find People select **Next.**
+11. Under Find People select **Next**.
 
-12. Under **Resource Accounts, Select Add,** enter **Sales AA** in the search box, then **select Add Resource Account,** enter **Display Name** of **Sales AA, Username** is **SalesAA,** and **Resource account type** of **Auto Attendant,** select **Save.**
+12. Under **Resource Accounts, Select Add,** enter **Sales AA** in the search box, then **select Add Resource Account,** enter **Display Name** of **Sales AA, Username** is **SalesAA,** and **Resource account type** of **Auto Attendant,** select **Save**.
 
 13. Select **Add**, select **Submit** under **Resource Accounts** menu.
 
@@ -948,9 +948,9 @@ Collaborative calling enables you to connect a call queue to a channel in Teams.
 
 2. Under **Voice**, and **Call Queues**, select **Sales CQ**.
 
-3. Under **Call answering** select **Choose a team,** select **Add a channel.** 
+3. Under **Call answering** select **Choose a team,** select **Add a channel**. 
 
-4. Type **Contoso loves Teams,** select the channel and select **Add,** select **General,** select **Apply.**  
+4. Type **Contoso loves Teams,** select the channel and select **Add,** select **General,** select **Apply**.  
 
 5. Leave the Teams Admin Center open for the next task
 
@@ -984,7 +984,7 @@ In this task you will enable conference mode that will then make it pass the cal
 
 2. Under **Voice,** and **Call Queues**, select **Sales CQ,** 
 
-3. Under **Call answering** select find **Conferencing mode,** toggle the setting to **On.** 
+3. Under **Call answering** select find **Conferencing mode,** toggle the setting to **On**. 
 
 You have successfully enabled conferencing mode for **Sales CQ** call queue.
 
@@ -1028,11 +1028,11 @@ In this task you will obtain a free MP3 to the music on hold solution for the Sa
 
 4. Close the tab and switch back to the Microsoft Teams admin center.
 
-5. Under **Voice** and **Call Queues**, select **Sales CQ.**
+5. Under **Voice** and **Call Queues**, select **Sales CQ**.
 
 6. to go into edit mode by double clicking **Sales CQ**.
 
-7. Under **Music on hold**, select **Play an audio file.**
+7. Under **Music on hold**, select **Play an audio file**.
 
 8. Select **Upload file,** Select **A-New-Life-free.mp3** press **Open**
 
