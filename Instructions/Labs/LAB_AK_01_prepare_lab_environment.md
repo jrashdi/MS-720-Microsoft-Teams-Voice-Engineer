@@ -111,8 +111,6 @@ If the reported public IP address is not the same as **&lt;PublicIP&gt;**, verif
 
 1. When the script has completed and you can see a **Complete** message, select **Finish**.
 
-As soon as the public certificate request job is complete, you may proceed to the next task and request your public certificate. After requesting the public certificate, wait for the script to finish. If the script takes longer than 10 minutes to complete, select **Cancel** and run the script again.
-
 As soon as the script finishes successfully, you have successfully configured your lab environment with the provided scripts.
 
 ## Exercise 2: Assign permissions
@@ -185,7 +183,7 @@ In the following task you will add the custom domain to Megan Bowen.
 
 1. In the Megan Bowen user card, select the **Account** tab under **Username and email** select **Manage username and email**.
 
-1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencial symbol, select the textbox under **Domains** and select **Lab&lt;customlabnumber&gt;.O365Ready.com**.
+1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencil symbol, select the textbox under **Domains** and select **Lab&lt;customlabnumber&gt;.O365Ready.com**.
 
 1. Select **Done**, then select **Save changes**.
 
@@ -221,7 +219,7 @@ You have successfully signed into your test clients and reviewed the overall num
 
 ### Task 2 - Add the Domestic Calling Plan trial license to your tenant
 
-As an admin, you can enable users to make phone calls with a Domestic Calling Plan or an International Calling Plan in Office 365. Alex Wilber recently joined Contoso and his job requires him to make domestic phone calls. In this task you will activate the trial for domestic calling.
+As an admin, you can enable users to make phone calls with a Domestic Calling Plan or an International Calling Plan in Office 365. Isaiah Langer recently joined Contoso and his job requires him to make domestic phone calls. In this task you will activate the trial for domestic calling.
 
 1. You are still signed in to CLIENT01 as “Lab User” and in the **Microsoft 365 admin center** as **MOD Administrator**.
 
@@ -231,7 +229,7 @@ As an admin, you can enable users to make phone calls with a Domestic Calling Pl
 
 1. In the **Add-ons** list, locate and then select **Microsoft 365 Domestic Calling Plan for US and Canada Trial**, note you may need to expand the list to see all the add-ons and be sure to select the trial version.
 
-1. Select **Details** and select **Start free trial.** 
+1. Select **Details** and select **Start free trial**. 
 
 1. On the Check out page, select **Try now**.
 
@@ -243,7 +241,7 @@ You have successfully activated the Calling Plan trial in your tenant.
 
 ### Task 3 - Assign the Domestic Calling Plan license to Isaiah Langer
 
-As an admin, you can assign the calling plan license that gives users the right to be assigned a phone number and make and receive PSTN calls. This is a Domestic Calling Plan or an International Calling Plan in Office 365. Alex Wilber recently joined Contoso and his job requires him to make domestic phone calls. In this task you will activate the Calling Plan license for Alex Wilber. Alex already has an E5 license, so has a Teams Phone System license, but requires a calling plan license.
+As an admin, you can assign the calling plan license that gives users the right to be assigned a phone number and make and receive PSTN calls. This is a Domestic Calling Plan or an International Calling Plan in Office 365. Isaiah Langer recently joined Contoso and his job requires him to make domestic phone calls. In this task you will activate the Calling Plan license for Isaiah Langer. Isaiah already has an E5 license, so has a Teams Phone System license, but requires a calling plan license.
 
 1. You are still signed in to CLIENT01 as “Lab User” and in the **Microsoft 365 admin center** as **MOD Administrator**.
 
@@ -251,9 +249,9 @@ As an admin, you can assign the calling plan license that gives users the right 
 
 1. In the **Active users** list, select **Isaiah Langer**.
 
-1. In the **Isaiah Langer** card, select **Reset Password.**
+1. In the **Isaiah Langer** card, select **Reset Password**.
 
-1. Deselect **Automatically create a password** and **Require this user to change their password when they first sign in.**
+1. Deselect **Automatically create a password** and **Require this user to change their password when they first sign in**.
 
 1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of “Lab User” from CLIENT01.
 
