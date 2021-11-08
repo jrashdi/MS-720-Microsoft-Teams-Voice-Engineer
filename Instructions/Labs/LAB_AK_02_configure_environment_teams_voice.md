@@ -277,7 +277,7 @@ Review Packet Loss, Latency and Jitter by following these steps:
 2. Enter the following into the command prompt:
 
     ```console
-    cd $HOME”\AppData\Local\Microsoft Teams Network Assessment Tool\”
+    cd %userprofile%"\AppData\Local\Microsoft Teams Network Assessment Tool\"
     ```
 
 3. Press tab to tab through files in that directory, when you see the file <number>_quality_check_results.csv press **enter** to open the file. 
