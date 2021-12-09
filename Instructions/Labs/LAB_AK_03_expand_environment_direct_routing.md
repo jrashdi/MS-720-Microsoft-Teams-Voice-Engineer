@@ -54,7 +54,7 @@ In the following task you will download the DigiCert certificate you requested e
 
 3. In the message list, locate and select the email from **DigiCert** with the zip file attachment. The message may arrive in the Focused or Other folder and should arrive within 2-5 minutes.
 
-4. Download the **sbc01_Lab&lt;customlabnumber&gt;.O365Ready.com**XXXXXXX.**zip** file attachment and save it to **C:\LabFiles**.
+4. Download the **sbc01_lab&lt;customlabnumber&gt;.o365ready.com**XXXXXXX.**zip** file attachment, it will be saved to the default Downloads folder.
 
 5. Close the browser window to end the task.
 
@@ -63,8 +63,6 @@ You have successfully downloaded the certificate you requested in an earlier exe
 **Warning**: Download the file as is. Do not compress the already compressed zip file. Some web-based email systems allow you to compress or zip your download. This will cause the already compressed file to be compressed again and will cause the script in this lab to fail.
 
 ### Task 3 - Run the ImportLabCert script located in C:\Scripts
-
- 
 
 In the following task you will import the certificate to the local machine and convert it to a format the SBC can read.
 
@@ -230,7 +228,7 @@ In the following task you will upload the lab certificate you requested earlier.
 
 1. In the Change Certificates window, scroll down to the **UPLOAD CERTIFICATE FILES FROM YOUR COMPUTER** section.
 
-1. In the **Private key pass-phrase (optional)** box, enter **labpass@word1**. 
+1. In the **Private key pass-phrase (optional)** box, enter **Pa55w.rd**. 
  
 1. Under **Send Private Key file from your computer to the device**, select **Choose File**.  
 
