@@ -126,7 +126,7 @@ In the following task you will create the new session boarder controller resourc
 
 	- **Username:** sbcadmin
 
-	- **Password:** Pa55w.rd1234
+	- **Password:** Enter the default Admin password in the “Resource” section on the right side of the lab window.
 
 10. Select **Review + Create** (Sometimes you need to select **Previous** and select **Review + Create** again).
 
@@ -150,7 +150,7 @@ In the following task you will create the new session boarder controller resourc
 
 	- **User name:** Administrator
 
-	- **Password:** Pa55w.rd
+	- **Password:** Enter the default Admin password in the “Resource” section on the right side of the lab window.
 
 18. Once the module is installed you will see the command prompt again.
 
@@ -176,7 +176,7 @@ You have successfully created an SBC hosted inside Microsoft Azure.
 
 	- **Username:** sbcadmin
 
-	- **Password:** Pa55w.rd1234
+	- **Password:** Enter the default Admin password in the “Resource” section on the right side of the lab window.
 
 You have successfully logged onto the SBC.
 
@@ -228,7 +228,7 @@ In the following task you will upload the lab certificate you requested earlier.
 
 1. In the Change Certificates window, scroll down to the **UPLOAD CERTIFICATE FILES FROM YOUR COMPUTER** section.
 
-1. In the **Private key pass-phrase (optional)** box, enter **Pa55w.rd**. 
+1. In the **Private key pass-phrase (optional)** box, enter the default Admin password in the “Resource” section on the right side of the lab window.
  
 1. Under **Send Private Key file from your computer to the device**, select **Choose File**.  
 

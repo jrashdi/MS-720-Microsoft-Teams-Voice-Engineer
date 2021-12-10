@@ -704,11 +704,11 @@ Now perform a call with Alex Wilber our user who is configured for Direct Routin
 
 First, we will sign in the 3CX softphone
 
-1. You are still signed into MS720-CLIENT01 as “Lab User” from the previous task
+1. You are still signed into MS720-CLIENT01 as “Admin” from the previous task
 
 2. Select **Start** and then enter **3CX Phone** and select it
 
-3. In the softphone, on the top right side of the screen, select **Lab User***.
+3. In the softphone, on the top right side of the screen, select **Admin***.
 
 4. Verify that on the **Account windows, the Hook** is displayed on the screen for the LabUser.
 

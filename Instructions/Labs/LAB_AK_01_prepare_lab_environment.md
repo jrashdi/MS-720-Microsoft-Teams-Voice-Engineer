@@ -32,7 +32,7 @@ In this exercise, you will run scripts designed to provision user accounts, grou
 
 In the following task you will sign identify your lab’s public IP address to ensure that you can regain access to your lab environment at a later date.
 
-1. Sign in to MS720-CLIENT01 as “Lab User” with the password provided to you. You can find the password in the “Resource” section on the right side of the lab window. 
+1. Sign in to MS720-CLIENT01 as “Admin” with the password provided to you. You can find the password in the “Resource” section on the right side of the lab window.
 
 1. Open Microsoft Edge and then browse to **http://www.bing.com**.
 
@@ -50,7 +50,7 @@ The lab number task, updates the O365Ready.com DNS server with your lab's public
 
 Note: If you have restarted this lab or if it expired and the virtual machines were reset, perform the steps in the knowledge section at the end of this task. You do not need to be issued a new lab number.  
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” with the password provided to you.
+1. You are still signed in to MS720-CLIENT01 as “Admin” with the password provided to you.
 
 1. In Microsoft Edge, browse to **http://www.O365Ready.com**.
 
@@ -88,7 +88,7 @@ You have successfully identified your lab number and updated your public IP addr
 
 In the following task you will execute a script to setup your lab environment.
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” with the password provided to you.
+1. You are still signed in to MS720-CLIENT01 as “Admin” with the password provided to you.
 
 1. Open File Explorer and then browse to **C:\Scripts**.
 
@@ -116,7 +116,7 @@ As soon as the script finishes successfully, you have successfully configured yo
 
 In the following task you will request your public certificate for the SBC (Session Border Controller) so you can use it later in the labs. This is used to authenticate connections to multiple tenants and networks served from a single SBC.
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” with the password provided to you.
+1. You are still signed in to MS720-CLIENT01 as “Admin” with the password provided to you.
 
 1. Open File Explorer and then browse to **C:\LabFiles**.
 
@@ -154,7 +154,7 @@ In this exercise, you will assign the required admin permissions to continue wit
 
 In this task you will verify your custom domain so you can work with it and assign it to users.
 
-1. You are still on MS720-CLIENT01 where you are still signed in as “Lab User”. 
+1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”. 
 
 1. In **Microsoft Edge**, browse to the Microsoft 365 admin center at [**https://admin.microsoft.com**](https://admin.microsoft.com/).
 
@@ -178,7 +178,7 @@ You have successfully verified the custom domain created from the script is set 
 
 In the following task you will use the global administrator account MOD Administrator to assign Teams Service Administrator permissions to a personalized account for Katie Jordan.
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” and to the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and to the **Microsoft 365 admin center** as **MOD Administrator**.
 
 1. In the upper left navigation, select the three dashes left from **Contoso** to open the full left-side menu.
 
@@ -204,7 +204,7 @@ You have successfully assigned the Teams Service administrator permission to Kat
 
 In the following task you will add the custom domain to Megan Bowen.
 
-1. You are still on MS720-CLIENT01 where you are still signed in as “Lab User”, and you are still in the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”, and you are still in the **Microsoft 365 admin center** as **MOD Administrator**.
 
 1. In the left navigation, select **Users** and **Active users**.
 
@@ -234,7 +234,7 @@ In this exercise, you will review the overall number of licenses and the number 
 
 In this task you will sing into the clients provided by your training provider and run a certain script also provided by the lab hoster, to understand what licenses are inside the tenant and what licenses are applied.
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” and in the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and in the **Microsoft 365 admin center** as **MOD Administrator**.
 
 1. On the upper left side, select the **Navigation menu** with the three dashes then select **Billing** and then select **Licenses**. 
 
@@ -250,7 +250,7 @@ You have successfully signed into your test clients and reviewed the overall num
 
 As an admin, you can enable users to make phone calls with a Domestic Calling Plan or an International Calling Plan in Office 365. Isaiah Langer recently joined Contoso and his job requires him to make domestic phone calls. In this task you will activate the trial for domestic calling.
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” and in the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and in the **Microsoft 365 admin center** as **MOD Administrator**.
 
 1. On the Microsoft 365 admin center page, select the three dashed in the upper left-side, select **Billing**, then **Purchase services**.
 
@@ -272,7 +272,7 @@ You have successfully activated the Calling Plan trial in your tenant.
 
 As an admin, you can assign the calling plan license that gives users the right to be assigned a phone number and make and receive PSTN calls. This is a Domestic Calling Plan or an International Calling Plan in Office 365. Isaiah Langer recently joined Contoso and his job requires him to make domestic phone calls. In this task you will activate the Calling Plan license for Isaiah Langer. Isaiah already has an E5 license, so has a Teams Phone System license, but requires a calling plan license.
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” and in the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and in the **Microsoft 365 admin center** as **MOD Administrator**.
 
 1. On the Microsoft 365 admin center page, in the left navigation, select **Users**, then **Active users**.
 
@@ -282,7 +282,7 @@ As an admin, you can assign the calling plan license that gives users the right 
 
 1. Deselect **Automatically create a password** and **Require this user to change their password when they first sign in**.
 
-1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of “Lab User” from MS720-CLIENT01.
+1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of “Admin” from MS720-CLIENT01.
 
 1. Press **Reset password**.
 
@@ -314,7 +314,7 @@ Several configuration steps of Microsoft Teams in this lab can also be done or m
 
 In this task you will install the latest Teams PowerShell module on your lab client and check the correct version number.
 
-1. You are still signed in to MS720-CLIENT01 as “Lab User” with the password provided to you.
+1. You are still signed in to MS720-CLIENT01 as “Admin” with the password provided to you.
 
 1. Select the start button, enter **PowerShell** and select **Run as administrator** below PowerShell from the start menu.
 
