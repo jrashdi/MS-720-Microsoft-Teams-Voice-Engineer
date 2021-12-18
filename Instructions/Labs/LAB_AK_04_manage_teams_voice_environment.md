@@ -1,11 +1,11 @@
 ---
 lab:
-    title: 'Lab 03: Manage your Teams Voice Environment'
+    title: 'Lab 04: Manage your Teams Voice Environment'
     type: 'Answer Key'
     module: 'Module 1: Plan and configure Teams Phone'
 ---
 
-# Lab 03: Manage your Teams Phone environment
+# Lab 04: Manage your Teams Phone environment
 # Student lab answer key
 
 ## Lab Scenario
@@ -24,13 +24,13 @@ Contoso need to make changes to existing users who are enabled for Teams Voice a
 
   - **Estimated Time to complete**: 30 minutes
 
-In this exercise, you will perform day-to-day management tasks for Teams Voice users. 
+In this exercise, you will perform day-to-day management tasks for Teams Voice users.
 
 ### Task 1 - Change user call pickup settings
 
 In this task you will sign into the Microsoft Teams Admin Center and make changes so that Isaiah’s colleague Katie can pick up their calls.
 
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
 
 2. In the left navigation menu select **Users** and find **Isaiah Langer** and select the name to open the user’s properties.
 
@@ -48,15 +48,42 @@ In this task you will sign into the Microsoft Teams Admin Center and make change
 
 The changes are now applied, and a banner will show for calls directed to Isaiah on Katie’s Teams client, allowing them to answer in the event that Isaiah is not able to.
 
-### Task 2 - Configure call delegation
+### Task 2 - Enable user for Teams Direct Routing
 
-In this task you will configure Isaiah Langer so that Katie Jordan is a delegate of Isaiah Langer and is allowed to make calls on their behalf, but not receive calls.
+In this task, an existing user who isn’t enabled for voice services must be enabled for Direct Routing. We’ll ensure the necessary licenses are assigned, then enable the user for Direct Routing.
 
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
+
+2. Select Start, type PowerShell and open a non-Administrative **Windows PowerShell** window.
+
+3. Use the following cmdlet to import the module and connect **to Microsoft Teams**:
+
+    ```powershell
+    Import-Module MicrosoftTeams  
+    Connect-MicrosoftTeams
+    ```
+
+4. When prompted for credentials, enter the credentials of **Katie Jordan**.
+
+5. Type the following command to enable Alex Wilber for **Direct Routing**:
+
+    ```powershell
+    Set-CsUser -Identity AlexW@<tenant>.onmicrosoft.com -EnterpriseVoiceEnabled $true -HostedVoiceMail $true -OnPremLineURI tel:+14255551122
+    ```
+
+6. Close the PowerShell Window at the end of the task.
+
+Alex Wilber is now configured to use Direct Routing.
+
+### Task 3 - Configure call delegation
+
+In this task you will configure Alex Wilbur so that Katie Jordan is a delegate of Alex Wilbur and is allowed to make calls on their behalf, but not receive calls.
+
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
 
 2. Select **Users** and **Manage users**.
 
-3. Find **Isaiah langer** and select the name to open the user’s properties.
+3. Find **Alex Wilbur** and select the name to open the user’s properties.
 
 4. On the user’s properties page, select the **Voice** tab.
 
@@ -70,11 +97,11 @@ In this task you will configure Isaiah Langer so that Katie Jordan is a delegate
 
 The changes are now active.
 
-### Task 3 - Enable audio conferencing
+### Task 4 - Enable audio conferencing
 
 In this task you validate audio conferencing is enabled for Katie Jordan and change the default settings.
 
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
 
 2. Select **Users** and **Manage users**.
 
@@ -86,7 +113,7 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 6. Set **Include toll-free numbers in meeting requests from user** to **Off**.
 
-7. Select the **Toll number** dropdown and change it to **+1 689 206 9333 Orlando, United States**.
+7. Select the **Toll number** dropdown and change it to **+1 689 206 9333 Orlando, United States**. (**Note**: That particular number might not be available.  Choose another number as appropriate.)
 
 8. Select **Apply**.
 
@@ -94,11 +121,11 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 You have successfully modified the audio-conferencing settings for Katie Jordan. 
 
-### Task 4 - Assign a dial out policy
+### Task 5 - Assign a dial out policy
 
 In this task you will assign a new Dial out policy to Megan Bowen, to restrict her from making outbound calls.
 
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
 
 2. Select **Users** and **Manage users**.
 
@@ -166,7 +193,7 @@ The Teams IP Phone can now be signed in to by a user or remotely signed in to a 
 
 In this task, we will create and license a Microsoft Teams Room device account using Windows PowerShell. This will be for the Contoso Board Room at the Bellevue site and use Direct Routing for voice calls.
 
-1. You are still signed in to CLIENT01 as “Lab User”.
+1. You are still signed in to MS720-CLIENT01 as “Admin”.
 
 2. Open Microsoft Edge from the task bar and browse to the Microsoft 365 admin center at [https://admin.microsoft.com](https://admin.microsoft.com/).
 
@@ -186,7 +213,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 10. Change directory to a location suitable for creating a script, and then create a new file named SkypeRoomProvisioningScript.ps1 by entering the following command.
 
-    ```PowerShell
+    ```console
     cd $HOME\Documents
     
     notepad .\SkypeRoomProvisioningScript.ps1
@@ -202,16 +229,16 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 15. Replace that line and the one following it with the following code:
 
-	```PowerShell
-	Connect-MicrosoftTeams -Credential $credSkype
-	```
+    ```PowerShell
+    Connect-MicrosoftTeams -Credential $credSkype
+    ```
 	
     The lines of code in that script should look like the example below.
     
     ```PowerShell
-	try
-	{
-	  Connect-MicrosoftTeams -Credential $credSkype
+    try
+    {
+	      Connect-MicrosoftTeams -Credential $credSkype
     }
     ```
 
@@ -243,7 +270,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 21. A Windows PowerShell credential request window appears. Enter the credentials of your **MOD Administrator**.
 
-22. A Windows PowerShell credential request window appears, asking you the **Enter the desired UPN and password for this new room account**. Enter mtr01@\<labnumber\>.onmicrosoft.com and enter a secure password you will remember.
+22. A Windows PowerShell credential request window appears, asking you the **Enter the desired UPN and password for this new room account**. Enter **mtr01@lab&lt;customlabnumber&gt;.o365ready.com** and enter a secure password you will remember.
 
 23. Enter the following display name for the account and then press Enter.
 
@@ -275,21 +302,21 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 35. Close the PowerShell Window at the end of the task.
 
-
 If the script fails to create the room, open a new Administrator PowerShell console and run the following commands. Use your **MOD Administrator** credentials to log in, and use the email address of the Bellevue Board Room you created via the script.
 
-	```PowerShell
-	Connect-MicrosoftTeams
-	$mtr = get-csonlineuser -identity "mtr@<your lab domain>"
-	Enable-CsMeetingRoom -Identity $mtr.UserName -SipAddressType EmailAddress -RegistrarPool $mtr.RegistrarPool
-	```
+    ```powershell
+    Connect-MicrosoftTeams
+    $mtr = Get-CsOnlineUser -identity "mtr@lab<customlabnumber>.o365ready.com"
+    Enable-CsMeetingRoom -Identity $mtr.UserName -SipAddressType EmailAddress -RegistrarPool $mtr.RegistrarPool
+    ```
+
 Upon completion of the script a summary of actions will be stated, including a statement that the script has **Successfully configured a room mailbox for the account**. The account can now be signed-in to a Microsoft Teams Room system using the password provided in step **21**.
 
 ### Task 3 - Prepare to manage devices by creating tags in the Teams Admin Center
 
 In this task you will configure device tags to allow Contoso to identify devices based upon the type of employee that will use the device, so that the importance of the device can be identified by a support technician. We will configure two tags, **Executive** and **Contact Center**.
 
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
 
 2. Navigate to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
@@ -325,7 +352,7 @@ In this exercise, you will perform exercises to help troubleshoot specific issue
 
 Megan Bowen has reported they are not receiving voicemails. Microsoft offers some Self-help diagnostics tools that can be run before raising a support ticket. In this task you will run the Voicemail diagnostic that validates that a user is properly configured to use Voicemail in Teams.
 
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
 
 2. Navigate to the **Microsoft 365 admin center** at admin.microsoft.com.
 
@@ -351,45 +378,43 @@ In this lab we are going to create and then break a dial plan rule and check Cal
 
 Firstly, we will create a dial plan rule, in this scenario, the organization would like the short code 7786 to translate to +1-877-696-7786.
 
-1. You are still signed in to CLIENT01 as “Lab User” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
 
 2. Navigate to the **Microsoft Teams admin center** at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
 3. Select **Voice** and **Dial Plan**.
 
-1. Select the **Global (org wide default)** dial plan.
+    1. Select the **Global (org wide default)** dial plan.
+    
+    2. Under Normalization rules select **Add** to get to the add new rule dialogue.
+    
+    3. For **Name** enter **Converts 7786 to US support number**.
+    
+    4. For **Description** enter **Converts 7786 to US support number**.
+    
+    5. Ensure **Basic** rule is selected, it should be by default.
+    
+    6. Tick **The number dialed begins with** and enter 7.
+    
+    7. Tick **The length of the number being dialed is** and enter 4.
+    
+    8. Ensure **Exactly** is selected for length of number to be dialed.
+    
+    9. Tick **Add this number to the beginning** and enter +1877696.
+    
+    10. Test the rule by entering **7786** and pressing Test. The output should be **+18776967786**, if the output is correct select **Save**.
+    
+    11. You will see your new rule in the global dial plan, select **Save**.
+    
+    12. Close the browser window.
 
-2. Under Normalization rules select **Add** to get to the add new rule dialogue.
+You have successfully added a normalization rule to a dial plan to meet the extension dialing organizational requirement. We will now confirm the rule works with a real user.
 
-3. For **Name** enter **Converts 7786 to US support number**.
-
-4. For **Description** enter **Converts 7786 to US support number**.
-
-5. Ensure **Basic** rule is selected, it should be by default.
-
-6. Tick **The number dialed begins with** and enter 7.
-
-7. Tick **The length of the number being dialed is** and enter 4.
-
-8. Ensure **Exactly** is selected for length of number to be dialed.
-
-9. Tick **Add this number to the beginning** and enter +1877696.
-
-10. Test the rule by entering **7786** and pressing Test. The output should be **+18776967786**, if the output is correct select **Save**.
-
-11. You will see your new rule in the global dial plan, select **Save**.
-
-12. Close the browser window.
-
-You have successfully added a normalization rule to a dial plan to meet the extension dialing organizational requirement.
-
-We will now confirm the rule works with a real user
-
-1. Sign into CLIENT02 as “Isaiah Langer”, required. You may still be signed in from a previous task.
+1. Sign into MS720-CLIENT02 as “Admin”, required. You may still be signed in from a previous task.
 
 2. From the desktop select and run Microsoft Teams client.
 
-3. You should still be signed in as Isaiah Longer on the Teams Desktop client. If not, sign in using the credentials of Isaiah.
+3. You should still be signed in as Megan Bowen on the Teams Desktop client. If not, sign in using the credentials of Megan Bowen.
 
 4. You will be prompted with **Stay signed into all your apps** select **No, sign in to this app only**.
 
@@ -421,7 +446,7 @@ We will now confirm the rule works with a real user
 
 Now we have proven the rule works, we will break the rule and confirm the rule.
 
-1. You are still signed into CLIENT01 as “Lab User” from the previous task.
+1. You are still signed into MS720-CLIENT01 as “Admin” from the previous task.
 
 2. Open Microsoft Edge from the task bar and browse to the Microsoft Teams admin center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
@@ -433,9 +458,9 @@ Now we have proven the rule works, we will break the rule and confirm the rule.
 
 6. Note it will be converted to an advanced regular expression now.
 
-7. In the field the number dialed matches this regular expression, it will read ^(7\d{3})$
+7. In the field the number dialed matches this regular expression, it will read **^(7\d{3})$**
 
-8. Replace the 7 with a 6 to now read, ^(6\d{3})$ 
+8. Replace the 7 with a 6 to now read, **^(6\d{3})$** 
 
 9. Test the rule by entering 7786 and pressing Test. The output should be the translated number isn't an E.164 phone number.
 
@@ -445,15 +470,15 @@ Now we have proven the rule works, we will break the rule and confirm the rule.
 
 Now we have broken our dial plan, we will sign into Teams again and prove it is no longer working
 
-1. You are still signed into CLIENT02 as “Isaiah” from the previous task.
+1. You are still signed into MS720-CLIENT02 as "Admin" from the previous task.
 
 2. From the desktop select and run Microsoft Teams client.
 
 3. Select Get started.
 
-4. When prompted for sign in, enter Isaiah Langer’s username and select **Next**.
+4. When prompted for sign in, enter Alex Wilbur’s username and select **Next**.
 
-5. When prompted enter Isaiah Langer’s password and select **Next**.
+5. When prompted enter Alex Wilbur’s password and select **Next**.
 
 6. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only**.
 
@@ -487,11 +512,11 @@ You have successfully created a dial plan, proven it works, broken it and seen t
 
 Users can check on the network performance of their calls live during the call. In this task we will test the Team call health feature
 
-1. You are still signed into CLIENT02 as “Isaiah Langer” from the previous task
+1. You are still signed into MS720-CLIENT02 as “Admin” from the previous task
 
 2. From the desktop select and run **Microsoft Teams** client
 
-3. You should still be signed in as **Isaiah Langer**.
+3. You should still be signed in as **Alex Wilbur**.
 
 4. Select the calls button on the left rail.
 
@@ -531,12 +556,11 @@ Call Health shows you the following:
 | Received packet loss| The result of a poor network connection, this is the percentage of audio data packets not received by your system. Lower is better |
 | Received codec| The codec used for encoding audio data received by your system. |
 
-
 ### Task 4 - Use the Microsoft 365 connectivity test tool
 
 A Teams Phone user working from home reports they are having call quality issues, we will use the Microsoft 365 connectivity test tool to check they are tasking an optimum network path to Office 365 and check their basic Teams network performance
 
-1. Sign into CLIENT01 as “Lab User” with the password provided to you. In this task we will treat Client01 as the PC of the user with the problem.
+1. Sign into MS720-CLIENT01 as “Admin” with the password provided to you. In this task we will treat MS720-CLIENT01 as the PC of the user with the problem.
 
 2. Open Microsoft Edge from the task bar and browse to [https://connectivity.office.com/](https://connectivity.office.com/).
 
@@ -586,13 +610,163 @@ If they front door locations do not have green ticks and they are not using any 
 
 You have successfully tested network connectivity and performance from a user’s machine using the Microsoft 365 network test tool.
 
-### Task 5 - Inspect PSTN Usage Reports
+### Task 5 - Investigate and diagnose calling issues with SBC SIP logs
+
+When investigating calling issues with Direct Routing you may need to review call logs, or Session Initiation Protocol (SIP) logs, SIP is the protocol used between Microsoft Teams Phone service, your Session Border Controller and your PSTN operator.
+
+In this lab you will in install a Syslog server to collect logs from the AudioCodes SBC, configure the AudioCodes SBC to send logs to the Syslog server, and place a call and review the logs.
+
+First, you need to install AudioCodes syslog Viewer in MS720-RRAS01:
+
+1. Switch to MS720-RRAS01 and sign in with the credentials provided in the lab.
+
+2. Open Microsoft Edge and browse to [http://redirect.audiocodes.com/install/index.html](http://redirect.audiocodes.com/install/index.html)
+
+3. Under Syslog viewer for Windows, Press the Download Button.
+
+4. When the file is downloaded, select **Open**.
+
+5. On Welcome to the Syslog viewer Setup Wizard, select Next.
+
+6. On Select Destination Location, select Next.
+
+7. On Select Start Menu folder, select Next.
+
+8. The app will install, when complete leave Run application ticked and click finish.
+
+You have successfully installed AudioCodes Syslog viewer which is also a listening syslog server. You can validate it is listening on UDP port 514 by running the following
+
+1. Select start, type cmd, see Command prompt, right select and run as administrator.
+
+2. At the command prompt use netstat to find the processes listening on port 514:
+
+    ```console
+    netstat -na | find "514" |
+    ```
+
+3. At the top of the output you will see This is the process listening on UDP 514:
+
+    ```console
+    UDP 0.0.0.0:514 *.* |
+    ```
+
+4. Leave the Syslog viewer running.
+
+5. To configure the AudioCodes SBC to point to the Syslog server, we need to know the server public IP address, still in the command line, type the following.
+
+    ```console
+    Ipconfig |
+    ```
+
+6. In the results, note down the Ethernet adapter External IPv4 Address.
+
+7. Since windows firewall is running on the server Public interface, we need to open 514 UDP on the firewall, by running the following command:
+
+    ```console
+    netsh advfirewall firewall add rule name= "Open Port 514" dir=in action=allow protocol=UDP localport=514 |
+    ```
+
+8. You should get OK returned at the command line.
+
+9. Close the command window.
+
+Now that we have a syslog viewer running and we know what IP it is listening on, we need to direct logs from the SBC to our syslog server
+
+1. Remaining on MS720-RRAS01 server
+
+2. Launch Microsoft Edge and navigate to 192.168.0.200 (this is the AudioCodes SBC IP address)
+
+3. Login to your SBC username Admin, Password Admin
+
+4. go to Troubleshoot on the top menu
+
+5. Under Logging select Syslog Settings 
+
+6. Set the following
+
+	- Enable Syslog: enable (the default)
+
+	- Syslog Server IP: Public IP address from the task above
+
+	- Syslog Server Port: 514 (the default)
+
+7. Select Apply
+
+8. Select Admin, Logout on the top right of the interface
+
+9. At the login screen, again login SBC username Admin, Password Admin
+
+10. Go back to Syslog viewer, you should see a logout and login event in the syslog
+
+You have successfully setup your AudioCodes SBC to send Syslogs to the Syslog viewer and can see logs being sent from the SBC to the Syslog viewer.
+
+Now perform a call with Alex Wilber our user who is configured for Direct Routing
+
+First, we will sign in the 3CX softphone
+
+1. You are still signed into MS720-CLIENT01 as “Admin” from the previous task
+
+2. Select **Start** and then enter **3CX Phone** and select it
+
+3. In the softphone, on the top right side of the screen, select **Admin***.
+
+4. Verify that on the **Account windows, the Hook** is displayed on the screen for the LabUser.
+
+5. Select **OK** to close the Account window.
+
+6. Start the Teams Desktop client by running it from the desktop.
+
+7. You should still be signed in as Alex Wilber.
+
+8. Switch to the 3CX softphone on MS720-CLIENT01.
+
+9. In the 3CX softphone **14255551234**
+
+10. The Teams client will ring, answer the Teams client.
+
+11. If your lab machine prompted, you to use your microphone select **allow.**
+
+12. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access.**
+
+13. Note the call connects, leave it connected for 60 seconds.
+
+14. Press the red hang-up button in Teams to disconnect the call to disconnect the call.
+
+Review the logs in Syslog Viewer
+
+1. On MS720-RRAS01 bring the Syslog viewer back into focus
+
+2. You should see many lines of logs 
+
+3. Select tools on the top menu then SIP flow diagram, this draws an interactive ladder diagram of the SIP signaling for calls
+
+4. The top-right pane contains list of all sessions found in the current display buffer. For each session some useful summary information is displayed. 
+
+5. The bottom-right pane contains the details of the currently selected message. 
+
+6. The left pane contains the ladder diagram. Click on the message to select it. Note that when you do so, "message details" pane is updated and cursor in the "main window" is re-positioned on a line that corresponds to the selected message (so that you can jump to it and check what happened near the same time).
+
+7. You can now see a complete SIP ladder diagram of your call, click on and review
+
+	- The Invite, which sets up the call
+
+	- The 183 Session Progress
+
+	- The BYE which ends the session.
+
+	- You should not see any 5xx or 6xx SIP codes, which indicate errors
+
+If you are seeing 5xx and 6xx error codes, confirm the number dialed is correct and has been normalized correctly to an E.164 format that the PSTN carrier supports. If that is correct confirm that number is dialable on a different system, to prove the number is in service and works. You could, for example, dial the number from a cell phone. If the number works outside of this system and is formatted correctly, raise a support issue with your PSTN operator.
+
+You have successfully reviewed a Teams Direct Routing call SIP log.
+
+### Task 6 - Inspect PSTN Usage Reports
 
 The Teams PSTN (Public Switched Telephone Network) usage report in the Microsoft Teams admin center gives you an overview of calling and audio conferencing activity in your organization. 
 
 In this task we will review the PSTN Usage report.
 
-1. You are still signed into CLIENT01 as “Lab User” from the previous task.
+1. You are still signed into MS720-CLIENT01 as “Admin” from the previous task.
 
 2. Open Microsoft Edge from the task bar and browse to the **Microsoft Teams admin center** at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
@@ -648,11 +822,11 @@ The report shows:
 
 You have successfully generated and reviewed the PSTN usage report
 
-### Task 6 - Review Calls in Call Analytics
+### Task 7 - Review Calls in Call Analytics
 
 If we want to review the usage and performance of an individuals Teams calling, the first place to look is Call Analytics in the Teams Admin Center. In this task we will review Alex Wilber’s calls in Call Analytics
 
-1. You are still signed into CLIENT01 as “Lab User” and in the **Microsoft Teams admin center** as **MOD Administrator**.
+1. You are still signed into MS720-CLIENT01 as “Admin” and in the **Microsoft Teams admin center** as **MOD Administrator**.
 
 2. Select **Users** and **Manage users** on the left menu.
 
@@ -676,13 +850,13 @@ You can see device, system, connectivity and network information. Note that sinc
 
 You now know how to access and review call and meeting information in Call Analytics in the Teams Admin Center.
 
-### Task 7 - Review Calls in Call Quality Dashboard
+### Task 8 - Review Calls in Call Quality Dashboard
 
 A Voice Administrator should look at the call and meeting usage and performance across the entire environment. This can be done by reviewing the Microsoft Call Quality Dashboard
 
 In this task you open and review Call Quality Dashboard
 
-1. You are still signed into CLIENT01 as “Lab User” and in the **Microsoft Teams admin center** as **MOD Administrator**.
+1. You are still signed into MS720-CLIENT01 as “Admin” and in the **Microsoft Teams admin center** as **MOD Administrator**.
 
 2. At the bottom of the left menu, select **Call Quality Dashboard**.
 
