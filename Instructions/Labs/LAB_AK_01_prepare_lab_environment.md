@@ -46,13 +46,13 @@ You have successfully identified and stored your IP address. When you restart yo
 
 ### Task 2 - Retrieve your lab number
 
-The lab number task, updates the O365Ready.com DNS server with your lab's public IP address and creates a DNS delegation zone for your lab domain pointing to the DNS server running on MS720-RRAS01. Requests for hosts in your lab domain will be resolved by the DNS server running on MS720-RRAS01.
+The lab number task, updates the O365ready.com DNS server with your lab's public IP address and creates a DNS delegation zone for your lab domain pointing to the DNS server running on MS720-RRAS01. Requests for hosts in your lab domain will be resolved by the DNS server running on MS720-RRAS01.
 
 Note: If you have restarted this lab or if it expired and the virtual machines were reset, perform the steps in the knowledge section at the end of this task. You do not need to be issued a new lab number.  
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” with the password provided to you.
 
-1. In Microsoft Edge, browse to **http://www.O365Ready.com**.
+1. In Microsoft Edge, browse to **http://www.o365ready.com**.
 
 1. On the Welcome page, select the **Generate Lab Number** tab.
 
@@ -70,7 +70,7 @@ Note: If you have restarted this lab or if it expired and the virtual machines w
 
 If you have restarted this lab or if the lab timer has expired and the virtual machines were reset, you will likely have a new public IP address. Perform the following steps to update your lab domain delegation zone's public IP address.
 
-1. In Microsoft Edge, browse to [http://www.O365Ready.com](http://www.o365ready.com/).
+1. In Microsoft Edge, browse to [http://www.o365ready.com](http://www.o365ready.com/).
 
 1. On the Welcome page, select the **Update Public IP Address** tab.
 
@@ -120,7 +120,7 @@ In the following task you will request your public certificate for the SBC (Sess
 
 1. Open File Explorer and then browse to **C:\LabFiles**.
 
-1. Select **CertReq-Lab&lt;customlabnumber&gt;.O365Ready.com.txt**. This certificate request was created by the configuration script.
+1. Select **CertReq-lab&lt;customlabnumber&gt;.o365ready.com.txt**. This certificate request was created by the configuration script.
 
 1. In Notepad, select all the text in the file and then press Ctrl+C or right-click or tap and hold and select **Copy** to copy the contents to the clipboard.
 
@@ -168,7 +168,7 @@ In this task you will verify your custom domain so you can work with it and assi
 
 1. Select **Settings** then select **Domains**.
 
-1. Verify your custom domain has been added to Office 365 and is set as Default. This domain starts with a **Lab** string and your five digits lab number, followed by the **O365Ready.com** domain. The domain may still be listed as Incomplete setup, this will not cause problems in the lab.
+1. Verify your custom domain has been added to Office 365 and is set as Default. This domain starts with a **Lab** string and your five digits lab number, followed by the **O365ready.com** domain. The domain may still be listed as Incomplete setup, this will not cause problems in the lab.
 
 1. Leave the browser window open.
 
@@ -212,7 +212,7 @@ In the following task you will add the custom domain to Megan Bowen.
 
 1. In the Megan Bowen user card, select the **Account** tab under **Username and email** select **Manage username and email**.
 
-1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencil symbol, select the textbox under **Domains** and select **Lab&lt;customlabnumber&gt;.O365Ready.com**.
+1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencil symbol, select the textbox under **Domains** and select **lab&lt;customlabnumber&gt;.O365ready.com**.
 
 1. Select **Done**, then select **Save changes**.
 

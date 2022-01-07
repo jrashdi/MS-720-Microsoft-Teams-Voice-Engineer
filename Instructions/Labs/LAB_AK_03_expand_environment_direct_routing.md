@@ -466,7 +466,7 @@ In the following task you will add the message manipulation on the SBC.
 
 	- **Source IP Address:** 52.114.\*.\* 
 
-	- **Destination Host:** FQDN of SBC (**sbc01.Lab&lt;customlabnumber&gt;.O365Ready.com)**
+	- **Destination Host:** FQDN of SBC (**sbc01.Lab&lt;customlabnumber&gt;.O365ready.com)**
 
 	- **Message Condition:** Teams 
 
@@ -713,7 +713,7 @@ In the following task you will assign the Emergency Location Identification numb
 
 2. In the left navigation pane select the three dashes, select **Locations** and select **Emergency addresses.**
 
-3. Select **Bellevue Office Address****.**
+3. Select **Bellevue Office Address**.
 
 4. Leave **Organization name** as **Contoso**, Add **ELIN** as **425-555-1200.**
 

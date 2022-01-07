@@ -400,7 +400,7 @@ In this task you will create an emergency location. This is needed before you ca
 
 7. In the **Street Number** box, enter **700**.
 
-8. In the **Street Name** box, enter **Bellevue Way Northeast******.
+8. In the **Street Name** box, enter **Bellevue Way Northeast**.
 
 9. In the **City** box, enter **Bellevue**.
 
@@ -690,11 +690,11 @@ In this task you will order a phone number in the Teams Admin Center to assign t
 
 10. For **Search for new numbers** select **Search by area code** and enter **206**.
 
-Note: The phone numbers can be subject to changes, dependent on the lab provider and possibly needs to be adjusted.
+**Note**: The phone numbers that are available in different regions will vary and **206** numbers may not be available. Try other area codes in the US and Canada, such as **308** in Nebraska.  The area code of the phone number does not need to match the emergency address location.
 
-11. When all fields are complete, select **Next**. Microsoft will now reserve and present some numbers for you. If there are no numbers available for your selected State/City combination, select another State/City and try again.
+11. When all fields are complete, select **Next**. Microsoft will now reserve phone numbers in the chosen area code. If there are no numbers available for your selected State/City combination, select another State/City and try again.
 
-12. You should see 1 206 area code number, select **Place Order**. If you chose a different area code the number should reflect that area code.
+12. Verify the area code and phone number, then select **Place Order**.
 
 13. You will see “Thank you, your order has been placed!”, select **Finish**.
 
