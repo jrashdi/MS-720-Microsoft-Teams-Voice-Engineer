@@ -248,7 +248,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
     Update-Module MSOnline
     ```
 
-15. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
+15. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**. If the command fails, run **Install-Module ExchangeOnlineManagement**.
 
     ```powershell
     Update-Module ExchangeOnlineManagement
