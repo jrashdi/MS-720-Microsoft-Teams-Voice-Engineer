@@ -592,7 +592,7 @@ Call Park is disabled by default. Our organization would like the option to use 
 
 3. Select the **Global (org wide default)** policy.
 
-4. Switch **Allow call park** to **On**.
+4. Switch **Call park** to **On**.
 
 5. Select **Save**.
 
@@ -752,7 +752,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 11. If you are prompted with the Teams welcome information:
 
-	- Bring your team together**,** select **Next**.
+	- Bring your team together, select **Next**.
 
 	- Chat 1:1 and with groups, select **Next**.
 
@@ -828,7 +828,7 @@ In this task you will order a new Dedicated conference bridge toll number. This 
 
 7. For **Number Type**, select **Dedicated conference bridge (Toll)**.
 
-8. The Quantity field will now appear, enter 1.
+8. Select **Microsoft** in the Operator field, the Quantity field will now appear, enter 1.
 
 9. For **Search for new numbers** select **search by area code** and enter **920**.
 
@@ -886,7 +886,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 6. Enter **Sales CQ** as **Display name**
 
-7. **SalesCQ** as **Username,** leave domain as is**,** 
+7. **SalesCQ** as **Username,** leave domain as is, 
 
 8. **Resource account type** select **Call queue,** then select **Save**.
 
@@ -912,7 +912,7 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 2. Under **Voice**, select **Auto Attendants** and select **Add**.
 
-3. Enter **Sales AA** for the name**,** 
+3. Enter **Sales AA** for the name,
 
 4. Time zone of **(UTC-08:00) Pacific Time (US…,** 
 
@@ -996,7 +996,7 @@ In this task you will create the relevant holiday configuration. Holidays differ
 
 1. In the Microsoft Teams admin center, go to **Voice &gt; Holidays**.
 
-2. Select **New holiday**.
+2. Select **Add** to start the creation of a new holiday.
 
 3. Enter a name for the holiday.
 
