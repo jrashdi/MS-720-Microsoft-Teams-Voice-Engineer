@@ -886,7 +886,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 6. Enter **Sales CQ** as **Display name**
 
-7. **SalesCQ** as **Username**, leave domain as is.
+7. **SalesCQ** as **Username,** leave domain as is, 
 
 8. **Resource account type** select **Call queue**, then select **Save**.
 
