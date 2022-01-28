@@ -54,7 +54,7 @@ In the following task you will download the DigiCert certificate you requested e
 
 3. In the message list, locate and select the email from **DigiCert** with the zip file attachment. The message may arrive in the Focused or Other folder and should arrive within 2-5 minutes.
 
-4. Download the **sbc01_lab&lt;customlabnumber&gt;.o365ready.com**XXXXXXX.**zip** file attachment, it will be saved to the default Downloads folder.
+4. Download the **sbc01_lab&lt;customlabnumber&gt;.o365ready.comXXXXXXX.zip** file attachment, it will be saved to the default Downloads folder.
 
 5. Close the browser window to end the task.
 
@@ -108,9 +108,9 @@ In the following task you will create the new session boarder controller resourc
 
 2. Open a new Microsoft Edge browser window and navigate to **https://portal.azure.com** 
 
-3. Select **create a resource.**
+3. Select **create a resource**.
 
-4. Search for **Audiocodes SBC.**
+4. Search for **Mediant VE Session Border Controller (SBC)**.
 
 5. Select **Mediant VE Session Border Controller (SBC).**
 
@@ -120,15 +120,15 @@ In the following task you will create the new session boarder controller resourc
 
 8. Fill **Name** with **SBC** then Select **OK.**
 
-9. Fill out the following information:
+9. Fill out the following information and leave everything else as-is:
 
 	- **Virtual machine name:** sbc01
 
 	- **Username:** sbcadmin
 
-	- **Password:** Enter the default Admin password in the “Resource” section on the right side of the lab window.
+	- **Password:** P@55w.rd1234
 
-10. Select **Review + Create** (Sometimes you need to select **Previous** and select **Review + Create** again).
+10. Select **Review + Create** (If you see a "Validation failed" message, you need to select **Previous** and select **Review + Create** again).
 
 11. Select **Create** and wait for the deployment to complete.
 
@@ -138,7 +138,7 @@ In the following task you will create the new session boarder controller resourc
 
 14. Make Note of the Public IP Address.
 
-15. Select the start button, enter **PowerShell** and select **PowerShell** from the start menu.
+15. Select the start button, enter **Windows PowerShell** and select **Run as administrator** below PowerShell from the start menu.
 
 16. When Windows PowerShell window has opened, enter the following cmdlet to a session with the DNS Server:
 
@@ -170,13 +170,15 @@ You have successfully created an SBC hosted inside Microsoft Azure.
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”.
 
-2. Open a new Microsoft Edge browser window and navigate to [**https://&lt;SBCpublicIPAddress&gt;**](*)
+2. Open a new Microsoft Edge browser window and navigate to [**https://&lt;SBCpublicIPAddress&gt;**](*) or [https://sbc01.lab&lt;student lab code&gt;.o365ready.com](*)
+
+**Note**: You may see a connection message indicating your connection isn't private (NET::ERR_CERTIFICATE_TRANSPARENCY_REQUIRED or NET::ERR_CERT_COMMON_NAME_INVALID).  Select **Advanced** and then the link at the bottom to **Continue to &lt;SBCpublicIPAddress&gt;**.
 
 3. Logon to the SBC using the following credentials you configured earlier:
 
 	- **Username:** sbcadmin
 
-	- **Password:** Enter the default Admin password in the “Resource” section on the right side of the lab window.
+	- **Password:** P@55w.rd1234
 
 You have successfully logged onto the SBC.
 
@@ -184,35 +186,41 @@ You have successfully logged onto the SBC.
 
 In the following task you will add the root certificate to the session border controller.
 
-1. You are still on MS720-CLIENT01 where you are still signed in as “Admin” and on the SBC configuration website as **Admin**.
+1. You are still on MS720-CLIENT01 where you are still signed in as “Admin” and on the SBC configuration website as **sbcadmin**.
 
-2. On the top menu, select **IP NETWORK**.
+1. On the top menu, select **IP NETWORK**.
 
-3. In the left navigation, select **SECURITY &gt; TLS Contexts**.
+1. In the left navigation, select **SECURITY &gt; TLS Contexts**.
 
-4. In the results pane, in the **TLS Contexts** table, select **Teams-TLSContext**.
+1. Above the results pane, in the **TLS Contexts** table, select **New**.
 
-5. Scroll down, and below the Teams-TLSContext information, select **Trusted Root Certificate**.
+1. Enter **Teams-TLSContext** as the Name.
 
-6. In the Trusted Root Certificates window, select **Import**.
+1. Change the **TLS Version** option to **TLSv1.2** and leave everthing else the same.
 
-7. In the **Import New Certificate** dialog box, select **Choose File**.
+1. Select **APPLY**.
 
-8. Browse to **C:\LabFiles**, select **BaltimoreTrustedRootCA.cer**, and then select **Open**. If you cannot find the certificate, select **All files (\*.\*)** in the bottom right corner.
+1. Scroll down, and below the **Teams-TLSContext** information, select **Trusted Root Certificate**.
 
-9. In the **Import New Certificate** dialog box, select **Ok**.
+1. In the Trusted Root Certificates window, select **Import**.
 
-10. Review the information for the selected root certificate that was installed.
+1. In the **Import New Certificate** dialog box, select **Choose File**.
 
-11. Perform the steps above and load the following root certificates:
+1. Browse to **C:\LabFiles**, select **BaltimoreTrustedRootCA.cer**, and then select **Open**. If you cannot find the certificate, select **All files (\*.\*)** in the bottom right corner.
+
+1. In the **File upload** dialog box, select **Close**.
+
+1. Review the information for the selected root certificate that was installed.
+
+1. Perform the steps above and load the following root certificates:
 
 	- **DigicertTrustedRoot.cer**
 
 	- **DigicertTrustedRootIntermediate.cer**
 
-12. When complete, in the Trusted Root Certificates window, to the left of **TLS Context[#1]**, select the back arrow icon.
+1. When complete, in the Trusted Root Certificates window, to the left of **TLS Context[#1]**, select the back arrow icon.
 
-13. Leave the browser window open for the next task.
+1. Leave the browser window open for the next task.
 
 You have successfully uploaded the root certificate to your SBC and can now continue uploading the lab certificate in the chain.
 
@@ -220,21 +228,21 @@ You have successfully uploaded the root certificate to your SBC and can now cont
 
 In the following task you will upload the lab certificate you requested earlier.  
 
-1. You are still on MS720-CLIENT01 where you are still signed in as “Admin” and on the SBC configuration website as **Admin**.
+1. In the TLS Contexts window, in the TLS Contexts table, select Teams-TLSContext.
 
-1. In the TLS Contexts window, in the **TLS Contexts** table, select **Teams-TLSContext**.
-
-1. Scroll down, and below the Teams-TLSContext information, select **Change Certificate**.
+1. Scroll down, and below the **Teams-TLSContext** information, select **Change Certificate**.
 
 1. In the Change Certificates window, scroll down to the **UPLOAD CERTIFICATE FILES FROM YOUR COMPUTER** section.
 
 1. In the **Private key pass-phrase (optional)** box, enter the default Admin password in the “Resource” section on the right side of the lab window.
  
-1. Under **Send Private Key file from your computer to the device**, select **Choose File**.  
+1. Under **Send Private Key file from your computer to the device**, select **Load Private Key File**.  
 
 1. In the Open window, browse to **C:\LabFiles**, select **Labcert.pfx**, and then select **Open**. If you cannot find the certificate, select **All files (*.*)** in the bottom right corner.  
 
 1. To the right of the lab certificate file path, select **Load File**.  
+
+    - **IMPORTANT**: After uploading the lab certificate, go back to Task 7 and verify that all 3 trusted root certificates are present.  If not, add any missing certificates and save the SBC configuration.
 
 1. Review the banner and verify that the certificate was loaded.  
 
@@ -266,11 +274,11 @@ In the following task you will configure the SIP interfaces that allow your SBC 
 
 	- **Enable TCP Keepalive:** Enable 
 
-	- **Classification Failure Response:** 0
+	- **Classification Failure Response Type:** 0
 
 	- **Media Realm:** #0 
 
-	- **TLS Context Name:** #1 Teams
+	- **TLS Context Name:** Teams-TLSContext
 
 	- **TLS Mutual Authentication:** Enable
 
@@ -290,9 +298,9 @@ In the following task you will configure the SBC Proxy Sets.
 
 	- **SBC IPv4 SIP Interface:** #1 Teams
 
-	- **TLS Context name:** #1 Teams
+	- **TLS Context name:** Teams-TLSContext
 
-	- **Proxy Keep-alive:** Using Options
+	- **Proxy Keep-alive:** Using OPTIONS
 
 	- **Proxy Hot Swap:** Enable
 
@@ -320,7 +328,7 @@ In the following task you will configure the SBC Proxy Addresses Interfaces.
 
 2. Select **Apply**.
 
-3. Scroll to the bottom of the page and select **Proxy Addresses**, select **New** and fill out the following information:
+3. Add another Proxy Address by selecting **New** and fill out the following information:
 
 	- **Proxy addresses:** sip2.pstnhub.microsoft.com:5061
 
@@ -332,7 +340,7 @@ In the following task you will configure the SBC Proxy Addresses Interfaces.
 
 4. Select **Apply**.
 
-5. Scroll to the bottom of the page and select **Proxy Addresses**, select **New** and fill out the following information:
+5. Add another Proxy Address by selecting **New** and fill out the following information:
 
 	- **Proxy addresses:** sip3.pstnhub.microsoft.com:5061
 
@@ -350,11 +358,11 @@ You have successfully configured Proxy Addresses on the SBC.
 
 In the following task you will configure the Coder Groups on the SBC.
 
-1. Create a new coders group by going to **Coders &amp; Profiles &gt; Coder Groups**, select Coder Group Name and then select **1: Does Not exist** and configure the following **Coder Names:**
+1. Create a new coders group by going to **Coders &amp; Profiles &gt; Coder Groups**, select Coder Group Name from the drop-down list and then select **1: Does Not exist** and configure the following **Coder Names:**
 
 	- SILK-NB with a pay lode type of 103
 
-	- Silk-WB with a pay lode type of 103
+	- Silk-WB with a pay lode type of 104
 
 	- G.711A-law
 
@@ -376,7 +384,7 @@ In the following task you will configure the IP Profiles for the SBC.
 
 	- **Name:** Teams
 
-	- **SBC Security Mode:** Secured
+	- **SBC Media Security Mode:** Secured
 
 	- **Remote Early Media RTP Detection Mode:** By Media
 
@@ -384,7 +392,7 @@ In the following task you will configure the IP Profiles for the SBC.
 
 	- **RTCP Mode:** Generate Always
 
-	- **SIP Update Support:** Not Supported
+	- **SIP UPDATE Support:** Not Supported
 
 	- **Remote re-INVITE:** Supported only with SDP
 
@@ -418,7 +426,7 @@ In the following task you will configure IP groups for the SBC.
 
 	- **Media Realm:** #0
 
-	- **Classify By Proxy Set:** disable
+	- **Classify By Proxy Set:** Disable
 
 	- **Local Host Name:** the name given to the device during creation - **sbc01.lab&lt;customlabnumber&gt;.o365ready.com**
 
@@ -436,7 +444,7 @@ You have successfully configured IP Groups on the SBC.
 
 In the following task you will configure the SBC to be ready for Teams.
 
-1. To configure SRTP go to **Media**, **Media security**, select **Media Security** and set it to **Enable**. 
+1. To configure SRTP go to **Media**, **Media security**, select **Media Security** and set it to **Enable**.
 
 2. Select **Apply** and then **Save**.
 
@@ -466,7 +474,7 @@ In the following task you will add the message manipulation on the SBC.
 
 	- **Source IP Address:** 52.114.\*.\* 
 
-	- **Destination Host:** FQDN of SBC (**sbc01.Lab&lt;customlabnumber&gt;.O365ready.com)**
+	- **Destination Host:** FQDN of SBC (**sbc01.lab&lt;customlabnumber&gt;.o365ready.com)**
 
 	- **Message Condition:** Teams 
 
@@ -538,7 +546,7 @@ In the following task you will configure 4 IP to IP calling rules on the SBC.
 
 	- **Destination Type:** IP Group
 
-	- **Destination Group:** Teams 
+	- **Destination IP Group:** Teams 
 
 10. Select **Apply** and then **Save**.
 
@@ -550,7 +558,7 @@ You have successfully configured the AudioCodes SBC to receive requests from the
 
 In the following task you will validate the the SBC to be ready for Teams
 
-On the SBC, select **Monitor** and under **VOIP Status &gt; Proxy Set Status**, the output should be **Online** for the three entries for psthub.Microsoft.com. 
+On the SBC, select **Monitor** at the top and under **VOIP Status &gt; Proxy Set Status**, the output should be **Online** for the three entries for psthub.Microsoft.com. 
 
 If the output shows the correct value for all three entries your SBC is configured correctly and you will be able to continue with the next exercise.
 
@@ -604,7 +612,7 @@ If you have several usages defined, the names of the usages might truncate. Use 
 9. Run the New-CsOnlineVoiceRoute command - Creates a new online voice route. Online voice routes contain instructions that tell Microsoft Teams how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX):
 
     ```powershell
-    New-CsOnlineVoiceRoute -Identity "10 Digit Dialing" -NumberPattern "^\+1(\d{10})$" -OnlinePstnGatewayList SBC01.lab<customlabnumber>.o365ready.com -OnlinePstnUsages "US and Canada"
+    New-CsOnlineVoiceRoute -Identity "10 Digit Dialing" -NumberPattern "^\+1(\d{10})$" -OnlinePstnGatewayList sbc01.lab<customlabnumber>.o365ready.com -OnlinePstnUsages "US and Canada"
     ```
 
 10. Run the Get-CSOnlineVoiceRoute command, this command returns information about the online voice routes configured for use in your tenant. Online voice routes contain instructions that tell Microsoft Teams how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX):
