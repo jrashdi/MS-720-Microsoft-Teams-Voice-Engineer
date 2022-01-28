@@ -288,7 +288,7 @@ Review Packet Loss, Latency and Jitter by following these steps:
 
 Microsoft’s performance targets for Teams are:
 
-- **LossRate %,** also called Packet loss <0.1% during any 15s interval – the tests are 5 seconds each, so we should not be breaching this threshold
+- **LossRate %**, also called Packet loss <0.1% during any 15s interval – the tests are 5 seconds each, so we should not be breaching this threshold
 
 - **AverageLatency-Ms, (one way)** **&lt; 50ms**
 
@@ -316,13 +316,13 @@ In this task you will sign into client01 and the Teams Admin Center and add our 
 
 3. Sign in with the credentials of the Teams Administrator for this lab, **Katie Jordan**.
 
-4. Expand the left navigation menu and select to expand **Locations,** then select **Network topology**.
+4. Expand the left navigation menu and select to expand **Locations**, then select **Network topology**.
 
 5. You will be prompted with **You haven't created any network sites yet**. Select **Add**.
 
 6. Enter the **name** for the first Network Site as **Tacoma Network Site** and **Description** as **Tacoma Office**.
 
-7. Select **Add a Network Region,** enter **UK** and select **Add**.
+7. Select **Add a Network Region**, enter **UK** and select **Add**.
 
 8. Select UK (select the circle) then select **Link**.
 
@@ -342,7 +342,7 @@ In this task you will sign into client01 and the Teams Admin Center and add our 
 
 16. Enter the **name** for the first Network Site as **Bellevue Network Site** and **Description** as **Bellevue Office**.
 
-17. Select **Add a Network Region,** select **UK** and select **Link**.
+17. Select **Add a Network Region**, select **UK** and select **Link**.
 
 18. Select **Add subnets**.
 
@@ -832,7 +832,7 @@ In this task you will order a new Dedicated conference bridge toll number. This 
 
 9. For **Search for new numbers** select **search by area code** and enter **920**.
 
-10. When all fields are complete, select **Next,** Microsoft will now reserve and present some numbers for you. If you see “We can't find any phone numbers for the area code you entered.” Try another US area code for this exercise. If you really did want a specific city, you would contact the PSTN service desk to find out if/when there is availability.
+10. When all fields are complete, select **Next**, Microsoft will now reserve and present some numbers for you. If you see “We can't find any phone numbers for the area code you entered.” Try another US area code for this exercise. If you really did want a specific city, you would contact the PSTN service desk to find out if/when there is availability.
 
 11. You should see 1 reserved number, select **Place Order**.
 
@@ -888,7 +888,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 7. **SalesCQ** as **Username,** leave domain as is, 
 
-8. **Resource account type** select **Call queue,** then select **Save**.
+8. **Resource account type** select **Call queue**, then select **Save**.
 
 9. Once saved, you will see Sales CQ under accounts to add, select **Add**.
 
@@ -896,7 +896,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 11. Set **Language** to **English (United States)**.
 
-12. Under **Call answering** select **Choose users and group, Add users,** search for Isaiah Langer. and select **Add**.
+12. Under **Call answering** select **Choose users and group, Add users**, search for Isaiah Langer. and select **Add**.
 
 13. Leave the other options as default
 
@@ -912,9 +912,9 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 2. Under **Voice**, select **Auto Attendants** and select **Add**.
 
-3. Enter **Sales AA** for the name,
+3. Enter **Sales AA** for the name, 
 
-4. Time zone of **(UTC-08:00) Pacific Time (US…,** 
+4. Time zone of **(UTC-08:00) Pacific Time (US…)**,
 
 5. Leave the Language as default
 
@@ -922,15 +922,15 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 7. Under **Call flow**, select **Add a greeting message** and enter, “Thank you for calling Contoso, your call is important to us, please be patient while we handle your call”.
 
-8. Under **Then route the call**, select **Redirect Call**, then select Redirect to **Voice App,** enter **Sales CQ,** then select **Next**
+8. Under **Then route the call**, select **Redirect Call**, then select Redirect to **Voice App**, enter **Sales CQ**, then select **Next**
 
-9. Under **Set business hours** leave the defaults and select **next,** 
+9. Under **Set business hours** leave the defaults and select **next**, 
 
-10. Under set Holiday call settings select **Next,** 
+10. Under set Holiday call settings select **Next**, 
 
 11. Under Find People select **Next**.
 
-12. Under **Resource Accounts, Select Add,** enter **Sales AA** in the search box, then **select Add Resource Account,** enter **Display Name** of **Sales AA, Username** is **SalesAA,** and **Resource account type** of **Auto Attendant,** select **Save**.
+12. Under **Resource Accounts, Select Add**, enter **Sales AA** in the search box, then **select Add Resource Account**, enter **Display Name** of **Sales AA, Username** is **SalesAA**, and **Resource account type** of **Auto Attendant**, select **Save**.
 
 13. Select **Add**, select **Submit** under **Resource Accounts** menu.
 
@@ -948,9 +948,9 @@ Collaborative calling enables you to connect a call queue to a channel in Teams.
 
 2. Under **Voice**, and **Call Queues**, select **Sales CQ**.
 
-3. Under **Call answering** select **Choose a team,** select **Add a channel**. 
+3. Under **Call answering** select **Choose a team**, select **Add a channel**. 
 
-4. Type **Contoso loves Teams,** select the channel and select **Add,** select **General,** select **Apply**.  
+4. Type **Contoso loves Teams**, select the channel and select **Add**, select **General**, select **Apply**.  
 
 5. Leave the Teams Admin Center open for the next task
 
@@ -962,11 +962,11 @@ By default, if a call to a call queue isn't answered by an agent within the maxi
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-2. Under **Voice,** and **Call Queues**, select **Sales CQ**
+2. Under **Voice**, and **Call Queues**, select **Sales CQ**
 
-3. Under **Call time out handling,** select **Redirect this call to,** select Redirect to, from the drop-down menu select **Voicemail**
+3. Under **Call time out handling**, select **Redirect this call to**, select Redirect to, from the drop-down menu select **Voicemail**
 
-4. In the search type **All,** select **All Company,** 
+4. In the search type **All**, select **All Company**, 
 
 5. Set Enable **Transcription On**
 
@@ -982,9 +982,9 @@ In this task you will enable conference mode that will then make it pass the cal
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-2. Under **Voice,** and **Call Queues**, select **Sales CQ,** 
+2. Under **Voice**, and **Call Queues**, select **Sales CQ**, 
 
-3. Under **Call answering** select find **Conferencing mode,** toggle the setting to **On**. 
+3. Under **Call answering** select find **Conferencing mode**, toggle the setting to **On**. 
 
 You have successfully enabled conferencing mode for **Sales CQ** call queue.
 
@@ -1034,7 +1034,7 @@ In this task you will obtain a free MP3 to the music on hold solution for the Sa
 
 7. Under **Music on hold**, select **Play an audio file**.
 
-8. Select **Upload file,** Select **A-New-Life-free.mp3** press **Open**
+8. Select **Upload file**, Select **A-New-Life-free.mp3** press **Open**
 
 9. Select **Save**.
 
