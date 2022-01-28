@@ -248,7 +248,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
     Update-Module MSOnline
     ```
 
-15. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
+15. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**. If the command fails, run **Install-Module ExchangeOnlineManagement**.
 
     ```powershell
     Update-Module ExchangeOnlineManagement
@@ -610,157 +610,7 @@ If they front door locations do not have green ticks and they are not using any 
 
 You have successfully tested network connectivity and performance from a user’s machine using the Microsoft 365 network test tool.
 
-### Task 5 - Investigate and diagnose calling issues with SBC SIP logs
-
-When investigating calling issues with Direct Routing you may need to review call logs, or Session Initiation Protocol (SIP) logs, SIP is the protocol used between Microsoft Teams Phone service, your Session Border Controller and your PSTN operator.
-
-In this lab you will in install a Syslog server to collect logs from the AudioCodes SBC, configure the AudioCodes SBC to send logs to the Syslog server, and place a call and review the logs.
-
-First, you need to install AudioCodes syslog Viewer in MS720-RRAS01:
-
-1. Switch to MS720-RRAS01 and sign in with the credentials provided in the lab.
-
-2. Open Microsoft Edge and browse to [http://redirect.audiocodes.com/install/index.html](http://redirect.audiocodes.com/install/index.html)
-
-3. Under Syslog viewer for Windows, Press the Download Button.
-
-4. When the file is downloaded, select **Open**.
-
-5. On Welcome to the Syslog viewer Setup Wizard, select Next.
-
-6. On Select Destination Location, select Next.
-
-7. On Select Start Menu folder, select Next.
-
-8. The app will install, when complete leave Run application ticked and click finish.
-
-You have successfully installed AudioCodes Syslog viewer which is also a listening syslog server. You can validate it is listening on UDP port 514 by running the following
-
-1. Select start, type cmd, see Command prompt, right select and run as administrator.
-
-2. At the command prompt use netstat to find the processes listening on port 514:
-
-    ```console
-    netstat -na | find "514" |
-    ```
-
-3. At the top of the output you will see This is the process listening on UDP 514:
-
-    ```console
-    UDP 0.0.0.0:514 *.* |
-    ```
-
-4. Leave the Syslog viewer running.
-
-5. To configure the AudioCodes SBC to point to the Syslog server, we need to know the server public IP address, still in the command line, type the following.
-
-    ```console
-    Ipconfig |
-    ```
-
-6. In the results, note down the Ethernet adapter External IPv4 Address.
-
-7. Since windows firewall is running on the server Public interface, we need to open 514 UDP on the firewall, by running the following command:
-
-    ```console
-    netsh advfirewall firewall add rule name= "Open Port 514" dir=in action=allow protocol=UDP localport=514 |
-    ```
-
-8. You should get OK returned at the command line.
-
-9. Close the command window.
-
-Now that we have a syslog viewer running and we know what IP it is listening on, we need to direct logs from the SBC to our syslog server
-
-1. Remaining on MS720-RRAS01 server
-
-2. Launch Microsoft Edge and navigate to 192.168.0.200 (this is the AudioCodes SBC IP address)
-
-3. Login to your SBC username Admin, Password Admin
-
-4. go to Troubleshoot on the top menu
-
-5. Under Logging select Syslog Settings 
-
-6. Set the following
-
-	- Enable Syslog: enable (the default)
-
-	- Syslog Server IP: Public IP address from the task above
-
-	- Syslog Server Port: 514 (the default)
-
-7. Select Apply
-
-8. Select Admin, Logout on the top right of the interface
-
-9. At the login screen, again login SBC username Admin, Password Admin
-
-10. Go back to Syslog viewer, you should see a logout and login event in the syslog
-
-You have successfully setup your AudioCodes SBC to send Syslogs to the Syslog viewer and can see logs being sent from the SBC to the Syslog viewer.
-
-Now perform a call with Alex Wilber our user who is configured for Direct Routing
-
-First, we will sign in the 3CX softphone
-
-1. You are still signed into MS720-CLIENT01 as “Admin” from the previous task
-
-2. Select **Start** and then enter **3CX Phone** and select it
-
-3. In the softphone, on the top right side of the screen, select **Admin***.
-
-4. Verify that on the **Account windows, the Hook** is displayed on the screen for the LabUser.
-
-5. Select **OK** to close the Account window.
-
-6. Start the Teams Desktop client by running it from the desktop.
-
-7. You should still be signed in as Alex Wilber.
-
-8. Switch to the 3CX softphone on MS720-CLIENT01.
-
-9. In the 3CX softphone **14255551234**
-
-10. The Teams client will ring, answer the Teams client.
-
-11. If your lab machine prompted, you to use your microphone select **allow.**
-
-12. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access.**
-
-13. Note the call connects, leave it connected for 60 seconds.
-
-14. Press the red hang-up button in Teams to disconnect the call to disconnect the call.
-
-Review the logs in Syslog Viewer
-
-1. On MS720-RRAS01 bring the Syslog viewer back into focus
-
-2. You should see many lines of logs 
-
-3. Select tools on the top menu then SIP flow diagram, this draws an interactive ladder diagram of the SIP signaling for calls
-
-4. The top-right pane contains list of all sessions found in the current display buffer. For each session some useful summary information is displayed. 
-
-5. The bottom-right pane contains the details of the currently selected message. 
-
-6. The left pane contains the ladder diagram. Click on the message to select it. Note that when you do so, "message details" pane is updated and cursor in the "main window" is re-positioned on a line that corresponds to the selected message (so that you can jump to it and check what happened near the same time).
-
-7. You can now see a complete SIP ladder diagram of your call, click on and review
-
-	- The Invite, which sets up the call
-
-	- The 183 Session Progress
-
-	- The BYE which ends the session.
-
-	- You should not see any 5xx or 6xx SIP codes, which indicate errors
-
-If you are seeing 5xx and 6xx error codes, confirm the number dialed is correct and has been normalized correctly to an E.164 format that the PSTN carrier supports. If that is correct confirm that number is dialable on a different system, to prove the number is in service and works. You could, for example, dial the number from a cell phone. If the number works outside of this system and is formatted correctly, raise a support issue with your PSTN operator.
-
-You have successfully reviewed a Teams Direct Routing call SIP log.
-
-### Task 6 - Inspect PSTN Usage Reports
+### Task 5 - Inspect PSTN Usage Reports
 
 The Teams PSTN (Public Switched Telephone Network) usage report in the Microsoft Teams admin center gives you an overview of calling and audio conferencing activity in your organization. 
 
@@ -822,7 +672,7 @@ The report shows:
 
 You have successfully generated and reviewed the PSTN usage report
 
-### Task 7 - Review Calls in Call Analytics
+### Task 6 - Review Calls in Call Analytics
 
 If we want to review the usage and performance of an individuals Teams calling, the first place to look is Call Analytics in the Teams Admin Center. In this task we will review Alex Wilber’s calls in Call Analytics
 
@@ -850,7 +700,7 @@ You can see device, system, connectivity and network information. Note that sinc
 
 You now know how to access and review call and meeting information in Call Analytics in the Teams Admin Center.
 
-### Task 8 - Review Calls in Call Quality Dashboard
+### Task 7 - Review Calls in Call Quality Dashboard
 
 A Voice Administrator should look at the call and meeting usage and performance across the entire environment. This can be done by reviewing the Microsoft Call Quality Dashboard
 
