@@ -154,17 +154,23 @@ In the following task you will run the Network Planner report and review the res
 
 5. Enter a **friendly** **description** as **Network report for Tacoma and Bellevue**.
 
-6. For each site we must now define the number of users of each profile type. For **Tacoma Site**, select **Office worker** and set **Network users** to **30**.
+For each site we must now define the number of users of each profile type. 
 
-7. Select **Audio Only User** and set network users to **20**.
+6. For **Tacoma Site**, in the **Office worker** row, set Network users to **30**.
 
-8. For **Bellevue Site**, select **Office worker** and set **Network users** to **80**.
+7. Click **+Add** and choose **Audio User Only** 
 
-9. Select **Audio Only User** and set network users to **10**.
+8. In the **Audio Only User** row, set Network Users to **20**.
 
-10. Now select **Generate report**.
+9. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
 
-11. Close the browser window at the end of the task.
+10. Click **+Add** and choose **Audio User Only**
+
+11. In the  **Audio Only User** row, set Network Users to **10**.
+
+12. Now select **Generate report**.
+
+13. Close the browser window at the end of the task.
 
 You have successfully generated a Network Planner Report. We can see from the results that, at the default of 30% allowed bandwidth for Microsoft Teams reserved for real-time communications the Tacoma site is fine for bandwidth, but the Bellevue site does not have enough, as we can see by the figure highlighted in red. It would be recommended to increase the internet bandwidth at the Bellevue site.
 
@@ -254,9 +260,9 @@ The network quality check (performance test) is run with the NetworkAssessmentTo
 
 3. Enter **NetworkAssessmentTool.exe /qualitycheck** and press enter to run that program.
 
-4. This will now run the test, you will see output come up on the command prompt, note you can see the **Loss Rate**, **Latency** and **Jitter** as the tests are performed number as the tests are performed. 
+4. This will now run the test, you will see output come up on the command prompt, note you can see the **Loss Rate**, **Latency** and **Jitter** as the tests are performed.
 
-5. The test will run for 300 seconds with tests every 5 seconds, we will finish the test early, after 10 or more tests have been completed, press **Ctrl+C** to stop the test.
+5. The test will run for 300 seconds with tests every 5 seconds, we will finish the test early. After 10 or more tests have been completed, press **Ctrl+C** to stop the test.
 
 6. When the test is complete, you will see the output **Call Quality Check Has Finished Call Quality Check result has been written to: C:\Users\LabUser\AppData\Local\Microsoft Teams Network Assessment Tool\\<Number\>quality_check_results.csv**
 
@@ -280,7 +286,7 @@ Review Packet Loss, Latency and Jitter by following these steps:
     cd %userprofile%"\AppData\Local\Microsoft Teams Network Assessment Tool\"
     ```
 
-3. Press tab to tab through files in that directory, when you see the file <number>_quality_check_results.csv press **enter** to open the file. 
+3. Press **Tab** to tab through files in that directory, when you see a file name ending in _quality_check_results.csv press **Enter** to open the file. 
 
 4. Select the top right X to close the activation prompt when excel loads. You can now see your test results in Excel.
 
@@ -432,7 +438,7 @@ You have successfully added an emergency address
 
 Now that we have added our network Region, Sites and Subnets we can map our network locations to physical office addresses for emergency calling. 
 
-TIP: This configuration refers to Emergency Locations, but when you are defining them Teams Admin Center calls them Emergency Addresses. They are the same thing.
+TIP: This configuration refers to Emergency Locations, but when you are defining them, the Teams Admin Center calls them Emergency Addresses. They are the same thing.
 
 You can map emergency location\addresses to:
 
@@ -500,7 +506,7 @@ In this exercise, you will configure some key voice setting and policies require
 
 ### Task 1 - Create a Dial Plan for extension dialing
 
-In this task you will sign into the Client01 and the Teams Admin Center and configure a dial plan. Our Tacoma office users are used to using 3 digit short codes to call users internally, from 500 to 550. These 3 digit codes map 1:1 to the last 3 digits of their PSTN number. In Tacoma the numbers are +44208 566 5xx. XXX represents 00 to 99, We own this number range for the Tacoma users.
+In this task you will sign into the Client01 and the Teams Admin Center and configure a dial plan. Our Tacoma office users are used to using 3 digit short codes to call users internally, from 500 to 550. These 3 digit codes map 1:1 to the last 3 digits of their PSTN number. In Tacoma the numbers are +44208 566 5xx. XX represents 00 to 99, We own this number range for the Tacoma users.
 
 So, for example, if a user’s phone number is +44208 566 511, employees are used to being able to dial 511 to ring that user.
 
@@ -510,7 +516,7 @@ Since we want all users to be able to do 5xx extension dialing, we will add a ne
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
-2. In the left navigation pane select **Voice** and **Dial plans**. 
+2. In the left navigation pane expand **Voice** then select **Dial plans**. 
 
 3. Select the **Global (org wide default)** dial plan.
 
@@ -734,7 +740,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 2. Open the Edge browser and navigate to [https://teams.microsoft.com](https://teams.microsoft.com/).
 
-3. When a **Save password** dialog is displayed, select **Never**.
+3. Log in as Isaiah Langer using the password you assigned in the previous lab. When a **Save password** dialog is displayed, select **Never**.
 
 4. When a **Stay signed in?** dialog is displayed, select **No**.
 
@@ -906,7 +912,9 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 You have successfully created the Sales CQ call queue and added Isaiah Langer as an agent
 
-Now we will Create an Auto attendant and direct one of the options to send calls to our Sales CQ call queue. This will ready the Microsoft 365 Auto Attendant to become functional. 
+### Task 2 - Create an auto attendant for the Sales call queue
+
+Now we will create an auto attendant and direct one of the options to send calls to our Sales CQ call queue. This will ready the Microsoft 365 Auto Attendant to become functional. 
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
@@ -930,7 +938,7 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 11. Under Find People select **Next**.
 
-12. Under **Resource Accounts, Select Add**, enter **Sales AA** in the search box, then **select Add Resource Account**, enter **Display Name** of **Sales AA, Username** is **SalesAA**, and **Resource account type** of **Auto Attendant**, select **Save**.
+12. Under **Resource Accounts**, Select **Add**, enter **Sales AA** in the search box, then select **Add Resource Account**, enter **Display Name** of **Sales AA**, Username is **SalesAA**, and **Resource account type** of **Auto Attendant**, select **Save**.
 
 13. Select **Add**, select **Submit** under **Resource Accounts** menu.
 
@@ -940,7 +948,7 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 You have successfully created an Auto Attendant, and aligned it to a Call Queue
 
-### Task 2 – Configure a Call Queue to use a channel
+### Task 3 – Configure a Call Queue to use a channel
 
 Collaborative calling enables you to connect a call queue to a channel in Teams. Users can collaborate and share information in the channel while taking calls in the queue. Instead of defining the agents in the Teams Admin Center, the agents are defined by who is members of the team.
 
@@ -956,7 +964,7 @@ Collaborative calling enables you to connect a call queue to a channel in Teams.
 
 You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso Loves Teams team.
 
-### Task 3 - Configure a Call Queue to forward to voicemail if busy
+### Task 4 - Configure a Call Queue to forward to voicemail if busy
 
 By default, if a call to a call queue isn't answered by an agent within the maximum wait time, it will be disconnected. We would like to configure unanswered calls to go to voicemail instead. The voicemail must be an Office 365 Group voicemail.
 
@@ -964,7 +972,7 @@ By default, if a call to a call queue isn't answered by an agent within the maxi
 
 2. Under **Voice**, and **Call Queues**, select **Sales CQ**
 
-3. Under **Call time out handling**, select **Redirect this call to**, select Redirect to, from the drop-down menu select **Voicemail**
+3. Under **Call time out handling**, select **Redirect this call to**, select Redirect to, from the drop-down menu select **Voicemail (Shared)**
 
 4. In the search type **All**, select **All Company**, 
 
@@ -976,7 +984,7 @@ By default, if a call to a call queue isn't answered by an agent within the maxi
 
 You have successfully assigned a voicemail to the Call Queue should it reach a time out period. 
 
-### Task 4 - Explore conference mode toggle
+### Task 5 - Explore conference mode toggle
 
 In this task you will enable conference mode that will then make it pass the call between the inbound calls more quickly.
 
@@ -986,9 +994,11 @@ In this task you will enable conference mode that will then make it pass the cal
 
 3. Under **Call answering** select find **Conferencing mode**, toggle the setting to **On**. 
 
+4. Click **Save**.
+
 You have successfully enabled conferencing mode for **Sales CQ** call queue.
 
-### Task 5 - Set holiday modes within AA
+### Task 6 - Set holiday modes within AA
 
 In this task you will create the relevant holiday configuration. Holidays differ from country to country but in this instance, we will just create a new holiday time that’s relevant to yourself. 
 
@@ -1016,7 +1026,7 @@ In this task you will create the relevant holiday configuration. Holidays differ
 
 You have successfully created a holiday relevant to your area and assigned it to a Call queue. 
 
-### Task 6 - Import MP4 file in as custom music on hold
+### Task 7 - Import MP4 file in as custom music on hold
 
 In this task you will obtain a free MP3 to the music on hold solution for the Sales Call Queue
 
@@ -1034,7 +1044,7 @@ In this task you will obtain a free MP3 to the music on hold solution for the Sa
 
 7. Under **Music on hold**, select **Play an audio file**.
 
-8. Select **Upload file**, Select **A-New-Life-free.mp3** press **Open**
+8. Select **Upload file**, navigate to the **Downloads** folder, select **A-New-Life-free.mp3** and select **Open**.
 
 9. Select **Save**.
 
