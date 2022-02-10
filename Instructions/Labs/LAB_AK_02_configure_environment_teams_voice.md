@@ -740,9 +740,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 2. Open the Edge browser and navigate to [https://teams.microsoft.com](https://teams.microsoft.com/).
 
-3. Log in as Isaiah Langer using the password you assigned in the previous lab.
-
-3. When a **Save password** dialog is displayed, select **Never**.
+3. Log in as Isaiah Langer using the password you assigned in the previous lab. When a **Save password** dialog is displayed, select **Never**.
 
 4. When a **Stay signed in?** dialog is displayed, select **No**.
 
@@ -914,7 +912,9 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 You have successfully created the Sales CQ call queue and added Isaiah Langer as an agent
 
-Now we will Create an Auto attendant and direct one of the options to send calls to our Sales CQ call queue. This will ready the Microsoft 365 Auto Attendant to become functional. 
+### Task 2 - Create an auto attendant for the Sales call queue
+
+Now we will create an auto attendant and direct one of the options to send calls to our Sales CQ call queue. This will ready the Microsoft 365 Auto Attendant to become functional. 
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
@@ -948,7 +948,7 @@ Now we will Create an Auto attendant and direct one of the options to send calls
 
 You have successfully created an Auto Attendant, and aligned it to a Call Queue
 
-### Task 2 – Configure a Call Queue to use a channel
+### Task 3 – Configure a Call Queue to use a channel
 
 Collaborative calling enables you to connect a call queue to a channel in Teams. Users can collaborate and share information in the channel while taking calls in the queue. Instead of defining the agents in the Teams Admin Center, the agents are defined by who is members of the team.
 
@@ -964,7 +964,7 @@ Collaborative calling enables you to connect a call queue to a channel in Teams.
 
 You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso Loves Teams team.
 
-### Task 3 - Configure a Call Queue to forward to voicemail if busy
+### Task 4 - Configure a Call Queue to forward to voicemail if busy
 
 By default, if a call to a call queue isn't answered by an agent within the maximum wait time, it will be disconnected. We would like to configure unanswered calls to go to voicemail instead. The voicemail must be an Office 365 Group voicemail.
 
@@ -984,7 +984,7 @@ By default, if a call to a call queue isn't answered by an agent within the maxi
 
 You have successfully assigned a voicemail to the Call Queue should it reach a time out period. 
 
-### Task 4 - Explore conference mode toggle
+### Task 5 - Explore conference mode toggle
 
 In this task you will enable conference mode that will then make it pass the call between the inbound calls more quickly.
 
@@ -998,7 +998,7 @@ In this task you will enable conference mode that will then make it pass the cal
 
 You have successfully enabled conferencing mode for **Sales CQ** call queue.
 
-### Task 5 - Set holiday modes within AA
+### Task 6 - Set holiday modes within AA
 
 In this task you will create the relevant holiday configuration. Holidays differ from country to country but in this instance, we will just create a new holiday time that’s relevant to yourself. 
 
@@ -1026,7 +1026,7 @@ In this task you will create the relevant holiday configuration. Holidays differ
 
 You have successfully created a holiday relevant to your area and assigned it to a Call queue. 
 
-### Task 6 - Import MP4 file in as custom music on hold
+### Task 7 - Import MP4 file in as custom music on hold
 
 In this task you will obtain a free MP3 to the music on hold solution for the Sales Call Queue
 

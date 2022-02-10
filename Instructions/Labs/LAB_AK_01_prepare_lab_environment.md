@@ -70,7 +70,8 @@ The lab number task, updates the o365ready.com DNS server with your lab's public
 
     ![Screenshot of the o365ready.com website showing the lab number provisioning tool form.](.\Linked_Image_Files\M01_L01_E01_T02.png)
 
-If you have restarted this lab or if the lab timer has expired and the virtual machines were reset, you will likely have a new public IP address. Perform the following steps to update your lab domain delegation zone's public IP address.
+> [!NOTE]
+> If you have restarted this lab or if the lab timer has expired and the virtual machines were reset, you will likely have a new public IP address. Perform the following steps to update your lab domain delegation zone's public IP address.
 
 1. In Microsoft Edge, browse to [http://www.o365ready.com](http://www.o365ready.com/).
 
@@ -192,7 +193,7 @@ In the following task you will use the global administrator account MOD Administ
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and to the **Microsoft 365 admin center** as **MOD Administrator**.
 
-1. In the upper left navigation, select the three dashes left from **Contoso** to open the full left-side menu.
+1. In the upper left navigation, select the three dashes to the left of the organization name to open the full left-side menu.
 
 1. Select **Users** and **Active users** from the menu below.
 

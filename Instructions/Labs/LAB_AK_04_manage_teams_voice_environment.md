@@ -244,67 +244,70 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 16. In Notepad, **Save** the file and close it.
 
-17. Make sure you have the latest MSOnline PowerShell module installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
+### Task 2 - Run the modified SkypeRoomProvisioningScript.ps1 in PowerShell to setup the MTR account
+
+1. Make sure you have the latest MSOnline PowerShell module installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
 
     ```powershell
     Update-Module MSOnline
     ```
 
-18. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**. If the command fails, run **Install-Module ExchangeOnlineManagement**.
+2. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**. If the command fails, run **Install-Module ExchangeOnlineManagement**.
 
     ```powershell
     Update-Module ExchangeOnlineManagement
     ```
 
-19. Run the script with the following command:
+3. Run the script with the following command:
 
     ```powershell
     .\SkypeRoomProvisioningScript.ps1
     ```
 
-20. From the script menu choice, enter **2** for a Skype Room Systems v2 device, and then press Enter.
+4. From the script menu choice, enter **2** for a Skype Room Systems v2 device, and then press Enter.
 
-21. Enter **1** to create the account in AD, Exchange and Skype, and then press Enter.
+5. Enter **1** to create the account in AD, Exchange and Skype, and then press Enter.
 
-22. Enter **2** to create the account in the cloud, then press Enter.
+6. Enter **2** to create the account in the cloud, then press Enter.
 
-23. Enter **2** when asked if your users are synced to Office 365, then press Enter.
+7. Enter **2** when asked if your users are synced to Office 365, then press Enter.
 
-24. A Windows PowerShell credential request window appears. Enter the credentials of your **MOD Administrator**.
+8. A Windows PowerShell credential request window appears. Enter the credentials of your **MOD Administrator**.
 
-25. A Windows PowerShell credential request window appears, asking you the **Enter the desired UPN and password for this new room account**. Enter **mtr01@lab&lt;customlabnumber&gt;.o365ready.com** and enter a secure password you will remember.
+9. A Windows PowerShell credential request window appears, asking you the **Enter the desired UPN and password for this new room account**. Enter **mtr01@lab&lt;customlabnumber&gt;.o365ready.com** and enter a secure password you will remember.
 
-26. Enter the following display name for the account and then press Enter.
+10. Enter the following display name for the account and then press Enter.
 
     - **Bellevue Board Room**
 
-27. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM** SKU. 
+11. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM** SKU. 
 
-28. Choose **1** to add another license. Select the **ENTERPRISEPREMIUM** SKU.
+12. Choose **1** to add another license. Select the **ENTERPRISEPREMIUM** SKU.
 
-29. Choose **2** to proceed without adding any additional licenses. 
+13. Choose **2** to proceed without adding any additional licenses. 
 
-30. To provision the Exchange Room mailbox, choose **2** to provision the user in the cloud, then press Enter.
+14. To provision the Exchange Room mailbox, choose **2** to provision the user in the cloud, then press Enter.
 
-31. Enter **2** when asked to confirm if the Exchange Online admin account is different from the Global Administrator account, then press Enter. The process will take approximately 10 minutes to complete.
+15. Enter **2** when asked to confirm if the Exchange Online admin account is different from the Global Administrator account, then press Enter. The process will take approximately 10 minutes to complete.
 
-32. The script will state that the mailbox has been created. An opportunity to automatically configure the calendar processing defaults, so that Automatic Calendar Processing is enabled will be presented. Enter **1** for Yes, then press Enter.
+16. The script will state that the mailbox has been created. An opportunity to automatically configure the calendar processing defaults, so that Automatic Calendar Processing is enabled will be presented. Enter **1** for Yes, then press Enter.
 
-33. When prompted to provision Skype user, enter **2** for in the cloud, then press **Enter**.
+17. When prompted to provision Skype user, enter **2** for in the cloud, then press **Enter**.
 
-34. Enter **2** when asked to confirm if the Skype for Business Online admin account is different from the Global Administrator account, then press Enter.
+18. Enter **2** when asked to confirm if the Skype for Business Online admin account is different from the Global Administrator account, then press Enter.
 
-35. The account will now be enabled for Microsoft Teams (based upon the tenant being in **Teams Only Mode**) and the script will attempt to set up the account as a meeting room. This may take approximately 5 minutes.
+19. The account will now be enabled for Microsoft Teams (based upon the tenant being in **Teams Only Mode**) and the script will attempt to set up the account as a meeting room. This may take approximately 5 minutes.
 
-36. When prompted to configure **Enterprise Voice** for the room, choose **1** for Yes, then press Enter.
+20. When prompted to configure **Enterprise Voice** for the room, choose **1** for Yes, then press Enter.
 
-37. Enter the following E.164 number for the room, without a **tel:+** prefix: 14255551123 
+21. Enter the following E.164 number for the room, without a **tel:+** prefix: 14255551123 
 
-38. Check the LineURI stated is correct and shows as tel:+14255551123 and then choose **1** to accept, then press Enter.
+22. Check the LineURI stated is correct and shows as tel:+14255551123 and then choose **1** to accept, then press Enter.
 
-39. Close the PowerShell Window at the end of the task.
+23. Close the PowerShell Window at the end of the task.
 
-If the script fails to create the room, open a new Administrator PowerShell console and run the following commands. Use your **MOD Administrator** credentials to log in, and use the email address of the Bellevue Board Room you created via the script.
+> [!IMPORTANT] 
+> If the script fails to create the room, open a new Administrator PowerShell console and run the following commands. Use your **MOD Administrator** credentials to log in, and use the email address of the Bellevue Board Room you created via the script.
 
     ```powershell
     Connect-MicrosoftTeams
@@ -360,7 +363,7 @@ Megan Bowen has reported they are not receiving voicemails. Microsoft offers som
 
 3. On the left menu, select **Show all**, then **Users** and **Active Users**. 
 
-4. Find Megan Bowen and note down their username and email address, you will need it to run the test. Note this is one value in the format MeganB@\LAB<uniquelabnumber\>.o365ready.com
+4. Find Megan Bowen and note down their username and email address, you will need it to run the test. Note this is one value in the format MeganB@lab<customlabnumber\>.o365ready.com
 
 5. On the left menu, select **show all**, then **Support** and under the support menu **New service request**.
 
