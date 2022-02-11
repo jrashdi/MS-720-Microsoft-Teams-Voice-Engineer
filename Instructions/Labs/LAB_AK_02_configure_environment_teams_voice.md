@@ -378,7 +378,9 @@ In this task you will add a trusted IP addresses for each the Tacoma and Bellevu
 
 7. For the Tacoma office add **151.101.128.91** and **32** as the network range and in the description enter **Tacoma Office Public IP**.
 
-8. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
+8. Select **Apply**.
+
+9. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
 
 You have successfully added the public IP that clients will appear from for the Tacoma and Bellevue Offices as Trusted IPs.
 
