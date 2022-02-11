@@ -776,7 +776,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 18. Press the red hang-up button to disconnect the call.
 
-Now we confirmed that Alex can make a PSTN call in Teams
+Now we confirmed that Isaiah can make a PSTN call in Teams
 
 ## Exercise 6: Configure audio conferencing settings
 
