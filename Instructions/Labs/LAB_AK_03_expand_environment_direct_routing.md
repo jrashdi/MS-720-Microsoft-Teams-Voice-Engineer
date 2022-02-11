@@ -242,7 +242,7 @@ In the following task you will upload the lab certificate you requested earlier.
 
 1. To the right of the lab certificate file path, select **Load File**.  
 
-    - **IMPORTANT**: After uploading the lab certificate, go back to Task 7 and verify that all 3 trusted root certificates are present.  If not, add any missing certificates and scroll up from the top menu select **Save** to save the SBC configuration.
+    - **IMPORTANT**: After uploading the lab certificate, go back to Task 7 and verify that all 3 trusted root certificates are present.  If not, add any missing certificates and scroll up, select **Save** from the top menu to save the SBC configuration.
 
 1. Review the banner and verify that the certificate was loaded.  
 
