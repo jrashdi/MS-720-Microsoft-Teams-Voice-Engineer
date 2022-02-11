@@ -732,7 +732,7 @@ Now Isaiah has a calling plan and phone number and we will perform a test call t
 
 1. Switch to MS720-CLIENT02 and sign in as “Admin” with the credentials provided to you.
 
-2. Open the Edge browser and navigate to [https://teams.microsoft.com](https://teams.microsoft.com/).
+2. Open the Edge browser and navigate to [https://teams.microsoft.com](https://teams.microsoft.com/). Sign in with the credentials of Isaiah.
 
 3. When a **Save password** dialog is displayed, select **Never**.
 
