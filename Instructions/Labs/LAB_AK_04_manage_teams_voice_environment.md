@@ -165,7 +165,7 @@ In this task you will provision a Teams Phone device in the Teams administration
 
 5. The **Provision devices** page shows. Under **Waiting on activation** select **Add MAC addresses manually**.
 
-6. In the **Add MAC** addresses dialogue, enter the MAC address of "ab-cd-12-34-ef-56" and location, Bellevue, for the Teams IP Phone.
+6. In the **Add MAC** addresses dialogue, enter the MAC address of "ab-cd-12-34-ef-56" and for location enter **Bellevue**, for the Teams IP Phone.
 
 	In a production environment you would enter the actual MAC address of the device you want to connect.
 
