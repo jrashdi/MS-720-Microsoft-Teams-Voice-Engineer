@@ -157,7 +157,7 @@ In this task you will provision a Teams Phone device in the Teams administration
 
 1. Open Microsoft Edge from the task bar and browse to the **Microsoft Teams admin center** at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
-2. Sign in as **Katie Jorden**, who has the Teams Administrator role.
+2. Sign in as **Katie Jordan**, who has the Teams Administrator role.
 
 3. Select **Teams devices** and then select **Phones**.
 
