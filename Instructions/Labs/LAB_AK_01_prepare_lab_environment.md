@@ -161,7 +161,7 @@ You have successfully requested the certificate from DigiCert and will download 
 
 In this exercise, you will assign the required admin permissions to continue with the other labs and exercises in this course.
 
-### Task 1 - Verify the custom domain has been added to your Office 365 subscription
+### Task 1 - Verify the custom domain has been added to your Microsoft 365 subscription
 
 In this task you will verify your custom domain so you can work with it and assign it to users.
 
