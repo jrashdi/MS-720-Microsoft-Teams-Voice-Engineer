@@ -158,19 +158,23 @@ For each site we must now define the number of users of each profile type.
 
 6. For **Tacoma Site**, in the **Office worker** row, set Network users to **30**.
 
-7. Click **+Add** and choose **Audio User Only** 
+7. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
-8. In the **Audio Only User** row, set Network Users to **20**.
+8. Click **+Add** and choose **Audio User Only** 
 
-9. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
+9. In the **Audio Only User** row, set Network Users to **20**.
 
-10. Click **+Add** and choose **Audio User Only**
+10. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
 
-11. In the  **Audio Only User** row, set Network Users to **10**.
+11. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
-12. Now select **Generate report**.
+12. Click **+Add** and choose **Audio User Only**
 
-13. Close the browser window at the end of the task.
+13. In the  **Audio Only User** row, set Network Users to **10**.
+
+14. Now select **Generate report**.
+
+15. Close the browser window at the end of the task.
 
 You have successfully generated a Network Planner Report. We can see from the results that, at the default of 30% allowed bandwidth for Microsoft Teams reserved for real-time communications the Tacoma site is fine for bandwidth, but the Bellevue site does not have enough, as we can see by the figure highlighted in red. It would be recommended to increase the internet bandwidth at the Bellevue site.
 
