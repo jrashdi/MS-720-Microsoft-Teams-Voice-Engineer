@@ -152,7 +152,7 @@ In the following task you will run the Network Planner report and review the res
 
 4. Enter the report **name** as **Network Report 1**.
 
-5. Enter a **friendly** **description** as **Network report for Tacoma and Bellevue**.
+5. Enter a description of **Network report for Tacoma and Bellevue**.
 
 For each site we must now define the number of users of each profile type. 
 
