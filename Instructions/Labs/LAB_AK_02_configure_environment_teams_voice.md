@@ -1046,7 +1046,7 @@ In this task you will obtain a free MP3 to the music on hold solution for the Sa
 
 7. Under **Music on hold**, select **Play an audio file**.
 
-8. Select **Upload file**, navigate to the **Downloads** folder, select **A-New-Life-free.mp3** and select **Open**.
+8. Select **Upload file**, navigate to the **Downloads** folder, select **A-New-Life-.mp3** and select **Open**.
 
 9. Select **Save**.
 
