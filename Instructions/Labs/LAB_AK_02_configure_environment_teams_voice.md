@@ -1036,7 +1036,7 @@ In this task you will obtain a free MP3 to the music on hold solution for the Sa
 
 2. Open Microsoft Edge open a new tab and browse to [https://onhold2go.co.uk/Free_Music_On_Hold.php](https://onhold2go.co.uk/Free_Music_On_Hold.php).
 
-3. Download **A New Life** by selecting the ellipses and then download.
+3. Download **A New Life** by selecting the **Download test file**. If the Edge browser indicates the file is insecure, select the ellipses, then select Keep. Select **Keep anyway**. Once the zipped file is downloaded, open the downloads folder and extract the files contained within it. Extract them into the Downloads folder.
 
 4. Close the tab and switch back to the Microsoft Teams admin center.
 
