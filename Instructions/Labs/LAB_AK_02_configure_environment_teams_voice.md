@@ -908,7 +908,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 13. Leave the other options as default
 
-14. Scroll down the page and select **Save**. You will see your call queue in the call queues list
+14. Scroll down the page and select **Submit**. You will see your call queue in the call queues list
 
 15. Leave the Teams Admin Center Open for the next steps
 
