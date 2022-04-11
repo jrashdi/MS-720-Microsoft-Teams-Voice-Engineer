@@ -98,7 +98,9 @@ In the following task you will assign Azure credits to your tenant so that you c
 
 6. Submit the Promo code and select **Claim Promo Code**.
 
-7. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up.** 
+7. In the **Country/Region** field select **United States, and enter a phone number of **(425) 555-0100**.
+
+8. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up.** 
 
 ### Task 5 – Setting up Session Border Controller (SBC) Virtual Machine resources
 
