@@ -316,7 +316,7 @@ You have successfully configured Proxy Sets on the SBC.
 
 In the following task you will configure the SBC Proxy Addresses Interfaces.
 
-1. Scroll to the bottom of the page and select **Proxy Addresses**, select **New** and fill out the following information:
+1. Scroll to the bottom of the page and select **Proxy Address 0 items**, select **New** and fill out the following information:
 
 	- **Proxy addresses:** sip.pstnhub.microsoft.com:5061
 
