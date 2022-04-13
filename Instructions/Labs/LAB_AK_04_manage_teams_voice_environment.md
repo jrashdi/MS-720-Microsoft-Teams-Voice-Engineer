@@ -105,7 +105,7 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 2. Select **Users** and **Manage users**.
 
-3. Find **Katie Jordan** and select the name to open the user’s properties.
+3. Find **Isaiah Langer** and select the name to open the user’s properties.
 
 4. On the user’s properties page, select the **Account** tab and under **Audio Conferencing** select **Edit**.
 
@@ -119,7 +119,7 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 9. Leave the browser window open.
 
-You have successfully modified the audio-conferencing settings for Katie Jordan. 
+You have successfully modified the audio-conferencing settings for Isaiah Langer. 
 
 ### Task 5 - Assign a dial out policy
 
