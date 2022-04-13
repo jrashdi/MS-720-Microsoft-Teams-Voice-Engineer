@@ -83,17 +83,21 @@ In this task you will configure Alex Wilbur so that Katie Jordan is a delegate o
 
 2. Select **Users** and **Manage users**.
 
-3. Find **Alex Wilbur** and select the name to open the user’s properties.
+3. Find **Alex Wilber** and select the name to open the user’s properties.
 
 4. On the user’s properties page, select the **Voice** tab.
 
-5. Scroll down to **Call delegation** and select **Add people**
+5. Under the **Call answering rules** section, also allow **Call delegation**.
 
-6. Search for **Katie Jordan**, and select **Add** to include them on the **People list**, then select **Apply**.
+6. Scroll down to **Call delegation** and select **Add people**
 
-7. In the list below **Call delegation**, find **Katie Jordan** and Change the **Permission** value from **Make and receive calls** to **Make calls**. Switch the **Allow changing call settings** radio button to **Off**.
+7. Search for **Katie Jordan**, and select **Add** to include them on the **People list**, then select **Apply**.
 
-8. Leave the browser window open.
+8. In the list below **Call delegation**, find **Katie Jordan** and Change the **Permission** value from **Make and receive calls** to **Make calls**. Switch the **Allow changing call settings** radio button to **Off**.
+
+9. Select **Save**. 
+
+10. Leave the browser window open.
 
 The changes are now active.
 
