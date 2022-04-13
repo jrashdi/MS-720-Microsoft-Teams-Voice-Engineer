@@ -36,15 +36,17 @@ In this task you will sign into the Microsoft Teams Admin Center and make change
 
 3. On the user’s properties page, select the **Voice** tab.
 
-4. Under the **Group call pickup** section, select **Add people**.
+4. Under the **Call answering rules** section, also allow **Group call pickup**.
 
-5. Search for **Katie Jordan** and select **Add** to include them in the **People list**, then select Apply.
+5. Select **Manage call group**, then select **Add people**.
 
-6. As Katie would prefer an on-screen notification to show, rather than Teams to ring when Isaiah is unavailable, find **Katie Jordan** in the Group Call Pickup list. 
+6. Search for **Katie Jordan** and select **Add** to include them in the **People list**, then select Apply.
 
-7. In the **Notification** column, update the value from **Ring** to **Banner** from the drop-down menu.
+7. As Katie would prefer an on-screen notification to show, rather than Teams to ring when Isaiah is unavailable, find **Katie Jordan** in the Group Call Pickup list. 
 
-8. In the left navigation menu select **Users** to exit the properties page for Isaiah Langer.
+8. In the **Notification** column, update the value from **Ring** to **Banner** from the drop-down menu. Then select **Save**.
+
+9. In the left navigation menu select **Manage users** to exit the properties page for Isaiah Langer.
 
 The changes are now applied, and a banner will show for calls directed to Isaiah on Katie’s Teams client, allowing them to answer in the event that Isaiah is not able to.
 
