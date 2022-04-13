@@ -723,7 +723,7 @@ In the following task you will assign the Emergency Location Identification numb
 
 3. Select **Bellevue Office Address**.
 
-4. Leave **Organization name** as **Contoso**, Add **ELIN** as **425-555-1200**.
+4. Review the settings for **ELIN**. It should be **425-555-1200**. The number was set in an earlier task, and once the location has been validated, it's properties cannot be changed. This includes the ELIN number. 
 
 5. Select **Save.**
 
