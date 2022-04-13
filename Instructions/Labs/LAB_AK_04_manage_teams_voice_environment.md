@@ -577,7 +577,7 @@ A Teams Phone user working from home reports they are having call quality issues
 
 6. You will get a prompt to install .Net Core, would you like to download it now, click Yes
 
-7. This will take you to the .net core download site, Under Run desktop apps select Download
+7. This will take you to the .net core download site, Under Run desktop apps select Download x64
 
 8. When the download is complete, select open file
 
