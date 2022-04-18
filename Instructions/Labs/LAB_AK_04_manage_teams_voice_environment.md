@@ -685,7 +685,7 @@ If we want to review the usage and performance of an individuals Teams calling, 
 
 2. Select **Users** and **Manage users** on the left menu.
 
-3. Find and select **Alex Wilber**.
+3. Find and select **Isaiah Langer**.
 
 4. Select the **Meetings &amp; calls** tab.
 
