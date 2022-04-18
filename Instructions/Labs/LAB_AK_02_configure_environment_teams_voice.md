@@ -996,7 +996,7 @@ In this task you will enable conference mode that will then make it pass the cal
 
 3. Under **Call answering** select find **Conferencing mode**, toggle the setting to **On**. 
 
-4. Click **Save**.
+4. Click **Submit**.
 
 You have successfully enabled conferencing mode for **Sales CQ** call queue.
 
