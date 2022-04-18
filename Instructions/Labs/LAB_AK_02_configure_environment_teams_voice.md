@@ -158,7 +158,7 @@ For each site we must now define the number of users of each profile type.
 
 6. For **Tacoma Site**, in the **Office worker** row, set Network users to **30**.
 
-7. Click **+Add** and choose **Audio User Only** 
+7. Click **+Add** and choose **Audio Only User** 
 
 8. In the **Audio Only User** row, set Network Users to **20**.
 
