@@ -164,7 +164,7 @@ For each site we must now define the number of users of each profile type.
 
 9. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
 
-10. Click **+Add** and choose **Audio User Only**
+10. Click **+Add** and choose **Audio Only User**
 
 11. In the  **Audio Only User** row, set Network Users to **10**.
 
