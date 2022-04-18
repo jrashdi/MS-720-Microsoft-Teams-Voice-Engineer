@@ -481,7 +481,7 @@ Now we have broken our dial plan, we will sign into Teams again and prove it is 
 
 3. Select Get started.
 
-4. When prompted for sign in, enter Alex Wilbur’s username and select **Next**.
+4. When prompted for sign in, enter Isaiah Langer’s username and select **Next**.
 
 5. When prompted enter Alex Wilbur’s password and select **Next**.
 
