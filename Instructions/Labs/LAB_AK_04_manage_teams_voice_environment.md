@@ -521,7 +521,7 @@ Users can check on the network performance of their calls live during the call. 
 
 2. From the desktop select and run **Microsoft Teams** client
 
-3. You should still be signed in as **Alex Wilbur**.
+3. You should still be signed in as **Isaiah Langer**.
 
 4. Select the calls button on the left rail.
 
