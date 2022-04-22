@@ -120,7 +120,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 17. Enter the **name** as **Bellevue Site**.
 
-18. Enter the **friendly description** as **Bellevue Office**.
+18. Enter the description as **Bellevue Office**.
 
 19. You do not need to enter a street address, so skip **Create an address**.
 
