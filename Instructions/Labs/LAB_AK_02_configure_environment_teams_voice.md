@@ -986,7 +986,7 @@ By default, if a call to a call queue isn't answered by an agent within the maxi
 
 6. Select **Add a greeting message** and type **“we are unable to take your call, please leave a message and we will be back with you as soon as possible.”** 
 
-7. Select **Save**
+7. Select **Submit**
 
 You have successfully assigned a voicemail to the Call Queue should it reach a time out period. 
 
