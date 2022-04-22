@@ -142,7 +142,7 @@ In the following task you will create the new session boarder controller resourc
 
 12. Select **Go to resource group.**
 
-13. Select **sbc-ip.**
+13. Select **sbc01-ip.**
 
 14. Make Note of the Public IP Address.
 
