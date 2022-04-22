@@ -422,7 +422,7 @@ In the following task you will configure IP groups for the SBC.
 
 	- **Proxy Set:** #1 Teams
 
-	- **IP Profile:** #1 Teams
+	- **IP Profile:** #0 Teams
 
 	- **Media Realm:** #0
 
