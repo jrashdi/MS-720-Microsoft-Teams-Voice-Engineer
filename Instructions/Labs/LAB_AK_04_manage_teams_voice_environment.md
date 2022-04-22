@@ -159,6 +159,9 @@ In this exercise we will begin the provisioning process for a Teams Phone. We wi
 
 ### Task 1 - Perform remote provisioning of Teams Phones
 
+> [!NOTE]
+> The instructions provided here are for reference only and will not complete successfully.  To view the demonstration of these steps, visit [https://www.microsoft.com/videoplayer/embed/RWN0wC](https://www.microsoft.com/videoplayer/embed/RWN0wC).
+
 In this task you will provision a Teams Phone device in the Teams administration center.
 
 1. Open Microsoft Edge from the task bar and browse to the **Microsoft Teams admin center** at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
@@ -250,7 +253,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 16. In Notepad, **Save** the file and close it.
 
-### Task 2 - Run the modified SkypeRoomProvisioningScript.ps1 in PowerShell to setup the MTR account
+### Task 3 - Run the modified SkypeRoomProvisioningScript.ps1 in PowerShell to setup the MTR account
 
 1. Make sure you have the latest MSOnline PowerShell module installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
 
@@ -323,7 +326,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 Upon completion of the script a summary of actions will be stated, including a statement that the script has **Successfully configured a room mailbox for the account**. The account can now be signed-in to a Microsoft Teams Room system using the password provided in step **21**.
 
-### Task 3 - Prepare to manage devices by creating tags in the Teams Admin Center
+### Task 4 - Prepare to manage devices by creating tags in the Teams Admin Center
 
 In this task you will configure device tags to allow Contoso to identify devices based upon the type of employee that will use the device, so that the importance of the device can be identified by a support technician. We will configure two tags, **Executive** and **Contact Center**.
 
