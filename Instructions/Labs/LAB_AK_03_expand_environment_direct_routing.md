@@ -324,41 +324,41 @@ You have successfully configured Proxy Sets on the SBC.
 
 In the following task you will configure the SBC Proxy Addresses Interfaces.
 
-1. Scroll to the bottom of the page and select **Proxy Addresses**, select **New** and fill out the following information:
+1. Scroll to the bottom of the page and select **Proxy Address 0 items**, select **New** and fill out the following information:
 
-	- **Proxy addresses:** sip.pstnhub.microsoft.com:5061
+	- **Proxy address:** sip.pstnhub.microsoft.com:5061
 
 	- **Transport type:** TLS
 
-	- **Priority:** 1
+	- **Proxy Priority:** 1
 
-	- **Random weight:** 1
+	- **Proxy Random weight:** 1
 
 2. Select **Apply**.
 
 3. Add another Proxy Address by selecting **New** and fill out the following information:
 
-	- **Proxy addresses:** sip2.pstnhub.microsoft.com:5061
+	- **Proxy address:** sip2.pstnhub.microsoft.com:5061
 
 	- **Transport type:** TLS
 
-	- **Priority:** 2
+	- **Proxy Priority:** 2
 
-	- **Random weight:** 1
+	- **Proxy Random weight:** 1
 
 4. Select **Apply**.
 
 5. Add another Proxy Address by selecting **New** and fill out the following information:
 
-	- **Proxy addresses:** sip3.pstnhub.microsoft.com:5061
+	- **Proxy address:** sip3.pstnhub.microsoft.com:5061
 
 	- **Transport type:** TLS
 
-	- **Priority:** 3
+	- **Proxy Priority:** 3
 
-	- **Random weight:** 1
+	- **Proxy Random weight:** 1
 
-6. Select **Apply**.
+6. Select **Apply**, then **Save**, then select **Yes**.
 
 You have successfully configured Proxy Addresses on the SBC.
 
