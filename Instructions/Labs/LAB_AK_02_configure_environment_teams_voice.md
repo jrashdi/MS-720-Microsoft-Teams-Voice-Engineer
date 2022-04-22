@@ -426,7 +426,7 @@ In this task you will create an emergency location. This is needed before you ca
 
 14. Leave organization name as Contoso.
 
-15. Leave ELIN as blank.
+15. For ELIN enter **425-555-1200**.
 
 16. Tick the **I acknowledge and agree…** checkbox under **Emergency calling disclaimer**.
 
