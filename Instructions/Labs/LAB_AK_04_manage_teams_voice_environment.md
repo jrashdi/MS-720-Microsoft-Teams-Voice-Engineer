@@ -641,7 +641,7 @@ In this task we will review the PSTN Usage report.
 
 7. Select **Run report**.
 
-You will see a report showing all the PSTN calls made in the last 7 days. You should see the test calls we made with Alex Wilber in this exercise. Note, it may take some time for the call records to show. 
+You will see a report showing all the PSTN calls made in the last 7 days. You should see the test calls we made with Isaiah Langer in this exercise. Note, it may take some time for the call records to show. 
 
 The report shows:
 
