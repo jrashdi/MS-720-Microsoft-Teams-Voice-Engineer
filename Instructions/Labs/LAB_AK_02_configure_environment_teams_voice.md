@@ -868,7 +868,7 @@ You have successfully ordered a new dedicated conference toll phone number throu
 
 5. Select **Apply**.
 
-6. You will be back at the list of conference bridge numbers, sort the list by type to confirm you have a new Dedicated conference bridge.
+6. You will be back at the list of conference bridge numbers, sort the list by type to confirm you have a new Dedicated conference bridge. It may take a few minutes for the bridge to appear. You can refresh the page by moving to a different page in the Teams Admin Center then returning to the **Conference bridges** page.
 
 7. Leave the browser window open at the end of the task.
 
