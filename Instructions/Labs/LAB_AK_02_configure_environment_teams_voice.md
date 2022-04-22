@@ -100,7 +100,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 7. Enter the **name** as **Tacoma** **Site**.
 
-8. Enter the **friendly description** as **Tacoma Office**.
+8. Enter the description as **Tacoma Office**.
 
 9. You do not need to enter a street address, so skip **Create an address**.
 
@@ -120,7 +120,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 17. Enter the **name** as **Bellevue Site**.
 
-18. Enter the **friendly description** as **Bellevue Office**.
+18. Enter the description as **Bellevue Office**.
 
 19. You do not need to enter a street address, so skip **Create an address**.
 
@@ -152,19 +152,19 @@ In the following task you will run the Network Planner report and review the res
 
 4. Enter the report **name** as **Network Report 1**.
 
-5. Enter a **friendly** **description** as **Network report for Tacoma and Bellevue**.
+5. Enter a description of **Network report for Tacoma and Bellevue**.
 
 For each site we must now define the number of users of each profile type. 
 
 6. For **Tacoma Site**, in the **Office worker** row, set Network users to **30**.
 
-7. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
+7. Click **+Add** and choose **Audio Only User** 
 
 8. Click **+Add** and choose **Audio User Only** 
 
 9. In the **Audio Only User** row, set Network Users to **20**.
 
-10. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
+10. Click **+Add** and choose **Audio Only User**
 
 11. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
