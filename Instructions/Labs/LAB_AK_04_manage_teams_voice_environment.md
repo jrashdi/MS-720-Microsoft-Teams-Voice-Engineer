@@ -445,7 +445,7 @@ You have successfully added a normalization rule to a dial plan to meet the exte
 
 10. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**.
 
-11. Note that the number has been translated to +18776967786 and the call connects. It is an contact center that will stay connected for around a minute then automatically hang up.
+11. Note that the number has been translated to +18776967786 and the call connects. It is a contact center that will stay connected for around a minute then automatically hang up.
 
 12. Press the red hang-up button to disconnect the call.
 
@@ -483,7 +483,7 @@ Now we have broken our dial plan, we will sign into Teams again and prove it is 
 
 4. When prompted for sign in, enter Isaiah Langer’s username and select **Next**.
 
-5. When prompted enter Alex Wilbur’s password and select **Next**.
+5. When prompted enter Isaiah Langer’s password and select **Next**.
 
 6. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only**.
 
@@ -507,7 +507,7 @@ Now we have broken our dial plan, we will sign into Teams again and prove it is 
 
 11. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**.
 
-12. Note that Teams attempts to ring the number but it does not connect or you get the Teams. Announcement Service telling you the call cannot connect.
+12. Note that Teams attempts to ring the number but it does not connect or you get the Teams Announcement Service telling you the call cannot connect.
 
 13. Press the red hang-up button to disconnect the call.
 
