@@ -942,7 +942,7 @@ Now we will create an auto attendant and direct one of the options to send calls
 
 10. Under set Holiday call settings select **Next**, 
 
-11. Under Find People select **Next**.
+11. Under Dial scope select **Next**.
 
 12. Under **Resource Accounts**, Select **Add**, enter **Sales AA** in the search box, then select **Add Resource Account**, enter **Display Name** of **Sales AA**, Username is **SalesAA**, and **Resource account type** of **Auto Attendant**, select **Save**.
 
