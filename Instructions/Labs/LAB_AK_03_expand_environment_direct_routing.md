@@ -98,7 +98,15 @@ In the following task you will assign Azure credits to your tenant so that you c
 
 6. Submit the Promo code and select **Claim Promo Code**.
 
-7. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up.** 
+7. In the **Country/Region** field select **United States**, and enter a phone number of **(425) 555-0100**. Complete the rest of the form with the following information:
+	- Address Line 1: 1999 Strickler St
+	- City: Waco
+	- State: Nebraska
+	- ZIP Code: 68460
+	
+8. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up.** 
+
+9. If prompted to verify your address, select **Current address** and then select **Use this address**.
 
 ### Task 5 – Setting up Session Border Controller (SBC) Virtual Machine resources
 
@@ -134,7 +142,7 @@ In the following task you will create the new session boarder controller resourc
 
 12. Select **Go to resource group.**
 
-13. Select **sbc-ip.**
+13. Select **sbc01-ip.**
 
 14. Make Note of the Public IP Address.
 
@@ -316,41 +324,41 @@ You have successfully configured Proxy Sets on the SBC.
 
 In the following task you will configure the SBC Proxy Addresses Interfaces.
 
-1. Scroll to the bottom of the page and select **Proxy Addresses**, select **New** and fill out the following information:
+1. Scroll to the bottom of the page and select **Proxy Address 0 items**, select **New** and fill out the following information:
 
-	- **Proxy addresses:** sip.pstnhub.microsoft.com:5061
+	- **Proxy address:** sip.pstnhub.microsoft.com:5061
 
 	- **Transport type:** TLS
 
-	- **Priority:** 1
+	- **Proxy Priority:** 1
 
-	- **Random weight:** 1
+	- **Proxy Random weight:** 1
 
 2. Select **Apply**.
 
 3. Add another Proxy Address by selecting **New** and fill out the following information:
 
-	- **Proxy addresses:** sip2.pstnhub.microsoft.com:5061
+	- **Proxy address:** sip2.pstnhub.microsoft.com:5061
 
 	- **Transport type:** TLS
 
-	- **Priority:** 2
+	- **Proxy Priority:** 2
 
-	- **Random weight:** 1
+	- **Proxy Random weight:** 1
 
 4. Select **Apply**.
 
 5. Add another Proxy Address by selecting **New** and fill out the following information:
 
-	- **Proxy addresses:** sip3.pstnhub.microsoft.com:5061
+	- **Proxy address:** sip3.pstnhub.microsoft.com:5061
 
 	- **Transport type:** TLS
 
-	- **Priority:** 3
+	- **Proxy Priority:** 3
 
-	- **Random weight:** 1
+	- **Proxy Random weight:** 1
 
-6. Select **Apply**.
+6. Select **Apply**, then **Save**, then select **Yes**.
 
 You have successfully configured Proxy Addresses on the SBC.
 
@@ -422,7 +430,7 @@ In the following task you will configure IP groups for the SBC.
 
 	- **Proxy Set:** #1 Teams
 
-	- **IP Profile:** #1 Teams
+	- **IP Profile:** #0 Teams
 
 	- **Media Realm:** #0
 
@@ -723,7 +731,7 @@ In the following task you will assign the Emergency Location Identification numb
 
 3. Select **Bellevue Office Address**.
 
-4. Leave **Organization name** as **Contoso**, Add **ELIN** as **425-555-1200**.
+4. Review the settings for **ELIN**. It should be **425-555-1200**. The number was set in an earlier task, and once the location has been validated, it's properties cannot be changed. This includes the ELIN number. 
 
 5. Select **Save.**
 

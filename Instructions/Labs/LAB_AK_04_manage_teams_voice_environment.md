@@ -36,15 +36,17 @@ In this task you will sign into the Microsoft Teams Admin Center and make change
 
 3. On the user’s properties page, select the **Voice** tab.
 
-4. Under the **Group call pickup** section, select **Add people**.
+4. Under the **Call answering rules** section, also allow **Group call pickup**.
 
-5. Search for **Katie Jordan** and select **Add** to include them in the **People list**, then select Apply.
+5. Select **Manage call group**, then select **Add people**.
 
-6. As Katie would prefer an on-screen notification to show, rather than Teams to ring when Isaiah is unavailable, find **Katie Jordan** in the Group Call Pickup list. 
+6. Search for **Katie Jordan** and select **Add** to include them in the **People list**, then select Apply.
 
-7. In the **Notification** column, update the value from **Ring** to **Banner** from the drop-down menu.
+7. As Katie would prefer an on-screen notification to show, rather than Teams to ring when Isaiah is unavailable, find **Katie Jordan** in the Group Call Pickup list. 
 
-8. In the left navigation menu select **Users** to exit the properties page for Isaiah Langer.
+8. In the **Notification** column, update the value from **Ring** to **Banner** from the drop-down menu. Then select **Save**.
+
+9. In the left navigation menu select **Manage users** to exit the properties page for Isaiah Langer.
 
 The changes are now applied, and a banner will show for calls directed to Isaiah on Katie’s Teams client, allowing them to answer in the event that Isaiah is not able to.
 
@@ -83,17 +85,21 @@ In this task you will configure Alex Wilbur so that Katie Jordan is a delegate o
 
 2. Select **Users** and **Manage users**.
 
-3. Find **Alex Wilbur** and select the name to open the user’s properties.
+3. Find **Alex Wilber** and select the name to open the user’s properties.
 
 4. On the user’s properties page, select the **Voice** tab.
 
-5. Scroll down to **Call delegation** and select **Add people**
+5. Under the **Call answering rules** section, also allow **Call delegation**.
 
-6. Search for **Katie Jordan**, and select **Add** to include them on the **People list**, then select **Apply**.
+6. Scroll down to **Call delegation** and select **Add people**
 
-7. In the list below **Call delegation**, find **Katie Jordan** and Change the **Permission** value from **Make and receive calls** to **Make calls**. Switch the **Allow changing call settings** radio button to **Off**.
+7. Search for **Katie Jordan**, and select **Add** to include them on the **People list**, then select **Apply**.
 
-8. Leave the browser window open.
+8. In the list below **Call delegation**, find **Katie Jordan** and leave the **Permission** value as **Make and receive calls**. Switch the **Allow changing call settings** radio button to **Off**.
+
+9. Select **Save**. 
+
+10. Leave the browser window open.
 
 The changes are now active.
 
@@ -105,7 +111,7 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 2. Select **Users** and **Manage users**.
 
-3. Find **Katie Jordan** and select the name to open the user’s properties.
+3. Find **Isaiah Langer** and select the name to open the user’s properties.
 
 4. On the user’s properties page, select the **Account** tab and under **Audio Conferencing** select **Edit**.
 
@@ -119,7 +125,7 @@ In this task you validate audio conferencing is enabled for Katie Jordan and cha
 
 9. Leave the browser window open.
 
-You have successfully modified the audio-conferencing settings for Katie Jordan. 
+You have successfully modified the audio-conferencing settings for Isaiah Langer. 
 
 ### Task 5 - Assign a dial out policy
 
@@ -448,7 +454,7 @@ You have successfully added a normalization rule to a dial plan to meet the exte
 
 10. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**.
 
-11. Note that the number has been translated to +18776967786 and the call connects. It is an contact center that will stay connected for around a minute then automatically hang up.
+11. Note that the number has been translated to +18776967786 and the call connects. It is a contact center that will stay connected for around a minute then automatically hang up.
 
 12. Press the red hang-up button to disconnect the call.
 
@@ -484,9 +490,9 @@ Now we have broken our dial plan, we will sign into Teams again and prove it is 
 
 3. Select Get started.
 
-4. When prompted for sign in, enter Alex Wilbur’s username and select **Next**.
+4. When prompted for sign in, enter Isaiah Langer’s username and select **Next**.
 
-5. When prompted enter Alex Wilbur’s password and select **Next**.
+5. When prompted enter Isaiah Langer’s password and select **Next**.
 
 6. You will be prompted with “Stay signed into all your apps” select **No, sign in to this app only**.
 
@@ -510,7 +516,7 @@ Now we have broken our dial plan, we will sign into Teams again and prove it is 
 
 11. If you are prompted by Windows Defender Firewall for Microsoft Teams select **Allow Access**.
 
-12. Note that Teams attempts to ring the number but it does not connect or you get the Teams. Announcement Service telling you the call cannot connect.
+12. Note that Teams attempts to ring the number but it does not connect or you get the Teams Announcement Service telling you the call cannot connect.
 
 13. Press the red hang-up button to disconnect the call.
 
@@ -524,7 +530,7 @@ Users can check on the network performance of their calls live during the call. 
 
 2. From the desktop select and run **Microsoft Teams** client
 
-3. You should still be signed in as **Alex Wilbur**.
+3. You should still be signed in as **Isaiah Langer**.
 
 4. Select the calls button on the left rail.
 
@@ -580,7 +586,7 @@ A Teams Phone user working from home reports they are having call quality issues
 
 6. You will get a prompt to install .Net Core, would you like to download it now, click Yes
 
-7. This will take you to the .net core download site, Under Run desktop apps select Download
+7. This will take you to the .Net core download site, Under Run desktop apps select Download x64
 
 8. When the download is complete, select open file
 
@@ -588,7 +594,7 @@ A Teams Phone user working from home reports they are having call quality issues
 
 10. A UAC prompt will appear, click Yes
 
-11. Once the .net core installer is complete, click close
+11. Once the .Net core installer is complete, click close
 
 12. Close Microsoft Edge
 
@@ -638,7 +644,7 @@ In this task we will review the PSTN Usage report.
 
 7. Select **Run report**.
 
-You will see a report showing all the PSTN calls made in the last 7 days. You should see the test calls we made with Alex Wilber in this exercise. Note, it may take some time for the call records to show. 
+You will see a report showing all the PSTN calls made in the last 7 days. You should see the test calls we made with Isaiah Langer in this exercise. Note, it may take some time for the call records to show. 
 
 The report shows:
 
@@ -688,7 +694,7 @@ If we want to review the usage and performance of an individuals Teams calling, 
 
 2. Select **Users** and **Manage users** on the left menu.
 
-3. Find and select **Alex Wilber**.
+3. Find and select **Isaiah Langer**.
 
 4. Select the **Meetings &amp; calls** tab.
 

@@ -100,7 +100,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 7. Enter the **name** as **Tacoma** **Site**.
 
-8. Enter the **friendly description** as **Tacoma Office**.
+8. Enter the description as **Tacoma Office**.
 
 9. You do not need to enter a street address, so skip **Create an address**.
 
@@ -120,7 +120,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 17. Enter the **name** as **Bellevue Site**.
 
-18. Enter the **friendly description** as **Bellevue Office**.
+18. Enter the description as **Bellevue Office**.
 
 19. You do not need to enter a street address, so skip **Create an address**.
 
@@ -152,25 +152,29 @@ In the following task you will run the Network Planner report and review the res
 
 4. Enter the report **name** as **Network Report 1**.
 
-5. Enter a **friendly** **description** as **Network report for Tacoma and Bellevue**.
+5. Enter a description of **Network report for Tacoma and Bellevue**.
 
 For each site we must now define the number of users of each profile type. 
 
 6. For **Tacoma Site**, in the **Office worker** row, set Network users to **30**.
 
-7. Click **+Add** and choose **Audio User Only** 
+7. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
-8. In the **Audio Only User** row, set Network Users to **20**.
+8. Click **+Add** and choose **Audio Only User** 
 
-9. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
+9. In the **Audio Only User** row, set Network Users to **20**.
 
-10. Click **+Add** and choose **Audio User Only**
+10. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
 
-11. In the  **Audio Only User** row, set Network Users to **10**.
+11. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
-12. Now select **Generate report**.
+12. Click **+Add** and choose **Audio Only User**
 
-13. Close the browser window at the end of the task.
+13. In the  **Audio Only User** row, set Network Users to **10**.
+
+14. Now select **Generate report**.
+
+15. Close the browser window at the end of the task.
 
 You have successfully generated a Network Planner Report. We can see from the results that, at the default of 30% allowed bandwidth for Microsoft Teams reserved for real-time communications the Tacoma site is fine for bandwidth, but the Bellevue site does not have enough, as we can see by the figure highlighted in red. It would be recommended to increase the internet bandwidth at the Bellevue site.
 
@@ -422,7 +426,7 @@ In this task you will create an emergency location. This is needed before you ca
 
 14. Leave organization name as Contoso.
 
-15. Leave ELIN as blank.
+15. For ELIN enter **425-555-1200**.
 
 16. Tick the **I acknowledge and agree…** checkbox under **Emergency calling disclaimer**.
 
@@ -490,13 +494,13 @@ In this task you will configure an emergency calling policy. Emergency calling p
 
 6. Under **Notification mode**, select **Send notification only**: A Teams chat message is sent to the users and groups that you specify.
 
-7. In **Users and groups for emergency calls notifications**, enter Alex and then select Alex Wilbur and select **Add**.
+7. In **Users and groups for emergency calls notifications**, enter Alex and then select Alex Wilber and select **Add**.
 
 8. Select **Apply**.
 
 9. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
 
-You have successfully setup notifications for Alex Wilbur whenever emergency calls are made.
+You have successfully setup notifications for Alex Wilber whenever emergency calls are made.
 
 ## Exercise 4: Configure voice policies
 
@@ -864,7 +868,7 @@ You have successfully ordered a new dedicated conference toll phone number throu
 
 5. Select **Apply**.
 
-6. You will be back at the list of conference bridge numbers, sort the list by type to confirm you have a new Dedicated conference bridge.
+6. You will be back at the list of conference bridge numbers, sort the list by type to confirm you have a new Dedicated conference bridge. It may take a few minutes for the bridge to appear. You can refresh the page by moving to a different page in the Teams Admin Center then returning to the **Conference bridges** page.
 
 7. Leave the browser window open at the end of the task.
 
@@ -908,7 +912,7 @@ In this task you will create a call queue. A call queue is a group of agents tha
 
 13. Leave the other options as default
 
-14. Scroll down the page and select **Save**. You will see your call queue in the call queues list
+14. Scroll down the page and select **Submit**. You will see your call queue in the call queues list
 
 15. Leave the Teams Admin Center Open for the next steps
 
@@ -938,7 +942,7 @@ Now we will create an auto attendant and direct one of the options to send calls
 
 10. Under set Holiday call settings select **Next**, 
 
-11. Under Find People select **Next**.
+11. Under Dial scope select **Next**.
 
 12. Under **Resource Accounts**, Select **Add**, enter **Sales AA** in the search box, then select **Add Resource Account**, enter **Display Name** of **Sales AA**, Username is **SalesAA**, and **Resource account type** of **Auto Attendant**, select **Save**.
 
@@ -960,11 +964,11 @@ Collaborative calling enables you to connect a call queue to a channel in Teams.
 
 3. Under **Call answering** select **Choose a team**, select **Add a channel**. 
 
-4. Type **Contoso loves Teams**, select the channel and select **Add**, select **General**, select **Apply**.  
+4. Type **Contoso**, select the channel and select **Add**, select **General**, select **Apply**.  
 
 5. Leave the Teams Admin Center open for the next task
 
-You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso Loves Teams team.
+You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso team.
 
 ### Task 4 - Configure a Call Queue to forward to voicemail if busy
 
@@ -982,7 +986,7 @@ By default, if a call to a call queue isn't answered by an agent within the maxi
 
 6. Select **Add a greeting message** and type **“we are unable to take your call, please leave a message and we will be back with you as soon as possible.”** 
 
-7. Select **Save**
+7. Select **Submit**
 
 You have successfully assigned a voicemail to the Call Queue should it reach a time out period. 
 
@@ -996,7 +1000,7 @@ In this task you will enable conference mode that will then make it pass the cal
 
 3. Under **Call answering** select find **Conferencing mode**, toggle the setting to **On**. 
 
-4. Click **Save**.
+4. Click **Submit**.
 
 You have successfully enabled conferencing mode for **Sales CQ** call queue.
 
@@ -1036,7 +1040,7 @@ In this task you will obtain a free MP3 to the music on hold solution for the Sa
 
 2. Open Microsoft Edge open a new tab and browse to [https://onhold2go.co.uk/Free_Music_On_Hold.php](https://onhold2go.co.uk/Free_Music_On_Hold.php).
 
-3. Download **A New Life** by selecting the ellipses and then download.
+3. Download **A New Life** by selecting the **Download test file**. If the Edge browser indicates the file is insecure, select the ellipses, then select Keep. Select **Keep anyway**. Once the zipped file is downloaded, open the downloads folder and extract the files contained within it. Extract them into the Downloads folder.
 
 4. Close the tab and switch back to the Microsoft Teams admin center.
 
@@ -1046,9 +1050,9 @@ In this task you will obtain a free MP3 to the music on hold solution for the Sa
 
 7. Under **Music on hold**, select **Play an audio file**.
 
-8. Select **Upload file**, navigate to the **Downloads** folder, select **A-New-Life-free.mp3** and select **Open**.
+8. Select **Upload file**, navigate to the **Downloads** folder, select **A-New-Life.mp3** and select **Open**.
 
-9. Select **Save**.
+9. Select **Submit**.
 
 10. Select the circle with the KJ initials in the upper right-side and select **Sign out**.
 
