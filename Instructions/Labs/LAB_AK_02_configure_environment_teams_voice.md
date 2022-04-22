@@ -100,7 +100,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 7. Enter the **name** as **Tacoma** **Site**.
 
-8. Enter the **friendly description** as **Tacoma Office**.
+8. Enter the description as **Tacoma Office**.
 
 9. You do not need to enter a street address, so skip **Create an address**.
 
