@@ -158,17 +158,17 @@ For each site we must now define the number of users of each profile type.
 
 6. For **Tacoma Site**, in the **Office worker** row, set Network users to **30**.
 
-7. Click **+Add** and choose **Audio Only User** 
+7. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
-8. Click **+Add** and choose **Audio User Only** 
+8. Click **+Add** and choose **Audio Only User** 
 
 9. In the **Audio Only User** row, set Network Users to **20**.
 
-10. Click **+Add** and choose **Audio Only User**
+10. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
 
 11. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
-12. Click **+Add** and choose **Audio User Only**
+12. Click **+Add** and choose **Audio Only User**
 
 13. In the  **Audio Only User** row, set Network Users to **10**.
 
