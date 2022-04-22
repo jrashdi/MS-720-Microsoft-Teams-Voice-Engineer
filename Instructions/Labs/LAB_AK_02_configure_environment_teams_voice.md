@@ -964,11 +964,11 @@ Collaborative calling enables you to connect a call queue to a channel in Teams.
 
 3. Under **Call answering** select **Choose a team**, select **Add a channel**. 
 
-4. Type **Contoso loves Teams**, select the channel and select **Add**, select **General**, select **Apply**.  
+4. Type **Contoso**, select the channel and select **Add**, select **General**, select **Apply**.  
 
 5. Leave the Teams Admin Center open for the next task
 
-You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso Loves Teams team.
+You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso team.
 
 ### Task 4 - Configure a Call Queue to forward to voicemail if busy
 
