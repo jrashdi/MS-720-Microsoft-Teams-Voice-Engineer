@@ -88,7 +88,7 @@ In the following task you will assign Azure credits to your tenant so that you c
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”.
 
-2. Open a new Microsoft Edge browser window and navigate to [**https://microsoftazurepass.com**](https://microsoftazurepass.com).
+2. Open a new Microsoft Edge browser window and navigate to [**https://www.microsoftazurepass.com**](https://www.microsoftazurepass.com).
 
 3. Select **Start.**
 
