@@ -732,7 +732,7 @@ In the following task you will assign the Emergency Location Identification numb
 
 4. Review the settings for **ELIN**. It should be **425-555-1200**. The number was set in an earlier task, and once the location has been validated, it's properties cannot be changed. This includes the ELIN number. 
 
-5. Select **Save.**
+5. Select **Save**.
 
 6. Leave the browser window open.
 
