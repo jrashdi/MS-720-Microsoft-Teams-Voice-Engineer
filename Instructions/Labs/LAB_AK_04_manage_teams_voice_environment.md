@@ -378,7 +378,7 @@ Firstly, we will create a dial plan rule, in this scenario, the organization wou
     
     10. Test the rule by entering **7786** and pressing Test. The output should be **+18776967786**, if the output is correct select **Save**.
     
-    11. You will see your new rule in the global dial plan, select **Save**.
+    11. You will see your new rule in the global dial plan, select **Save**. If you receive an error while attempting to save, put a number in the “External dialing prefix” field for the Dial Plan, remove it again, and then click **Save**.
     
     12. Close the browser window.
 
