@@ -70,7 +70,7 @@ In this task, an existing user who isn’t enabled for voice services must be en
 5. Type the following command to enable Alex Wilber for **Direct Routing**:
 
     ```powershell
-    Set-CsUser -Identity AlexW@<tenant>.onmicrosoft.com -EnterpriseVoiceEnabled $true -HostedVoiceMail $true -OnPremLineURI tel:+14255551122
+    Set-CsPhoneNumberAssignment -Identity AlexW@<tenant>.onmicrosoft.com PhoneNumber "+14255551122" -PhoneNumberType DirectRouting
     ```
 
 6. Close the PowerShell Window at the end of the task.

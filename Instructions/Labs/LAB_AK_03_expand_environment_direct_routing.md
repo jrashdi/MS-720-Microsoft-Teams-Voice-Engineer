@@ -667,10 +667,10 @@ In the following task you will enable the end user for voice services through th
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin” and you have an open **Teams PowerShell** session signed in as **Katie Jordan**.
 
-2. Run the Set-CSUser command, the command modifies Microsoft Teams properties for an existing user account. Properties can be modified only for accounts that have been enabled for use with Microsoft Teams:
+2. Run the Set-CsPhoneNumberAssignment command, the command assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.:
 
     ```powershell
-    Set-CsUser -Identity MeganB@Lab<customlabnumer>.O365ready.com -OnPremLineURI tel:+14255551234 -EnterpriseVoiceEnabled $true
+    Set-CsPhoneNumberAssignment -Identity MeganB@Lab<customlabnumer>.o365ready.com -PhoneNumber "+14255551234" -PhoneNumberType DirectRouting
     ```
 
 3. The cmdlet does not provide any output. When you are back on the command prompt, leave the window open for the next task.
