@@ -281,6 +281,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
     
     #Assign the license to the resource account
     Set-AzureADUserLicense -ObjectId mtr01@lab<customlabnumber>.o365ready.com -AssignedLicenses $Licenses
+
     ```
 
 Upon completion of these steps, the account can now be signed-in to a Microsoft Teams Room system using the password provided in step **4**.
