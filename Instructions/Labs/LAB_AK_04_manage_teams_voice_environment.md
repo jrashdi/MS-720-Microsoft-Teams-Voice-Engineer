@@ -212,119 +212,78 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 5. Search for **Microsoft Teams Room Standard** from the list of available services and select **Details**.
 
-6. Select **Start free trial,** then on the following page, choose **Try now**., then select **Continue** on the order receipt page.
+6. Select **Start free trial,** then on the following page, choose **Try now**, then select **Continue** on the order receipt page.
 
-7. Download the SkypeRoomProvisioning.ps1 script from the Microsoft website: [https://go.microsoft.com/fwlink/?linkid=870105](https://go.microsoft.com/fwlink/?linkid=870105)
+### Task 3 - Create a resource account and Exchange Online mailbox
 
-8. Open File Explorer and navigate to the **Downloads** folder and open **SkypeRoomProvisioningScript.ps1.txt**.
-
-9. Launch a Windows PowerShell command prompt as an Administrative user.
-
-10. Change directory to a location suitable for creating a script, and then create a new file named SkypeRoomProvisioningScript.ps1 by entering the following command.
-
-    ```console
-    cd $HOME\Documents
-    
-    notepad .\SkypeRoomProvisioningScript.ps1
-    ```
-
-11. When prompted **Do you want to create a new file?** select **Yes**
-
-12. In the Notepad Window for SkypeRoomProvisioningScript.ps1.**txt**, copy all text using **CTRL-A** and then **CTRL-C**.
-
-13. In the Notepad Window for SkypeRoomProvisioningScript.**ps1**, use **CTRL-V** to paste the PowerShell script from the clipboard, and then select **File** then select **Save**.
-
-14. In Notepad, use the Find feature to locate the line with the text "New-CsOnlineSession" 
-
-15. Replace that line and the one following it with the following code:
-
-    ```PowerShell
-    Connect-MicrosoftTeams -Credential $credSkype
-    ```
-	
-    The lines of code in that script should look like the example below.
-    
-    ```PowerShell
-    try
-    {
-	      Connect-MicrosoftTeams -Credential $credSkype
-    }
-    ```
-
-16. In Notepad, **Save** the file and close it.
-
-### Task 3 - Run the modified SkypeRoomProvisioningScript.ps1 in PowerShell to setup the MTR account
-
-1. Make sure you have the latest MSOnline PowerShell module installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
+1. Open Windows PowerShell and make sure you have the latest MSOnline PowerShell module installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
 
     ```powershell
     Update-Module MSOnline
+
     ```
 
 2. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**. If the command fails, run **Install-Module ExchangeOnlineManagement**.
 
     ```powershell
     Update-Module ExchangeOnlineManagement
+
     ```
 
-3. Run the script with the following command:
+3. Connect to Exchange Online PowerShell:
 
     ```powershell
-    .\SkypeRoomProvisioningScript.ps1
+    Connect-ExchangeOnline
+    
     ```
 
-4. From the script menu choice, enter **2** for a Skype Room Systems v2 device, and then press Enter.
-
-5. Enter **1** to create the account in AD, Exchange and Skype, and then press Enter.
-
-6. Enter **2** to create the account in the cloud, then press Enter.
-
-7. Enter **2** when asked if your users are synced to Office 365, then press Enter.
-
-8. A Windows PowerShell credential request window appears. Enter the credentials of your **MOD Administrator**.
-
-9. A Windows PowerShell credential request window appears, asking you the **Enter the desired UPN and password for this new room account**. Enter **mtr01@lab&lt;customlabnumber&gt;.o365ready.com** and enter a secure password you will remember.
-
-10. Enter the following display name for the account and then press Enter.
-
-    - **Bellevue Board Room**
-
-11. The next menu in the PowerShell script will provide a list of available licenses. Select the **MEETING_ROOM** SKU. 
-
-12. Choose **1** to add another license. Select the **ENTERPRISEPREMIUM** SKU.
-
-13. Choose **2** to proceed without adding any additional licenses. 
-
-14. To provision the Exchange Room mailbox, choose **2** to provision the user in the cloud, then press Enter.
-
-15. Enter **2** when asked to confirm if the Exchange Online admin account is different from the Global Administrator account, then press Enter. The process will take approximately 10 minutes to complete.
-
-16. The script will state that the mailbox has been created. An opportunity to automatically configure the calendar processing defaults, so that Automatic Calendar Processing is enabled will be presented. Enter **1** for Yes, then press Enter.
-
-17. When prompted to provision Skype user, enter **2** for in the cloud, then press **Enter**.
-
-18. Enter **2** when asked to confirm if the Skype for Business Online admin account is different from the Global Administrator account, then press Enter.
-
-19. The account will now be enabled for Microsoft Teams (based upon the tenant being in **Teams Only Mode**) and the script will attempt to set up the account as a meeting room. This may take approximately 5 minutes.
-
-20. When prompted to configure **Enterprise Voice** for the room, choose **1** for Yes, then press Enter.
-
-21. Enter the following E.164 number for the room, without a **tel:+** prefix: 14255551123 
-
-22. Check the LineURI stated is correct and shows as tel:+14255551123 and then choose **1** to accept, then press Enter.
-
-23. Close the PowerShell Window at the end of the task.
-
-> [!IMPORTANT] 
-> If the script fails to create the room, open a new Administrator PowerShell console and run the following commands. Use your **MOD Administrator** credentials to log in, and use the email address of the Bellevue Board Room you created via the script.
+4. Run the following command to create a new resource account with an Exchange Online mailbox:
 
     ```powershell
-    Connect-MicrosoftTeams
-    $mtr = Get-CsOnlineUser -identity "mtr01@lab<customlabnumber>.o365ready.com"
-    Enable-CsMeetingRoom -Identity $mtr.UserPrincipalName -SipAddressType EmailAddress -RegistrarPool $mtr.RegistrarPool
+    New-Mailbox -MicrosoftOnlineServicesID mtr01@lab<customlabnumber>.o365ready.com -Name "mtr01" -Alias MTR01 -Room -EnableRoomMailboxAccount $true  -RoomMailboxPassword (ConvertTo-SecureString -String 'P@ssw!rd1' -AsPlainText -Force)
+
     ```
 
-Upon completion of the script a summary of actions will be stated, including a statement that the script has **Successfully configured a room mailbox for the account**. The account can now be signed-in to a Microsoft Teams Room system using the password provided in step **21**.
+5. Run the following command to settings on the room mailbox:
+
+    ```powershell
+    Set-CalendarProcessing -Identity "mtr01" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -ProcessExternalMeetingMessages $true -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Microsoft Teams Meeting room!"
+    ```
+
+6. Now that the resource account and mailbox have been created, set the password to never expire in Azure Active Directory by running these commands:
+
+    ```powershell
+    Connect-AzureAD
+
+    Set-AzureADUser -ObjectID mtr01@lab<customlabnumber>.o365ready.com -PasswordPolicies DisablePasswordExpiration
+
+    ```
+
+7. The next step is to set the resource account's usage location and assign a license to the resource account.  In the same PowerShell window connected to Azure AD, run the command below:
+
+    ```powershell
+    Set-AzureADUser -ObjectID mtr01@lab<customlabnumber>.o365ready.com -UsageLocation 'US'
+
+    ```
+
+8. To assign the license, use the **Set-AzureADUser** cmdlet, and convert the license SKU ID into a PowerShell license type object which is then assigned to the resource account. In the following example, the license SKU ID is 6070a4c8-34c6-4937-8dfb-39bbc6397a60, and it's assigned to the account **mtr01@lab&lt;customlabnumber&gt;.o365ready.com**:
+
+    ```powershell
+    #Create an object for a single license type
+    $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
+    $License.SkuId = "6070a4c8-34c6-4937-8dfb-39bbc6397a60" 
+    
+    #Create an object for a multiple license type
+    $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
+    
+    #Add the single license object to the multiple license object
+    $Licenses.AddLicenses = $License 
+    
+    #Assign the license to the resource account
+    Set-AzureADUserLicense -ObjectId mtr01@lab<customlabnumber>.o365ready.com -AssignedLicenses $Licenses
+    ```
+
+Upon completion of these steps, the account can now be signed-in to a Microsoft Teams Room system using the password provided in step **4**.
 
 ### Task 4 - Prepare to manage devices by creating tags in the Teams Admin Center
 
