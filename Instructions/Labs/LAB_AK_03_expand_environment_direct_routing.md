@@ -90,9 +90,9 @@ In the following task you will assign Azure credits to your tenant so that you c
 
 2. Open a new Microsoft Edge browser window and navigate to [**https://www.microsoftazurepass.com**](https://www.microsoftazurepass.com).
 
-3. Select **Start.**
+3. Select **Start**.
 
-4. On the weblogin page, sign in as MOD Administrator with the credentials provided to you.
+4. On the login page, sign in as MOD Administrator with the credentials provided to you.
 
 5. Select **Confirm Microsoft Account**.
 
@@ -104,7 +104,7 @@ In the following task you will assign Azure credits to your tenant so that you c
 	- State: Nebraska
 	- ZIP Code: 68460
 	
-8. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up.** 
+8. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up**. 
 
 9. If prompted to verify your address, select **Current address** and then select **Use this address**.
 
@@ -114,19 +114,19 @@ In the following task you will create the new session boarder controller resourc
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”.
 
-2. Open a new Microsoft Edge browser window and navigate to **https://portal.azure.com** 
+2. Open a new Microsoft Edge browser window and navigate to **https://portal.azure.com**. 
 
 3. Select **create a resource**.
 
 4. Search for **Mediant VE Session Border Controller (SBC)**.
 
-5. Select **Mediant VE Session Border Controller (SBC).**
+5. Select **Mediant VE Session Border Controller (SBC)**.
 
 6. Select **Create.**
 
-7. For **Resource group**, select **Create New.**
+7. For **Resource group**, select **Create New**.
 
-8. Fill **Name** with **SBC** then Select **OK.**
+8. Fill **Name** with **SBC** then Select **OK**.
 
 9. Fill out the following information and leave everything else as-is:
 
@@ -140,9 +140,9 @@ In the following task you will create the new session boarder controller resourc
 
 11. Select **Create** and wait for the deployment to complete.
 
-12. Select **Go to resource group.**
+12. Select **Go to resource group**.
 
-13. Select **sbc01-ip.**
+13. Select **sbc01-ip**.
 
 14. Make Note of the Public IP Address.
 
@@ -152,6 +152,7 @@ In the following task you will create the new session boarder controller resourc
 
     ```powershell
     $Cimsession = New-CimSession -Name MS720-RRAS01 -ComputerName MS720-RRAS01 -Authentication Negotiate -Credential (Get-Credential)
+
     ```
 
 17. When prompted to provide credentials fill out the following information and select **OK**:

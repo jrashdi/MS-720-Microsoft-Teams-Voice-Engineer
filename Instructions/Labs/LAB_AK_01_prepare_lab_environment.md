@@ -375,7 +375,7 @@ In this task you will install the latest Teams PowerShell module on your lab cli
     Connect-MicrosoftTeams
     ```
 
-1. When the **Sign in to your account** window opens, enter the credentials of Katie Jordan to sign in with your Teams Administrator user.
+1. When the **Sign in to your account** window opens, enter the credentials of Katie Jordan (KatieJ@M365x&lt;tenantnumber&gt;.onmicrosoft.com) to sign in with your Teams Administrator user.
 
     ![Screenshot of the connecting to the Microsoft Teams PowerShell module.](.\Linked_Image_Files\M01_L01_E04_T01-1.png)
 
