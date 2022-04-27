@@ -235,7 +235,7 @@ In the following task you will add the custom domain to Megan Bowen.
 
 1. In the Megan Bowen user card, select the **Account** tab under **Username and email** select **Manage username and email**.
 
-1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencil symbol, select the textbox under **Domains** and select **lab&lt;customlabnumber&gt;.O365ready.com**.
+1. Below **Primary email address and username**, you can see the default UPN of Megan Bowen. Select the pencil symbol, select the textbox under **Domains** and select **lab&lt;customlabnumber&gt;.o365ready.com**.
 
 1. Select **Done**, then select **Save changes**.
 

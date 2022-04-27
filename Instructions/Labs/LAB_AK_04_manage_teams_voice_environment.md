@@ -70,7 +70,7 @@ In this task, an existing user who isn’t enabled for voice services must be en
 5. Type the following command to enable Alex Wilber for **Direct Routing**:
 
     ```powershell
-    Set-CsPhoneNumberAssignment -Identity AlexW@<tenant>.onmicrosoft.com PhoneNumber "+14255551122" -PhoneNumberType DirectRouting
+    Set-CsPhoneNumberAssignment -Identity AlexW@<tenant>.onmicrosoft.com -PhoneNumber "+14255551122" -PhoneNumberType DirectRouting
     ```
 
 6. Close the PowerShell Window at the end of the task.
@@ -79,7 +79,7 @@ Alex Wilber is now configured to use Direct Routing.
 
 ### Task 3 - Configure call delegation
 
-In this task you will configure Alex Wilbur so that Katie Jordan is a delegate of Alex Wilbur and is allowed to make calls on their behalf, but not receive calls.
+In this task you will configure Alex Wilber so that Katie Jordan is a delegate of Alex Wilber and is allowed to make calls on their behalf, but not receive calls.
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
 
@@ -210,7 +210,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 4. Select **Billing** then choose **Purchase Services**.
 
-5. Search for **Microsoft Teams Room Standard** from the list of available services and select **Details**.
+5. Search for **Microsoft Teams Room Standard** from the list of available services and select **Details**. Filter category by **Collaboration and communication** if you have trouble finding the service.
 
 6. Select **Start free trial,** then on the following page, choose **Try now**, then select **Continue** on the order receipt page.
 
@@ -223,14 +223,14 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
     ```
 
-2. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**. If the command fails, run **Install-Module ExchangeOnlineManagement**.
+2. Make sure you have the latest Exchange Online PowerShell modules installed with the following cmdlet. If you receive an **Untrusted repository** prompt, select **Yes to all**.
 
     ```powershell
-    Update-Module ExchangeOnlineManagement
+    Install-Module ExchangeOnlineManagement
 
     ```
 
-3. Connect to Exchange Online PowerShell:
+3. Connect to Exchange Online PowerShell, when prompted for credentials, enter the credentials of **Katie Jordan**.:
 
     ```powershell
     Connect-ExchangeOnline
@@ -240,51 +240,40 @@ In this task, we will create and license a Microsoft Teams Room device account u
 4. Run the following command to create a new resource account with an Exchange Online mailbox:
 
     ```powershell
-    New-Mailbox -MicrosoftOnlineServicesID mtr01@lab<customlabnumber>.o365ready.com -Name "mtr01" -Alias MTR01 -Room -EnableRoomMailboxAccount $true  -RoomMailboxPassword (ConvertTo-SecureString -String 'P@ssw!rd1' -AsPlainText -Force)
+    New-Mailbox -MicrosoftOnlineServicesID mtr01@lab<customlabnumber>.o365ready.com -Name "mtr01" -Alias mtr01 -Room -EnableRoomMailboxAccount $true  -RoomMailboxPassword (ConvertTo-SecureString -String 'P@ssw!rd1' -AsPlainText -Force)
 
     ```
 
-5. Run the following command to settings on the room mailbox:
+5. Run the following command to configure the settings on the room mailbox:
 
     ```powershell
     Set-CalendarProcessing -Identity "mtr01" -AutomateProcessing AutoAccept -AddOrganizerToSubject $false -DeleteComments $false -DeleteSubject $false -ProcessExternalMeetingMessages $true -RemovePrivateProperty $false -AddAdditionalResponse $true -AdditionalResponse "This is a Microsoft Teams Meeting room!"
     ```
 
-6. Now that the resource account and mailbox have been created, set the password to never expire in Azure Active Directory by running these commands:
+6. Now that the resource account and mailbox have been created, set the usage location and configure the password to never expire. When prompted for credentials, enter the credentials of **Katie Jordan**:
 
     ```powershell
     Connect-AzureAD
 
-    Set-AzureADUser -ObjectID mtr01@lab<customlabnumber>.o365ready.com -PasswordPolicies DisablePasswordExpiration
+    Set-AzureADUser -ObjectID mtr01@lab<customlabnumber>.o365ready.com -PasswordPolicies DisablePasswordExpiration -UsageLocation 'US'
 
     ```
 
-7. The next step is to set the resource account's usage location and assign a license to the resource account.  In the same PowerShell window connected to Azure AD, run the command below:
+7. To assign the license, use the **Set-AzureADUser** cmdlet, and convert the license SKU ID into a PowerShell license type object which is then assigned to the resource account. In the following example, the license SKU ID is 6070a4c8-34c6-4937-8dfb-39bbc6397a60, and it's assigned to the account **mtr01@lab&lt;customlabnumber&gt;.o365ready.com**:
 
     ```powershell
-    Set-AzureADUser -ObjectID mtr01@lab<customlabnumber>.o365ready.com -UsageLocation 'US'
-
-    ```
-
-8. To assign the license, use the **Set-AzureADUser** cmdlet, and convert the license SKU ID into a PowerShell license type object which is then assigned to the resource account. In the following example, the license SKU ID is 6070a4c8-34c6-4937-8dfb-39bbc6397a60, and it's assigned to the account **mtr01@lab&lt;customlabnumber&gt;.o365ready.com**:
-
-    ```powershell
-    #Create an object for a single license type
-    $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
-    $License.SkuId = "6070a4c8-34c6-4937-8dfb-39bbc6397a60" 
+    $MTRLicense = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
+    $MTRLicense.SkuId = "6070a4c8-34c6-4937-8dfb-39bbc6397a60" 
     
-    #Create an object for a multiple license type
     $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
     
-    #Add the single license object to the multiple license object
-    $Licenses.AddLicenses = $License 
+    $Licenses.AddLicenses = $MTRLicense 
     
-    #Assign the license to the resource account
     Set-AzureADUserLicense -ObjectId mtr01@lab<customlabnumber>.o365ready.com -AssignedLicenses $Licenses
 
     ```
 
-Upon completion of these steps, the account can now be signed-in to a Microsoft Teams Room system using the password provided in step **4**.
+Upon completion of these steps, you can view the new Teams Room account in the Microsoft 365 admin center and the account can now be signed-in to a Microsoft Teams Room system using the password provided in step **4**.
 
 ### Task 4 - Prepare to manage devices by creating tags in the Teams Admin Center
 
@@ -378,7 +367,7 @@ Firstly, we will create a dial plan rule, in this scenario, the organization wou
     
     10. Test the rule by entering **7786** and pressing Test. The output should be **+18776967786**, if the output is correct select **Save**.
     
-    11. You will see your new rule in the global dial plan, select **Save**. If you receive an error while attempting to save, put a number in the “External dialing prefix” field for the Dial Plan, remove it again, and then click **Save**.
+    11. You will see your new rule in the global dial plan, select **Save**. If you receive an error while attempting to save, enter a number in **External dialing prefix** for the Dial Plan, remove it again, and then click **Save**.
     
     12. Close the browser window.
 
