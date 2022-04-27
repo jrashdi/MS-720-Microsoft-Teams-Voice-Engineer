@@ -338,7 +338,7 @@ In this task you will sign into client01 and the Teams Admin Center and add our 
 
 9. Select **Add subnets**.
 
-10. Leave IP version as IPv4 and enter IP address as **10.10.1.0** with network range as **24**.
+10. Leave IP version as IPv4 and enter IP address as **10.10.10.0** with network range as **24**.
 
 11. For Description enter **Tacoma Subnet**.
 

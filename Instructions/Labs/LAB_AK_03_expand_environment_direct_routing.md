@@ -88,11 +88,11 @@ In the following task you will assign Azure credits to your tenant so that you c
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”.
 
-2. Open a new Microsoft Edge browser window and navigate to [**https://microsoftazurepass.com**](https://microsoftazurepass.com).
+2. Open a new Microsoft Edge browser window and navigate to [**https://www.microsoftazurepass.com**](https://www.microsoftazurepass.com).
 
-3. Select **Start.**
+3. Select **Start**.
 
-4. On the weblogin page, sign in as MOD Administrator with the credentials provided to you.
+4. On the login page, sign in as MOD Administrator with the credentials provided to you.
 
 5. Select **Confirm Microsoft Account**.
 
@@ -104,7 +104,7 @@ In the following task you will assign Azure credits to your tenant so that you c
 	- State: Nebraska
 	- ZIP Code: 68460
 	
-8. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up.** 
+8. Select **I agree to the subscription agreement, offer details and privacy statement**, and select **Sign up**. 
 
 9. If prompted to verify your address, select **Current address** and then select **Use this address**.
 
@@ -114,19 +114,19 @@ In the following task you will create the new session boarder controller resourc
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”.
 
-2. Open a new Microsoft Edge browser window and navigate to **https://portal.azure.com** 
+2. Open a new Microsoft Edge browser window and navigate to **https://portal.azure.com**. 
 
 3. Select **create a resource**.
 
 4. Search for **Mediant VE Session Border Controller (SBC)**.
 
-5. Select **Mediant VE Session Border Controller (SBC).**
+5. Select **Mediant VE Session Border Controller (SBC)**.
 
 6. Select **Create.**
 
-7. For **Resource group**, select **Create New.**
+7. For **Resource group**, select **Create New**.
 
-8. Fill **Name** with **SBC** then Select **OK.**
+8. Fill **Name** with **SBC** then Select **OK**.
 
 9. Fill out the following information and leave everything else as-is:
 
@@ -140,9 +140,9 @@ In the following task you will create the new session boarder controller resourc
 
 11. Select **Create** and wait for the deployment to complete.
 
-12. Select **Go to resource group.**
+12. Select **Go to resource group**.
 
-13. Select **sbc01-ip.**
+13. Select **sbc01-ip**.
 
 14. Make Note of the Public IP Address.
 
@@ -152,6 +152,7 @@ In the following task you will create the new session boarder controller resourc
 
     ```powershell
     $Cimsession = New-CimSession -Name MS720-RRAS01 -ComputerName MS720-RRAS01 -Authentication Negotiate -Credential (Get-Credential)
+
     ```
 
 17. When prompted to provide credentials fill out the following information and select **OK**:
@@ -600,7 +601,6 @@ In the following task you will create your first voice routing policy and PSTN u
     Get-CsOnlinePstnUsage
     ```
 
-
 6. Review the output of the command.
 
 If you have several usages defined, the names of the usages might truncate. Use the command, (Get-CSOnlinePSTNUsage).Usage, to display a list of the defined PSTN usages. An online PSTN usage links an online voice policy to a route. The output will show if there is an identity that can be used or possibly reused, or also excluded from being used. For example there may be a PSTN usage called Seattle, that can cover all of the Pacific North West of the United States. The overall goal is to keep your PSTN Usage rules to a minimum and keep them simple as it will reduce the overall administration effort later. We want to validate that the information we have in the tenant is relevant and also ensure we do not duplicate any existing PSTN usages. 
@@ -667,10 +667,10 @@ In the following task you will enable the end user for voice services through th
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin” and you have an open **Teams PowerShell** session signed in as **Katie Jordan**.
 
-2. Run the Set-CSUser command, the command modifies Microsoft Teams properties for an existing user account. Properties can be modified only for accounts that have been enabled for use with Microsoft Teams:
+2. Run the Set-CsPhoneNumberAssignment command, the command assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.:
 
     ```powershell
-    Set-CsUser -Identity MeganB@Lab<customlabnumer>.O365ready.com -OnPremLineURI tel:+14255551234 -EnterpriseVoiceEnabled $true
+    Set-CsPhoneNumberAssignment -Identity MeganB@Lab<customlabnumer>.o365ready.com -PhoneNumber "+14255551234" -PhoneNumberType DirectRouting
     ```
 
 3. The cmdlet does not provide any output. When you are back on the command prompt, leave the window open for the next task.
@@ -733,7 +733,7 @@ In the following task you will assign the Emergency Location Identification numb
 
 4. Review the settings for **ELIN**. It should be **425-555-1200**. The number was set in an earlier task, and once the location has been validated, it's properties cannot be changed. This includes the ELIN number. 
 
-5. Select **Save.**
+5. Select **Save**.
 
 6. Leave the browser window open.
 
