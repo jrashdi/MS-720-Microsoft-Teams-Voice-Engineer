@@ -70,7 +70,7 @@ In this task, an existing user who isn’t enabled for voice services must be en
 5. Type the following command to enable Alex Wilber for **Direct Routing**:
 
     ```powershell
-    Set-CsPhoneNumberAssignment -Identity AlexW@<tenant>.onmicrosoft.com PhoneNumber "+14255551122" -PhoneNumberType DirectRouting
+    Set-CsPhoneNumberAssignment -Identity AlexW@<tenant>.onmicrosoft.com -PhoneNumber "+14255551122" -PhoneNumberType DirectRouting
     ```
 
 6. Close the PowerShell Window at the end of the task.
@@ -79,7 +79,7 @@ Alex Wilber is now configured to use Direct Routing.
 
 ### Task 3 - Configure call delegation
 
-In this task you will configure Alex Wilbur so that Katie Jordan is a delegate of Alex Wilbur and is allowed to make calls on their behalf, but not receive calls.
+In this task you will configure Alex Wilber so that Katie Jordan is a delegate of Alex Wilbur and is allowed to make calls on their behalf, but not receive calls.
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft Teams admin center** as **Katie Jordan**.
 

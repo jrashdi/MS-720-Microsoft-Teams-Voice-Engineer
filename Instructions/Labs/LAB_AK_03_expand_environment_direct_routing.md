@@ -591,6 +591,7 @@ In the following task you will create your first voice routing policy and PSTN u
 
     ```powershell
     Connect-MicrosoftTeams
+
     ```
 
 4. In the prompt sign in as **Katie Jordan** with the credentials provided to you.
@@ -599,6 +600,7 @@ In the following task you will create your first voice routing policy and PSTN u
 
     ```powershell
     Get-CsOnlinePstnUsage
+
     ```
 
 6. Review the output of the command.
@@ -609,24 +611,28 @@ If you have several usages defined, the names of the usages might truncate. Use 
 
     ```powershell
     Set-CsOnlinePstnUsage -Identity Global -Usage @{Add="US and Canada"}
+
     ```
 
 8. Run the New-CSOnlineVoiceRoutingPolicy to create a new online voice routing policy. Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Teams users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks:
 
     ```powershell
     New-CsOnlineVoiceRoutingPolicy "North America" -OnlinePstnUsages "US and Canada"
+
     ```
 
 9. Run the New-CsOnlineVoiceRoute command - Creates a new online voice route. Online voice routes contain instructions that tell Microsoft Teams how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX):
 
     ```powershell
     New-CsOnlineVoiceRoute -Identity "10 Digit Dialing" -NumberPattern "^\+1(\d{10})$" -OnlinePstnGatewayList sbc01.lab<customlabnumber>.o365ready.com -OnlinePstnUsages "US and Canada"
+
     ```
 
 10. Run the Get-CSOnlineVoiceRoute command, this command returns information about the online voice routes configured for use in your tenant. Online voice routes contain instructions that tell Microsoft Teams how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX):
 
     ```powershell
     Get-CsOnlineVoiceRoute
+
     ```
 
 11. Review the output of the command and verify that your new voice route has been added.
@@ -644,7 +650,8 @@ In the following task you will create another voice routing policy with the PSTN
 2. Run the Grant-CsOnlineVoiceRoutingPolicy, the command assigns a per-user online voice routing policy to one or more users. Online voice routing policies manage online PSTN usages for Phone System users:
 
     ```powershell
-    Grant-CsOnlineVoiceRoutingPolicy -Identity MeganB@Lab<customlabnumber>.O365ready.com -PolicyName "North America"
+    Grant-CsOnlineVoiceRoutingPolicy -Identity MeganB@lab<customlabnumber>.o365ready.com -PolicyName "North America"
+
     ```
 
 If you receive an error stating that the **Policy "North America" is not a user policy. You can assign only a user policy to a specific user**., wait 2-3 minutes and then retry the command. You may need to retry the command several times before it is successful and it may take up to 15 minutes before it becomes available. If the policy is still not updated in the service, you continue to the next lab and return later.
@@ -653,6 +660,7 @@ If you receive an error stating that the **Policy "North America" is not a user 
 
     ```powershell
     Get-CsOnlineUser MeganB | select OnlineVoiceRoutingPolicy
+
     ```
 
 4. Review the output of the command. If the policy is empty, try the command again.
@@ -670,7 +678,8 @@ In the following task you will enable the end user for voice services through th
 2. Run the Set-CsPhoneNumberAssignment command, the command assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.:
 
     ```powershell
-    Set-CsPhoneNumberAssignment -Identity MeganB@Lab<customlabnumer>.o365ready.com -PhoneNumber "+14255551234" -PhoneNumberType DirectRouting
+    Set-CsPhoneNumberAssignment -Identity MeganB@lab<customlabnumer>.o365ready.com -PhoneNumber "+14255551234" -PhoneNumberType DirectRouting
+
     ```
 
 3. The cmdlet does not provide any output. When you are back on the command prompt, leave the window open for the next task.
@@ -686,7 +695,8 @@ In the following task you will assign a voice route to a user, this will grant t
 2. In Windows PowerShell, enter the following and then press Enter, this will assign the policy to the identified user, in this instance the identity is **Megan Bowan**, we will be assigning her the **North American** Policy. 
 
     ```powershell
-    Grant-CsOnlineVoiceRoutingPolicy -Identity MeganB@Lab<customlabnumer>.O365ready.com -PolicyName "North America"
+    Grant-CsOnlineVoiceRoutingPolicy -Identity MeganB@lab<customlabnumer>.o365ready.com -PolicyName "North America"
+
     ```
 
 3. The cmdlet does not provide any output. Close the PowerShell window to end this task.
@@ -715,7 +725,7 @@ In the following task you will create a normalization record for a 4-digit dial 
 
 9. Verify functionality by typing **1234** into the test box and pressing **Test –** Output should be +14255551234.
 
-10. Select **Save.**
+10. Select **Save**.
 
 11. Leave the browser window open for the end of this task.
 
@@ -753,9 +763,9 @@ In the following task you will configure location-based routing to allow connect
 
 5. Within the Teams Admin Center select **Voice**, then **Direct Routing.**
 
-6. Select **sbc01,** select **settings** and **edit SBC**
+6. Select **sbc01**, select **settings** and **edit SBC**
 
-7. Under **Location based routing and media optimization**, turn **on Location based routing**, select **Gateway site ID** to **Washington,** then select **Save.**
+7. Under **Location based routing and media optimization**, turn **on Location based routing**, select **Gateway site ID** to **Washington**, then select **Save**.
 
 8. Leave the browser window open.
 
