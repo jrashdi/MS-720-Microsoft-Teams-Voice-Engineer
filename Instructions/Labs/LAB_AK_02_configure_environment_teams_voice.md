@@ -644,7 +644,7 @@ There is a persistent nuisance caller calling users in the Bellevue office and w
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” with the password provided to you.
 
-2. Press the start button and enter PowerShell.
+2. Press the start button and enter **PowerShell**.
 
 3. Windows PowerShell will appear on the start menu, right click on it and select **Run as administrator**.
 
@@ -694,7 +694,7 @@ In this task you will order a phone number in the Teams Admin Center to assign t
 
 6. Select **United States** as **Country or region**.
 
-7. For Number Type, select User (subscriber).
+7. For Number Type, select **User (subscriber)**.
 						
 8. For Operator, select Microsoft.						
 
