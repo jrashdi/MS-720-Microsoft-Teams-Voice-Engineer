@@ -209,7 +209,7 @@ In the following task you will add the root certificate to the session border co
 
 1. Select **APPLY**.
 
-1. Scroll down, and below the **Teams-TLSContext** information, select **Trusted Root Certificate**.
+1. Scroll down, and below the **Teams-TLSContext** information, select **Trusted Root Certificates**.
 
 1. In the Trusted Root Certificates window, select **Import**.
 
