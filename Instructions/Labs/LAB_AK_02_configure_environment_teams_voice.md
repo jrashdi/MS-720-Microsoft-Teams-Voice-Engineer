@@ -556,7 +556,7 @@ You have successfully added a normalization rule to a dial plan to meet the exte
 
 Calling policies are used to control which features are available to users. By default, when a user is on a Call in Teams, a second call coming in will alert them with a toast, giving them the option to pick up the second incoming call. Our organization does not want users interrupted when they are on calls. This feature is called “busy on busy”.
 
-At Contoso you need to enable the option of convenience recording 1:1 calls, which is disabled by default. Your labs Teams Administrator, Katie Jordan will create a custom calling policy and apply it to all users via a Group policy assignment.
+At Contoso, you need to enable the option of convenience recording 1:1 calls, which is disabled by default. Your labs Teams Administrator, Katie Jordan will create a custom calling policy and apply it to all users via a Group policy assignment.
 
 1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
@@ -578,7 +578,7 @@ At Contoso you need to enable the option of convenience recording 1:1 calls, whi
 
 10. Select **Add group** to open the **Assign policy to group** dialogue.
 
-11. For Select a group enter **all company** and when all company group appears select **Add**.
+11. Under **Select a group** search for **Contoso All Company** and when **Contoso All Company** group appears select **Add**.
 
 12. Leave rank as 1.
 
@@ -588,7 +588,7 @@ At Contoso you need to enable the option of convenience recording 1:1 calls, whi
 
 15. Leave the browser open in the Microsoft Teams admin center at the end of this task.
 
-The policy is now applied to all users in the default **all company** group. If a user is directly assigned a policy (either individually or through a batch assignment), that policy takes precedence over a policy inherited by being a member of a group. This leaves the option for specific users to be directly assigned a different policy should they want busy on busy disabled.
+The policy is now applied to all users in the default **All Company** group. If a user is directly assigned a policy (either individually or through a batch assignment), that policy takes precedence over a policy inherited by being a member of a group. This leaves the option for specific users to be directly assigned a different policy should they want busy on busy disabled.
 
 You have successfully created and assigned a calling policy.
 
@@ -964,11 +964,11 @@ Collaborative calling enables you to connect a call queue to a channel in Teams.
 
 3. Under **Call answering** select **Choose a team**, select **Add a channel**. 
 
-4. Type **Contoso**, select the channel and select **Add**, select **General**, select **Apply** and select **Submit**.  
+4. Type **Contoso All Company**, select the **General** channel and select **Add**, select **General**, select **Apply** and select **Submit**.  
 
 5. Leave the Teams Admin Center open for the next task
 
-You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso team.
+You have successfully assigned the call answering for the Call Queue to the General channel within the Contoso All Company team.
 
 ### Task 4 - Configure a Call Queue to forward to voicemail if busy
 
@@ -980,7 +980,7 @@ By default, if a call to a call queue isn't answered by an agent within the maxi
 
 3. Under **Call time out handling**, select **Redirect this call to**, select Redirect to, from the drop-down menu select **Voicemail (Shared)**
 
-4. In the search type **All**, select **All Company**, 
+4. In the search type **Contoso All Company**, select **Contoso All Company**, 
 
 5. Set Enable **Transcription On**
 

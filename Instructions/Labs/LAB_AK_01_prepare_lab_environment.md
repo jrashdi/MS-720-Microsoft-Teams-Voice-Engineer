@@ -389,6 +389,12 @@ In this task you will install the latest Teams PowerShell module on your lab cli
 
 1. You should see some users and their attributes scroll across the screen. If you see this, you have signed in successfully and can interact with Teams in your tenant.
 
+1. Create a new Team to be used throughout the labs in this course by running the following command:
+
+    ```powershell
+    New-Team -DisplayName "Contoso All Company" -Description "Team for the entire Contoso Company" -Visibility Public
+    ```
+
 1. Disconnect your session by running the following command at the command prompt.
 
     ```powershell
