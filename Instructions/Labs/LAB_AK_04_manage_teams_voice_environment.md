@@ -165,7 +165,7 @@ Outbound calls from Megan Bowen have been restricted.
 
   - **Estimated Time to complete**: 30 minutes
 
-In this exercise we will begin the provisioning process for a Teams Phone. We will then create and license an account to use with a Microsoft Teams Room system.
+In this exercise we will begin the provisioning process for a Teams Phone. We will then create and license an account to use with a Microsoft Teams Room.
 
 ### Task 1 - Perform remote provisioning of Teams Phones
 
@@ -220,7 +220,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 4. Select **Billing** then choose **Purchase Services**.
 
-5. Search for **Microsoft Teams Room Standard** from the list of available services and select **Details**. Filter category by **Collaboration and communication** if you have trouble finding the service.
+5. Search for **Microsoft Teams Room Basic** from the list of available services and select **Details**. Filter category by **Collaboration and communication** if you have trouble finding the service.
 
 6. Select **Start free trial,** then on the following page, choose **Try now**, then select **Continue** on the order receipt page.
 
