@@ -203,7 +203,7 @@ In the following task you will use the global administrator account MOD Administ
 
 1. In the **Manage admin roles** pane, select **Admin center access**.
 
-1. In the list, select **Teams Administrator**.
+1. In the list, select **Exchange Administrator** and **Teams Administrator**.
 
 1. At the bottom of the card, select **Save changes**. Admin roles are updated.
 
@@ -213,7 +213,7 @@ In the following task you will use the global administrator account MOD Administ
 
 1. Deselect **Automatically create a password** and **Require this user to change their password when they first sign in**.
 
-1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of “Admin” from MS720-CLIENT01.
+1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of your Microsoft 365 tenant administrator.
 
 1. Press **Reset password**.
 
@@ -281,7 +281,7 @@ As an admin, you can enable users to make phone calls with a Domestic Calling Pl
 
 1. Under **View by category**, select **Add-ons**.
 
-1. In the **Add-ons** list, locate and then select **Microsoft 365 Domestic Calling Plan for US and Canada Trial**, note you may need to expand the list to see all the add-ons and be sure to select the trial version.
+1. In the **Add-ons** list, locate and then select **Microsoft Teams Domestic Calling Plan for US and Canada Trial**, note you may need to expand the list to see all the add-ons and be sure to select the trial version.
 
 1. Select **Details** and select **Start free trial**. 
 
@@ -307,7 +307,7 @@ As an admin, you can assign the calling plan license that gives users the right 
 
 1. Deselect **Automatically create a password** and **Require this user to change their password when they first sign in**.
 
-1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of “Admin” from MS720-CLIENT01.
+1. Enter a password that meets the complexity requirements and you will remember for later in the lab, e.g. the password of your Microsoft 365 tenant administrator.
 
 1. Press **Reset password**.
 
@@ -365,7 +365,7 @@ In this task you will install the latest Teams PowerShell module on your lab cli
     Get-Module -Name MicrosoftTeams
     ```
 
-1. You should see a version number of 2.5.1 or above and a multi value field with different cmdlets available.
+1. You should see a version number of 4.9.1 or above and a multi value field with different cmdlets available.
 
     ![Screenshot of the installing and importing the Microsoft Teams PowerShell module.](./Linked_Image_Files/M01_L01_E04_T01.png)
 

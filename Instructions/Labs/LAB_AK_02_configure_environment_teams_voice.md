@@ -98,7 +98,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 6. You will be prompted “You haven't added any network sites yet.” Select **Add a network site**.
 
-7. Enter the **name** as **Tacoma** **Site**.
+7. Enter the **name** as **Tacoma Site**.
 
 8. Enter the description as **Tacoma Office**.
 
@@ -106,7 +106,7 @@ In this task you will setup your network and sites in Teams Network Planner. Con
 
 10. Enter the **network users** as **50**, as we have 50 users in the Tacoma office.
 
-11. Network subnets are just for reference in the report, our Tacoma offices network subnet is **10.10.1.0** with a network range of **24**. Enter these values.
+11. Network subnets are just for reference in the report, our Tacoma offices network subnet is **10.10.10.0** with a network range of **24**. Enter these values.
 
 12. Tacoma has local internet breakout, enter **50** for **Internet link capacity**.
 
@@ -156,7 +156,7 @@ In the following task you will run the Network Planner report and review the res
 
 For each site we must now define the number of users of each profile type. 
 
-6. For **Tacoma Site**, in the **Office worker** row, set Network users to **30**.
+6. For **Tacoma Site**, in the **Office Worker** row, set Network users to **30**.
 
 7. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
@@ -164,7 +164,7 @@ For each site we must now define the number of users of each profile type.
 
 9. In the **Audio Only User** row, set Network Users to **20**.
 
-10. For **Bellevue Site**, in the **Office worker** row, set Network users to **80**.
+10. For **Bellevue Site**, in the **Office Worker** row, set Network users to **80**.
 
 11. Remove the **Remote Worker** row by selecting the **X** at the end of the row.
 
@@ -196,7 +196,7 @@ In this task you will sign into a client machine provided by your training provi
 
 3. Select **download** to download the installer.
 
-4. Go to **Start**, enter **Run** and select **Run**, and enter **Shell:Downloads** in the open dialog and select **OK**, this will open the downloads folder.
+4. Go to **Start**, enter **Run** and select **Run**, and enter **Shell:Downloads** in the open dialog and select **OK**, this will open the **Downloads** folder.
 
 5. Find **MicrosoftTeamsNetworkAssessmentTool.exe**, right select it and run as administrator.
 
@@ -234,9 +234,9 @@ The Teams Network Assessment Tool is run from the command line. We will now run 
 
 6. Enter **NetworkAssessmentTool.exe** and press enter to run that program.
 
-7. You will get a **Windows Defender Firewall Prompt;** Ensure Public networks is ticked and select **allow access**.
+7. You will get a **Windows Defender Firewall Prompt;** Ensure Public networks is checked and select **Allow Access**.
 
-8. The test will complete, and you will see Service connectivity result has been written to: and a file path, and be put back at the command prompt.
+8. The test will complete, and you will see *"Service connectivity result has been written to:"* and a file path, and be put back at the command prompt.
 
 You have started the Network Assessment Tool for the first time.
 
@@ -268,7 +268,7 @@ The network quality check (performance test) is run with the NetworkAssessmentTo
 
 5. The test will run for 300 seconds with tests every 5 seconds, we will finish the test early. After 10 or more tests have been completed, press **Ctrl+C** to stop the test.
 
-6. When the test is complete, you will see the output **Call Quality Check Has Finished Call Quality Check result has been written to: C:\Users\LabUser\AppData\Local\Microsoft Teams Network Assessment Tool\\<Number\>quality_check_results.csv**
+6. When the test is complete, you will see the output *"Call Quality Check Has Finished Call Quality Check result has been written to:"* and a file path, and be put back at the command prompt.
 
 ### Task 5 - Interpret Results of the Network Quality Check
 
@@ -408,7 +408,7 @@ In this task you will create an emergency location. This is needed before you ca
 
 5. Select the **Country or region** menu and then select **United States**.
 
-6. Switch **Input address manually** from Off to **On**.
+6. Switch **Input address manually** to **On**.
 
 7. In the **Street Number** box, enter **700**.
 
@@ -534,15 +534,15 @@ Since we want all users to be able to do 5xx extension dialing, we will add a ne
 
 7. Ensure **Basic** rule is selected, it should be by default.
 
-8. Tick **The number dialed begins with** and enter **5**.
+8. Check **The number dialed begins with** and enter **5**.
 
-9. Tick **The length of the number being dialed is** and enter **3**.
+9. Check **The length of the number being dialed is** and enter **3**.
 
 10. Ensure **Exactly** is selected for length of number to be dialed.
 
-11. Tick **Remove this many digits from the start of the number** and enter **1**.
+11. Check **Remove this many digits from the start of the number** and enter **1**.
 
-12. Tick **Add this number to the beginning** and enter **+442085665**.
+12. Check **Add this number to the beginning** and enter **+442085665**.
 
 13. Test the rule by entering **503** and selecting **Test**. The output should be +44208566503, if the output is correct select **Save**.
 
@@ -576,7 +576,7 @@ At Contoso, you need to enable the option of convenience recording 1:1 calls, wh
 
 9. While still in Voice and calling policies, select the **Group policy assignment** tab.
 
-10. Select **Add group** to open the **Assign policy to group** dialogue.
+10. Select **Add** to open the **Assign policy to group** dialogue.
 
 11. Under **Select a group** search for **Contoso All Company** and when **Contoso All Company** group appears select **Add**.
 
@@ -588,7 +588,7 @@ At Contoso, you need to enable the option of convenience recording 1:1 calls, wh
 
 15. Leave the browser open in the Microsoft Teams admin center at the end of this task.
 
-The policy is now applied to all users in the default **All Company** group. If a user is directly assigned a policy (either individually or through a batch assignment), that policy takes precedence over a policy inherited by being a member of a group. This leaves the option for specific users to be directly assigned a different policy should they want busy on busy disabled.
+The policy is now applied to all users in the **Contoso All Company** group. If a user is directly assigned a policy (either individually or through a batch assignment), that policy takes precedence over a policy inherited by being a member of a group. This leaves the option for specific users to be directly assigned a different policy should they want busy on busy disabled.
 
 You have successfully created and assigned a calling policy.
 
@@ -610,7 +610,7 @@ Call Park is disabled by default. Our organization would like the option to use 
 
 6. Leave the browser open in the **Microsoft Teams admin center** at the end of this task.
 
-The call pickup range is from 10 to 99 and cannot be customized. You have successfully enabled call park for all users.
+The call pickup range is from 10 to 99 but can be customized here. You have successfully enabled call park for all users.
 
 ### Task 4 - Configure Caller ID policies
 
@@ -628,7 +628,7 @@ By default, the user's phone number is displayed when an outbound call is made t
 
 5. For **friendly description** enter **Block outbound caller ID**.
 
-6. Switch **Override the caller ID policy** from Off to **On**.
+6. Switch **Override the caller ID policy** to **On**.
 
 7. For **Replace the caller ID with** select **Anonymous**.
 
@@ -688,15 +688,15 @@ In this task you will order a phone number in the Teams Admin Center to assign t
 
 3. Under **Numbers**, select **Add**.
 
-4. At the top of the page, enter a name for your order **Bellevue numbers for users**.
+4. At the top of the page, enter a name for your order **New numbers for Bellevue site users**.
 
-5. For friendly description enter **Bellevue user numbers order**.
+5. For friendly description enter **New numbers for users at the Bellevue Office**.
 
 6. Select **United States** as **Country or region**.
 
 7. For Number Type, select **User (subscriber)**.
 						
-8. For Operator, select Microsoft.						
+8. For Operator, select **Microsoft**.
 
 9. The Quantity field will now appear, enter 1.
 
@@ -720,7 +720,7 @@ You have successfully ordered a phone number through the Teams admin center.
 
 Before a user can make calls, they need a phone number. In this task you will assign the phone number you ordered earlier to Isaiah Langer.
 
-1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams** **admin center** open as **Katie Jordan**.
+1. You are still signed in to MS720-CLIENT01 as “Admin” and have the **Microsoft Teams admin center** open as **Katie Jordan**.
 
 2. Select **Voice** and the **Phone numbers** tab.
 
