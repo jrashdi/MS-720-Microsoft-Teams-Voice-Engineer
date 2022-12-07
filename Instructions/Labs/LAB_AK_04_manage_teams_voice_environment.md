@@ -220,7 +220,7 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
 4. Select **Billing** then choose **Purchase Services**.
 
-5. Search for **Microsoft Teams Room Basic** from the list of available services and select **Details**. Filter category by **Collaboration and communication** if you have trouble finding the service.
+5. Search for **Microsoft Teams Room Pro** from the list of available services and select **Details**. Filter category by **Collaboration and communication** if you have trouble finding the service.
 
 6. Select **Start free trial,** then on the following page, choose **Try now**, then select **Continue** on the order receipt page.
 
@@ -269,11 +269,11 @@ In this task, we will create and license a Microsoft Teams Room device account u
 
     ```
 
-7. To assign the license, use the **Set-AzureADUser** cmdlet, and convert the license SKU ID into a PowerShell license type object which is then assigned to the resource account. In the following example, the license SKU ID is 6070a4c8-34c6-4937-8dfb-39bbc6397a60, and it's assigned to the account **mtr01@lab&lt;customlabnumber&gt;.o365ready.com**:
+7. To assign the license, use the **Set-AzureADUser** cmdlet, and convert the license SKU ID into a PowerShell license type object which is then assigned to the resource account. In the following example, the license SKU ID is 4cde982a-ede4-4409-9ae6-b003453c8ea6, and it's assigned to the account **mtr01@lab&lt;customlabnumber&gt;.o365ready.com**:
 
     ```powershell
     $MTRLicense = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
-    $MTRLicense.SkuId = "6070a4c8-34c6-4937-8dfb-39bbc6397a60" 
+    $MTRLicense.SkuId = "4cde982a-ede4-4409-9ae6-b003453c8ea6" 
     
     $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
     
