@@ -70,7 +70,7 @@ In the following task you will import the certificate to the local machine and c
 
 2. Switch to File Explorer and then browse to **C:\Scripts**.
 
-3. Select **ImportLabCert.exe**.
+3. Double-click **ImportLabCert.exe**.
 
 4. In the **User Account Control** dialog box, select **Yes**.
 
@@ -237,7 +237,7 @@ You have successfully uploaded the root certificate to your SBC and can now cont
 
 In the following task you will upload the lab certificate you requested earlier.  
 
-1. In the TLS Contexts window, in the TLS Contexts table, select Teams-TLSContext.
+1. In the TLS Contexts window, in the TLS Contexts table, select **Teams-TLSContext**.
 
 1. Scroll down, and below the **Teams-TLSContext** information, select **Change Certificate**.
 
@@ -265,15 +265,15 @@ In the following task you will configure the SIP interfaces that allow your SBC 
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin” and on the SBC configuration website as **sbcadmin**.
 
-2. On the top menu, select **Signaling &amp; media.**
+2. On the top menu, select **Signaling &amp; Media.**
 
-3. Select **core entities**, **sip interfaces**, and select **New**.
+3. Select **Core Entities**, **SIP Interfaces**, and select **New**.
 
 4. Fill out the following information:
 
 	- **Name:** Teams 
 
-	- **Network Interface:** #0 
+	- **Network Interface:** #0 [eth0]
 
 	- **UDP Port:** 0 
 
@@ -739,13 +739,11 @@ In the following task you will assign the Emergency Location Identification numb
 
 2. In the left navigation pane select the three dashes, select **Locations** and select **Emergency addresses.**
 
-3. Select **Bellevue Office Address**.
+3. Select **Bellevue Office Address** and then select **Edit**.
 
 4. Review the settings for **ELIN**. It should be **425-555-1200**. The number was set in an earlier task, and once the location has been validated, it's properties cannot be changed. This includes the ELIN number. 
 
-5. Select **Save**.
-
-6. Leave the browser window open.
+5. Leave the browser window open.
 
 You have successfully assigned the ELIN number to the location for emergency addresses.
 
