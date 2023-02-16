@@ -383,7 +383,7 @@ Firstly, we will create a dial plan rule, in this scenario, the organization wou
 
 You have successfully added a normalization rule to a dial plan to meet the extension dialing organizational requirement. We will now confirm the rule works with a real user.
 
-1. Sign into MS720-CLIENT02 as “Admin”, required. You may still be signed in from a previous task.
+1. Sign into **MS720-CLIENT02** as **Admin**, required. You may still be signed in from a previous task.
 
 2. From the desktop select and run Microsoft Teams client.
 
