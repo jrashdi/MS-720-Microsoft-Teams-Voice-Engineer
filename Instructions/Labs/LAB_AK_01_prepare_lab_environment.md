@@ -36,7 +36,7 @@ In the following task you will sign identify your lab’s public IP address to e
 
 1. Open Microsoft Edge and then browse to **http://www.bing.com**.
 
-1. In the **Search** box, enter **What is my IP** and then press Enter.
+1. In the **Search** box, enter **What is my IP** and then press **Enter**.
 
 1. The first result box with the label **Your public IP address** is your IP retrieved by Bing.
 
@@ -58,7 +58,7 @@ The lab number task, updates the o365ready.com DNS server with your lab's public
 
 1. In the **IP address** box, enter your public IP address from the previous task.
 
-1. In the **Lab Code** box, enter **MS720**, press Enter or select **Submit**.
+1. In the **Lab Code** box, enter **MS720**, press **Enter** or select **Submit**.
 
 1. This lab code will expire 90 days after the start of this course.
 
@@ -165,7 +165,7 @@ In this exercise, you will assign the required admin permissions to continue wit
 
 In this task you will verify your custom domain so you can work with it and assign it to users.
 
-1. You are still on MS720-CLIENT01 where you are still signed in as “Admin”. 
+1. You are still on **MS720-CLIENT01** where you are still signed in as **Admin**. 
 
 1. In **Microsoft Edge**, browse to the Microsoft 365 admin center at [**https://admin.microsoft.com**](https://admin.microsoft.com/).
 
