@@ -40,7 +40,7 @@ In this task you will sign into the Microsoft Teams Admin Center and make change
 
 5. Select **Manage call group**, then select **Add people**.
 
-6. Search for **Katie Jordan** and select **Add** to include them in the **People list**, then select Apply.
+6. Search for **Katie Jordan** and select **Add** to include them in the **People list**, then select **Apply**.
 
 7. As Katie would prefer an on-screen notification to show, rather than Teams to ring when Isaiah is unavailable, find **Katie Jordan** in the Group Call Pickup list. 
 
@@ -119,7 +119,7 @@ In this task you validate audio conferencing is enabled for Isaiah Langer and ch
 
 6. Select the row with **No toll-free numbers** policy that was just created and select **Assign users**.
 
-7. Search for **Isaiah** from **Manage users**, select **Isaiah Langer**, **Add** and **Apply**.
+7. Search for **Isaiah** from **Manage users**, select **Isaiah Langer**, **Add**, **Apply** and **Confirm**.
 
 8. Select **Users** and **Manage users**.
 
@@ -184,11 +184,11 @@ In this task you will provision a Teams Phone device in the Teams administration
 
 5. The **Provision devices** page shows. Under **Waiting on activation** select **Add MAC addresses manually**.
 
-6. In the **Add MAC** addresses dialogue, enter the MAC address of "ab-cd-12-34-ef-56" and for location enter **Bellevue**, for the Teams IP Phone.
+6. In the **Add MAC** addresses dialogue, enter the MAC address of **ab-cd-12-34-ef-56** and for location enter **Bellevue**, for the Teams IP Phone.
 
 	In a production environment you would enter the actual MAC address of the device you want to connect.
 
-7. Select **Apply** to save the change.
+7. Select **Save** to save the change.
 
 8. The **Waiting on activation page** will show the Teams IP Phone’s MAC address and location. Select the MAC address from the list, then select **Generate verification code**
 
@@ -351,7 +351,7 @@ In this lab we are going to create and then break a dial plan rule and check Cal
 
 Firstly, we will create a dial plan rule, in this scenario, the organization would like the short code 7786 to translate to +1-877-696-7786.
 
-1. You are still signed in to MS720-CLIENT01 as “Admin” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
+1. You are still signed in to **MS720-CLIENT01** as “Admin” and signed into the **Microsoft 365 admin center** as **MOD Administrator**.
 
 2. Navigate to the **Microsoft Teams admin center** at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).
 
