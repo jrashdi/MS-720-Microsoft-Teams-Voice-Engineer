@@ -565,7 +565,7 @@ You have successfully configured the AudioCodes SBC to receive requests from the
 
 ### Task 18 - Verify the SBC Connections to Teams
 
-In the following task you will validate the the SBC to be ready for Teams
+In the following task you will validate the SBC to be ready for Teams
 
 On the SBC, select **Monitor** at the top and under **VOIP Status &gt; Proxy Set Status**, the output should be **Online** for the three entries for psthub.Microsoft.com. 
 
@@ -596,7 +596,7 @@ In the following task you will create your first voice routing policy and PSTN u
 
 4. In the prompt sign in as **Katie Jordan** with the credentials provided to you.
 
-5. In Windows Powershell, enter the following and then press Enter. By running the command you will see that the existing PSTN usages in place. You can see what is in place and what usage plans are being assigned to the identity. 
+5. In Windows Powershell, enter the following and then press **Enter**. By running the command you will see that the existing PSTN usages in place. You can see what is in place and what usage plans are being assigned to the identity. 
 
     ```powershell
     Get-CsOnlinePstnUsage
@@ -692,7 +692,7 @@ In the following task you will assign a voice route to a user, this will grant t
 
 1. You are still on MS720-CLIENT01 where you are still signed in as “Admin” and you have an open **Teams PowerShell** session signed in as **Katie Jordan**.
 
-2. In Windows PowerShell, enter the following and then press Enter, this will assign the policy to the identified user, in this instance the identity is **Megan Bowan**, we will be assigning her the **North American** Policy. 
+2. In Windows PowerShell, enter the following and then press **Enter**, this will assign the policy to the identified user, in this instance the identity is **Megan Bowan**, we will be assigning her the **North American** Policy. 
 
     ```powershell
     Grant-CsOnlineVoiceRoutingPolicy -Identity MeganB@lab<customlabnumer>.o365ready.com -PolicyName "North America"
