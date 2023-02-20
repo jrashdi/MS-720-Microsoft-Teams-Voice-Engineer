@@ -56,7 +56,7 @@ We will input our network details and review the output report.
 
 In the following task you will create a custom user persona of a network user. In our scenario we have some users that are expected to only use audio for p2p calls and PSTN calls. They will not use video or desktop sharing as part of their role. We need to create a persona to reflect their use when planning our network.
 
-1. Sign into **MS720-CLIENT01** as “Admin” with the password provided to you.
+1. Sign into **MS720-CLIENT01** as **Admin** with the password provided to you.
 
 2. Open Microsoft Edge from the task bar and browse to the **Microsoft Teams admin center** at [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/).
 
@@ -190,7 +190,7 @@ In this exercise, you will install and run the Teams Network Assessment Tool to 
 
 In this task you will sign into a client machine provided by your training provider install the Teams Network Assessment Tool which is required to perform different tests.
 
-1. Sign into **MS720-CLIENT01** as “Admin” with the password provided to you.
+1. Sign into **MS720-CLIENT01** as **Admin** with the password provided to you.
 
 2. Open Microsoft Edge from the task bar and browse to the following site: [**https://www.microsoft.com/en-us/download/details.aspx?id=103017**](https://www.microsoft.com/en-us/download/details.aspx?id=103017).
 
@@ -198,7 +198,7 @@ In this task you will sign into a client machine provided by your training provi
 
 4. Go to **Start**, enter **Run** and select **Run**, and enter **Shell:Downloads** in the open dialog and select **OK**, this will open the **Downloads** folder.
 
-5. Find **MicrosoftTeamsNetworkAssessmentTool.exe**, right select it and run as administrator.
+5. Find **MicrosoftTeamsNetworkAssessmentTool.exe**, right select it and **run as administrator**.
 
 6. In the **User Account Control** window that asks “Do you want to allow this app to make changes to your device?”, select **Yes**.
 
@@ -208,7 +208,7 @@ In this task you will sign into a client machine provided by your training provi
 
 9. **Tick** to accept the terms in the license agreement and select **Next**.
 
-10. Change the **destination folder** install path to **C:\NetworkTest**, select next.
+10. Change the **destination folder** install path to **C:\NetworkTest**, select **next**.
 
 11. Select **Install**.
 
@@ -222,7 +222,7 @@ You have successfully installed the Teams Network Assessment Tool onto Client01.
 
 The Teams Network Assessment Tool is run from the command line. We will now run the network connectivity check, which requires no command line switches. Firstly, the tool will check if it has connectivity to the Teams media relay. These are used to relay audio and video when direct connection between clients is not possible. The checker also checks whether the load-balancer relay is QoS (Quality of Service) capable, which means the load-balancer redirects packets to relay instance ports 3479-3481 (instead of 3478) depending on modality (audio = 3479, video = 3480, screenshare/data = 3481).
 
-1. You are still signed in to MS720-CLIENT01 as “Admin” with the password provided to you.
+1. You are still signed in to **MS720-CLIENT01** as **Admin** with the password provided to you.
 
 2. Select **Start**, enter command prompt, find **Command Prompt** and right select it and chose **Run as administrator**.
 
@@ -320,7 +320,7 @@ Network sites are used for Dynamic emergency calling. Before configuring dynamic
 
 In this task you will sign into client01 and the Teams Admin Center and add our two offices as Network Sites in Network Topology
 
-1. Sign into **MS720-CLIENT01** as “Admin” with the password provided to you.
+1. Sign into **MS720-CLIENT01** as **Admin** with the password provided to you.
 
 2. Open Microsoft Edge from the task bar and browse to the **Microsoft Teams admin center** at [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/).
 
@@ -742,7 +742,7 @@ You have successfully assigned a phone number to Isaiah Langer.
 
 Now Isaiah has a calling plan and phone number and we will perform a test call to validate functionality of the configuration.
 
-1. Switch to **MS720-CLIENT02** and sign in as “Admin” with the credentials provided to you.
+1. Switch to **MS720-CLIENT02** and sign in as **Admin** with the credentials provided to you.
 
 2. Open the Edge browser and navigate to [https://teams.microsoft.com](https://teams.microsoft.com/). Sign in with the credentials of Isaiah.
 
@@ -804,7 +804,7 @@ The default phone number of your conference bridge defines the caller ID that wi
 
 Contoso does a lot of work with companies in New York and would prefer a New York number is their default audio conference bridge.
 
-1. Switch back to **MS720-CLIENT01** and sign in as “Admin” with the password provided to you.
+1. Switch back to **MS720-CLIENT01** and sign in as **Admin** with the password provided to you.
 
 2. Open Microsoft Edge from the task bar and browse to the **Microsoft Teams admin center** at [**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/).
 
